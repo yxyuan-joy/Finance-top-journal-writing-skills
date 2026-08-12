@@ -94,7 +94,6 @@ skills/                 # 5 个可独立安装的 skills
 evidence/               # 全量普查、人工策展、held-out 与来源方法；不含论文全文
 evals/                  # 路由案例、对抗性案例和评分表
 scripts/                # 仓库验证与可复现语料审计
-.github/workflows/      # 自动结构验证
 ```
 
 发布前还用三个隔离任务对资产定价、银行因果识别和结构反事实做 forward test；测试代理只看到 skill 与合成事实，不看到预期答案或精选论文。结果见 [`evals/forward-test-results.md`](evals/forward-test-results.md)。
