@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Causal-Empirical Writing"
+  short_description: "Write identification-led empirical finance papers"
+  default_prompt: "Use $finance-causal-empirical-writing to revise my causal finance paper."

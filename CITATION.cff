@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use these skills, please cite this repository."
+title: "Finance Top-Journal Writing Skills"
+type: software
+authors:
+  - family-names: "Yuan"
+    given-names: "Yixuan"
+repository-code: "https://github.com/yxyuan-joy/Finance-top-journal-writing-skills"
+license: MIT
+version: 1.0.0
+date-released: 2026-08-13
+keywords:
+  - academic writing
+  - finance
+  - Journal of Finance
+  - Journal of Financial Economics
+  - Review of Financial Studies
+  - agent skills

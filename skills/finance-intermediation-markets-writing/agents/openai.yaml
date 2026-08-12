@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Intermediation & Markets"
+  short_description: "Write intermediation and market-structure finance papers"
+  default_prompt: "Use $finance-intermediation-markets-writing to revise my finance paper."

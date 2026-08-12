@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Top-Journal Writing"
+  short_description: "Write and audit complete JF, JFE, and RFS papers"
+  default_prompt: "Use $finance-top-journal-writing to draft or revise my finance manuscript."

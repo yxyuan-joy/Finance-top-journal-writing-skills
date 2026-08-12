@@ -1,0 +1,217 @@
+{
+  "method": "full_census_of_strict_standard_original_sample",
+  "years": [
+    2020,
+    2025
+  ],
+  "papers": 2065,
+  "journals": {
+    "JF": {
+      "papers": 452,
+      "md_available": 452,
+      "md_coverage": 1.0,
+      "by_final_year": {
+        "2020": 71,
+        "2021": 70,
+        "2022": 68,
+        "2023": 72,
+        "2024": 88,
+        "2025": 83
+      },
+      "heading_flags": {
+        "abstract": {
+          "count": 452,
+          "share": 1.0
+        },
+        "introduction": {
+          "count": 0,
+          "share": 0.0
+        },
+        "literature": {
+          "count": 83,
+          "share": 0.1836
+        },
+        "data_sample": {
+          "count": 348,
+          "share": 0.7699
+        },
+        "institution_background": {
+          "count": 139,
+          "share": 0.3075
+        },
+        "method_identification": {
+          "count": 196,
+          "share": 0.4336
+        },
+        "model_framework": {
+          "count": 296,
+          "share": 0.6549
+        },
+        "result": {
+          "count": 396,
+          "share": 0.8761
+        },
+        "robustness_extension": {
+          "count": 307,
+          "share": 0.6792
+        },
+        "mechanism_channel": {
+          "count": 182,
+          "share": 0.4027
+        },
+        "conclusion": {
+          "count": 449,
+          "share": 0.9934
+        },
+        "appendix_support": {
+          "count": 451,
+          "share": 0.9978
+        },
+        "references": {
+          "count": 450,
+          "share": 0.9956
+        }
+      }
+    },
+    "JFE": {
+      "papers": 896,
+      "md_available": 896,
+      "md_coverage": 1.0,
+      "by_final_year": {
+        "2020": 152,
+        "2021": 207,
+        "2022": 201,
+        "2023": 88,
+        "2024": 111,
+        "2025": 137
+      },
+      "heading_flags": {
+        "abstract": {
+          "count": 103,
+          "share": 0.115
+        },
+        "introduction": {
+          "count": 862,
+          "share": 0.9621
+        },
+        "literature": {
+          "count": 169,
+          "share": 0.1886
+        },
+        "data_sample": {
+          "count": 811,
+          "share": 0.9051
+        },
+        "institution_background": {
+          "count": 260,
+          "share": 0.2902
+        },
+        "method_identification": {
+          "count": 394,
+          "share": 0.4397
+        },
+        "model_framework": {
+          "count": 476,
+          "share": 0.5312
+        },
+        "result": {
+          "count": 789,
+          "share": 0.8806
+        },
+        "robustness_extension": {
+          "count": 568,
+          "share": 0.6339
+        },
+        "mechanism_channel": {
+          "count": 311,
+          "share": 0.3471
+        },
+        "conclusion": {
+          "count": 893,
+          "share": 0.9967
+        },
+        "appendix_support": {
+          "count": 696,
+          "share": 0.7768
+        },
+        "references": {
+          "count": 886,
+          "share": 0.9888
+        }
+      }
+    },
+    "RFS": {
+      "papers": 717,
+      "md_available": 717,
+      "md_coverage": 1.0,
+      "by_final_year": {
+        "2020": 138,
+        "2021": 135,
+        "2022": 125,
+        "2023": 118,
+        "2024": 89,
+        "2025": 112
+      },
+      "heading_flags": {
+        "abstract": {
+          "count": 0,
+          "share": 0.0
+        },
+        "introduction": {
+          "count": 14,
+          "share": 0.0195
+        },
+        "literature": {
+          "count": 111,
+          "share": 0.1548
+        },
+        "data_sample": {
+          "count": 579,
+          "share": 0.8075
+        },
+        "institution_background": {
+          "count": 225,
+          "share": 0.3138
+        },
+        "method_identification": {
+          "count": 308,
+          "share": 0.4296
+        },
+        "model_framework": {
+          "count": 408,
+          "share": 0.569
+        },
+        "result": {
+          "count": 608,
+          "share": 0.848
+        },
+        "robustness_extension": {
+          "count": 424,
+          "share": 0.5914
+        },
+        "mechanism_channel": {
+          "count": 274,
+          "share": 0.3821
+        },
+        "conclusion": {
+          "count": 713,
+          "share": 0.9944
+        },
+        "appendix_support": {
+          "count": 379,
+          "share": 0.5286
+        },
+        "references": {
+          "count": 584,
+          "share": 0.8145
+        }
+      }
+    }
+  },
+  "limitations": [
+    "Heading flags describe MinerU Markdown structure, not writing quality.",
+    "Unheaded abstracts and introductions require journal-aware interpretation.",
+    "Source-folder year may differ from final publication year.",
+    "Human-curated exemplars are selected in a separate documented stage."
+  ]
+}

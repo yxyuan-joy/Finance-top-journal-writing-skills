@@ -1,0 +1,2196 @@
+journal,normalized_heading,count
+JF,abstract,452
+JF,references,450
+JF,supporting information,442
+JF,conclusion,370
+JF,data,152
+JF,table i summary statistics,72
+JF,model,61
+JF,results,58
+JF,discussion,48
+JF,appendix,46
+JF,robustness,45
+JF,related literature,44
+JF,conclusions,41
+JF,summary statistics,36
+JF,the model,27
+JF,equilibrium,25
+JF,replication code,25
+JF,main results,24
+JF,empirical results,22
+JF,extensions,21
+JF,model setup,20
+JF,appendix: proofs,19
+JF,empirical strategy,19
+JF,appendix a: proofs,19
+JF,proof of proposition 4,19
+JF,table ii summary statistics,18
+JF,methodology,18
+JF,data sources,17
+JF,proof of proposition 2,17
+JF,concluding remarks,17
+JF,proof of proposition 1,16
+JF,empirical analysis,16
+JF,estimation,16
+JF,proof of proposition 5,15
+JF,calibration,15
+JF,proof of proposition 3,15
+JF,setup,15
+JF,data description,15
+JF,institutional background,15
+JF,data and summary statistics,15
+JF,mechanisms,14
+JF,data and methodology,14
+JF,appendix: variable definitions,14
+JF,table i descriptive statistics,14
+JF,descriptive statistics,14
+JF,robustness tests,13
+JF,quantitative analysis,12
+JF,background,12
+JF,heterogeneity,11
+JF,implications,10
+JF,alternative explanations,10
+JF,proof of lemma 1,10
+JF,proof of lemma 2,10
+JF,appendix b: proofs,10
+JF,conceptual framework,10
+JF,empirical specification,10
+JF,applications,9
+JF,firms,9
+JF,comparative statics,9
+JF,identification strategy,9
+JF,empirical implications,9
+JF,acknowledgments,9
+JF,theoretical framework,9
+JF,summary,9
+JF,literature review,8
+JF,research design,8
+JF,analysis,8
+JF,estimation results,8
+JF,external validity,8
+JF,sample,8
+JF,baseline model,8
+JF,preferences,8
+JF,robustness checks,8
+JF,framework,7
+JF,households,7
+JF,proof of lemma 4,7
+JF,proof of proposition 6,7
+JF,empirical evidence,7
+JF,equilibrium characterization,7
+JF,sample construction,7
+JF,identification,6
+JF,theory,6
+JF,proof of lemma 3,6
+JF,discussion and conclusion,6
+JF,equilibrium analysis,6
+JF,real effects,6
+JF,experimental design,6
+JF,empirical predictions,6
+JF,data and variables,6
+JF,environment,6
+JF,data and empirical strategy,6
+JF,data and sample,6
+JF,preliminary analysis,6
+JF,proof of corollary 1,6
+JF,model calibration,6
+JF,model solution,6
+JF,additional results,6
+JF,appendix b: variable definitions,5
+JF,table i calibration,5
+JF,equilibrium definition,5
+JF,discussion of assumptions,5
+JF,proof of proposition 8,5
+JF,empirical design,5
+JF,historical background,5
+JF,main result,5
+JF,literature,5
+JF,experimental results,5
+JF,mechanism,5
+JF,robustness and extensions,5
+JF,quantitative results,5
+JF,counterfactuals,5
+JF,regression results,5
+JF,baseline results,5
+JF,estimation procedure,5
+JF,stylized facts,4
+JF,welfare,4
+JF,empirical relevance,4
+JF,banks,4
+JF,long-term contracts,4
+JF,contribution to the literature,4
+JF,proof of proposition 7,4
+JF,identifying assumptions,4
+JF,placebo tests,4
+JF,motivating facts,4
+JF,interpretation,4
+JF,empirical findings,4
+JF,appendix a,4
+JF,proofs for section ii,4
+JF,validation,4
+JF,institutional background and data,4
+JF,the baseline model,4
+JF,empirical framework,4
+JF,aggregate implications,4
+JF,sample selection,4
+JF,placebo test,4
+JF,fama-macbeth regressions,4
+JF,alternative mechanisms,4
+JF,data and descriptive statistics,4
+JF,a.1. baseline results,4
+JF,data and measurement,4
+JF,firm characteristics,4
+JF,table ii descriptive statistics,3
+JF,institutional context,3
+JF,regression analysis,3
+JF,financing,3
+JF,information structure,3
+JF,timing,3
+JF,learning,3
+JF,limitations,3
+JF,table i parameter values,3
+JF,investors,3
+JF,data and definitions,3
+JF,asset pricing implications,3
+JF,b.2. results,3
+JF,proof of lemma 6,3
+JF,proof of proposition 9,3
+JF,proofs for section iii,3
+JF,table iii descriptive statistics,3
+JF,supporting evidence,3
+JF,appendix a: variable definitions,3
+JF,survey data,3
+JF,quantitative model,3
+JF,a.2. results,3
+JF,data and institutional background,3
+JF,estimation strategy,3
+JF,additional analysis,3
+JF,equilibrium properties,3
+JF,proof of theorem 1,3
+JF,other data,3
+JF,table i calibrated parameters,3
+JF,benchmark model,3
+JF,general equilibrium,3
+JF,additional considerations,3
+JF,proofs for section iv,3
+JF,measurement error,3
+JF,extensions and robustness,3
+JF,calibration procedure,3
+JF,implementation,3
+JF,empirical methodology,3
+JF,structural estimation,3
+JF,government,3
+JF,market clearing,3
+JF,event study,3
+JF,table iii summary statistics,3
+JF,b.1. setup,3
+JF,inflation,3
+JF,appendix b: additional results,3
+JF,background and data,3
+JF,empirical approach,3
+JF,simulation results,3
+JF,model implications,3
+JF,parameter values,3
+JF,aggregation,3
+JF,reallocation,3
+JF,anomalies,2
+JF,robustness analyses,2
+JF,income statement,2
+JF,balance sheet,2
+JF,mergers and acquisitions,2
+JF,related literature and contribution,2
+JF,bank heterogeneity,2
+JF,appendix a: data,2
+JF,baseline environment,2
+JF,difference-in-differences results,2
+JF,graphical evidence,2
+JF,appendix c: proofs,2
+JF,proof of theorem 3,2
+JF,assumptions,2
+JF,timeline,2
+JF,testable implications,2
+JF,data and stylized facts,2
+JF,liquidity provision,2
+JF,proof of corollary 3,2
+JF,regulator’s problem,2
+JF,preliminaries,2
+JF,uncertainty,2
+JF,appendix d: calibration,2
+JF,the economic mechanism,2
+JF,heterogeneity analysis,2
+JF,parameter choices,2
+JF,leverage regulation,2
+JF,appendix a: additional tables,2
+JF,variation across industries,2
+JF,management fees,2
+JF,international evidence,2
+JF,instrumental variable analysis,2
+JF,closely related literature,2
+JF,appendix c: additional figures,2
+JF,parametric assumptions,2
+JF,clientele effects,2
+JF,portfolio sorts,2
+JF,appendix: data appendix,2
+JF,other data sources,2
+JF,test assets,2
+JF,c.5. summary,2
+JF,b.2. measurement error,2
+JF,experimental evidence,2
+JF,spanning regressions,2
+JF,method,2
+JF,model results,2
+JF,a simple conceptual framework,2
+JF,statistical and economic performance of return forecasts,2
+JF,private equity data,2
+JF,appendix b,2
+JF,proof of lemma 5,2
+JF,proof of lemma 7,2
+JF,proof of proposition 11,2
+JF,proof of proposition 12,2
+JF,trading game,2
+JF,b.1. summary statistics,2
+JF,data and methods,2
+JF,b.1. baseline results,2
+JF,econometric specification,2
+JF,firm-level variables,2
+JF,simulations,2
+JF,model overview,2
+JF,model structure,2
+JF,estimation of input parameters,2
+JF,instrumental variables,2
+JF,exploring the mechanism,2
+JF,bank data,2
+JF,table iii robustness,2
+JF,economic framework,2
+JF,sample overview,2
+JF,d.2. results,2
+JF,overview,2
+JF,theoretical background,2
+JF,implications and conclusion,2
+JF,what is the cost of privatization for workers?,2
+JF,policy,2
+JF,ceo turnover,2
+JF,data and research design,2
+JF,appendix a: extensions,2
+JF,decomposition method,2
+JF,c.1. savings and issuances,2
+JF,c.2. monetary policies,2
+JF,c.3. demand shifts and asset characteristics,2
+JF,model estimation,2
+JF,socialism: ongoing operations only,2
+JF,socialism: both ongoing operations and division sale,2
+JF,data description and summary statistics,2
+JF,data and sample selection,2
+JF,proofs,2
+JF,the reform,2
+JF,narrative retrieval,2
+JF,sensitivity analysis,2
+JF,background and related literature,2
+JF,proposition 6,2
+JF,appendix b: extensions,2
+JF,predictions,2
+JF,economic interpretation,2
+JF,asset prices,2
+JF,examples,2
+JF,panel regressions,2
+JF,discussion and extensions,2
+JF,data sources and sample construction,2
+JF,study design,2
+JF,stocktwits data,2
+JF,quantitative implications,2
+JF,proofs for section i,2
+JF,motivation,2
+JF,the setup,2
+JF,fintech credit and entrepreneurial growth,2
+JF,variable construction,2
+JF,currency returns around the clock,2
+JF,validation tests,2
+JF,survey evidence,2
+JF,proof of theorem 2,2
+JF,information aggregation,2
+JF,informed trading intensity,2
+JF,bond returns,2
+JF,control variables,2
+JF,microfoundations,2
+JF,hypotheses,2
+JF,context,2
+JF,administrative data,2
+JF,generalizability,2
+JF,alternative approaches,2
+JF,model robustness,2
+JF,calibration results,2
+JF,survey design,2
+JF,baseline regressions,2
+JF,subsample analysis,2
+JF,evidence,2
+JF,out-of-sample performance,2
+JF,alternative interpretations,2
+JF,lemma 1,2
+JF,proposition 3,2
+JF,simulation evidence,2
+JF,setting,2
+JF,policy implications,2
+JF,proof of corollary 2,2
+JF,a.4. proof of proposition 2,2
+JF,a.5. proof of corollary 1,2
+JF,return autocorrelations,2
+JF,representative household,2
+JF,characterization,2
+JF,contracting,2
+JF,external validation,2
+JF,return approximations,2
+JF,fiscal regime,2
+JF,monetary regime,2
+JF,optimal maturity policy,2
+JF,term structure of interest rates,2
+JF,empirical tests,2
+JF,economic mechanisms,2
+JF,contracting problem,2
+JF,appendix d: proof of lemma 3,2
+JF,appendix g: proof of proposition 2,2
+JF,data sources and sample selection,2
+JF,variance decomposition,2
+JF,project,2
+JF,predictive regressions,2
+JF,main hypotheses,2
+JF,"liquidity, volume, and order imbalance volatility",2
+JF,performance measures,2
+JF,returns,2
+JF,model comparison,2
+JF,additional empirical evidence,2
+JF,theoretical results,2
+JF,quantitative assessment,2
+JF,data and variable construction,2
+JF,principal portfolios,2
+JF,alternative identification strategies,2
+JF,financing frictions,2
+JF,caveats,2
+JF,economic relevance,2
+JF,a.i. research design,2
+JF,c.2. results,2
+JF,other potential mechanisms,2
+JF,motivating evidence,2
+JF,monetary policy,2
+JF,parameter calibration,2
+JF,principal component analysis,2
+JF,acknowledgements,2
+JF,data and empirical approach,2
+JF,sample and data,2
+JF,firm-level analysis,2
+JF,data overview,2
+JF,comparison with other studies,2
+JF,additional analyses,2
+JF,speculation,2
+JF,model description,2
+JF,alternative hypotheses,2
+JF,alternative consumption measures,2
+JF,monetary policy shocks,2
+JF,return premia,2
+JF,model performance,2
+JF,equilibrium results,2
+JF,appendix c: proof of proposition 1,2
+JF,linear regression results,2
+JF,heterogeneous sar results,2
+JF,firm-level data,2
+JF,cross-sectional analyses,2
+JF,mortgage credit reallocation,2
+JF,house prices,2
+JF,variable annuity market,2
+JF,estimation methodology,2
+JF,example,2
+JF,vix options as hedges for spx options,2
+JF,c.4. robustness checks,2
+JF,appendix a: additional results,2
+JF,limited commitment,2
+JF,asset pricing tests,2
+JF,earnings announcements,2
+JF,potential mechanisms,2
+JF,findings,2
+JF,mortgages,2
+JF,econometric model,2
+JF,variables,2
+JF,stock prices,2
+JF,summary and conclusions,2
+JF,intermediation variety,2
+JF,institutional setting and data,2
+JF,data collection,2
+JF,solving the model,2
+JF,asset pricing,2
+JF,unspanned exchange rate risks,2
+JF,negative home equity and household labor supply,2
+JF,labor income,2
+JF,data and sample construction,2
+JF,firm investment,2
+JF,the equity term structure,2
+JF,performance persistence,2
+JF,the equity term structure in leading asset pricing models,2
+JF,remarks,2
+JF,identification strategies,2
+JF,two-stage least squares,2
+JF,efficiency,2
+JF,corporate control around the world,2
+JF,c.1. setup,2
+JF,b.1. graphical evidence,2
+JF,origination stage,2
+JF,securitization stage,2
+JF,number of factors,2
+JFE,references,891
+JFE,introduction,863
+JFE,a b s t r a c t,781
+JFE,a r t i c l e i n f o,780
+JFE,conclusion,700
+JFE,data,345
+JFE,data availability,316
+JFE,declaration of competing interest,313
+JFE,credit authorship contribution statement,225
+JFE,results,127
+JFE,supplementary material,127
+JFE,model,109
+JFE,robustness,108
+JFE,abstract,104
+JFE,conclusions,101
+JFE,summary statistics,97
+JFE,journal pre-proof,82
+JFE,related literature,81
+JFE,appendix a. supplementary data,76
+JFE,discussion,72
+JFE,appendix a,70
+JFE,table 7,70
+JFE,jel classification,68
+JFE,supplementary materials,68
+JFE,table 10,67
+JFE,empirical results,64
+JFE,table 8,63
+JFE,appendix,59
+JFE,table 9,57
+JFE,table 6,56
+JFE,equilibrium,55
+JFE,table 4,48
+JFE,main results,48
+JFE,concluding remarks,48
+JFE,table 5,47
+JFE,descriptive statistics,44
+JFE,robustness checks,44
+JFE,baseline results,44
+JFE,table 1,44
+JFE,institutional background,42
+JFE,acknowledgments,40
+JFE,the model,38
+JFE,identification strategy,37
+JFE,data and summary statistics,37
+JFE,appendix a. proofs,36
+JFE,acknowledgements,35
+JFE,table 3,35
+JFE,data sources,35
+JFE,setup,35
+JFE,empirical strategy,35
+JFE,methodology,34
+JFE,calibration,33
+JFE,estimation results,32
+JFE,appendix b. supplementary data,31
+JFE,robustness tests,31
+JFE,estimation,31
+JFE,empirical analysis,31
+JFE,table 2,29
+JFE,extensions,28
+JFE,accepted manuscript,28
+JFE,model setup,25
+JFE,data and methodology,25
+JFE,appendix a. supplementary material,25
+JFE,data and sample,24
+JFE,table 12,22
+JFE,appendix a. variable definitions,21
+JFE,identification,20
+JFE,alternative explanations,19
+JFE,background,18
+JFE,theoretical framework,18
+JFE,literature review,17
+JFE,data description,17
+JFE,hypothesis development,16
+JFE,empirical evidence,16
+JFE,conceptual framework,16
+JFE,additional analyses,16
+JFE,model solution,15
+JFE,research design,15
+JFE,sample selection,15
+JFE,sample,15
+JFE,data and variables,15
+JFE,empirical methodology,15
+JFE,comparative statics,14
+JFE,empirical specification,14
+JFE,data and descriptive statistics,14
+JFE,external validity,14
+JFE,appendix b,14
+JFE,institutional setting,14
+JFE,appendix c. supplementary data,13
+JFE,stylized facts,13
+JFE,summary,13
+JFE,keywords,13
+JFE,sample construction,13
+JFE,setting,13
+JFE,analysis,12
+JFE,table 11,12
+JFE,control variables,12
+JFE,hypotheses,12
+JFE,empirical implications,11
+JFE,households,11
+JFE,institutional background and data,11
+JFE,empirical approach,11
+JFE,policy implications,11
+JFE,equilibrium characterization,11
+JFE,counterfactuals,11
+JFE,asset pricing implications,10
+JFE,mechanism,10
+JFE,additional tests,10
+JFE,appendix b. supplementary material,10
+JFE,environment,10
+JFE,additional results,10
+JFE,mechanisms,10
+JFE,data sources and sample construction,10
+JFE,empirical design,10
+JFE,quantitative analysis,10
+JFE,robustness and extensions,10
+JFE,multivariate analysis,9
+JFE,model estimation,9
+JFE,empirical predictions,9
+JFE,proof of proposition 2,9
+JFE,univariate analysis,9
+JFE,parameter estimates,9
+JFE,portfolio sorts,9
+JFE,data and variable construction,9
+JFE,limits to arbitrage,9
+JFE,theory,9
+JFE,estimation strategy,9
+JFE,data and sample construction,9
+JFE,equilibrium definition,8
+JFE,risk aversion,8
+JFE,regression analysis,8
+JFE,a.1. proof of proposition 1,8
+JFE,welfare analysis,8
+JFE,proof of proposition 1,8
+JFE,heterogeneity,8
+JFE,acknowledgment,8
+JFE,proof. see appendix a,8
+JFE,additional robustness tests,8
+JFE,fama-macbeth regressions,8
+JFE,table 13,8
+JFE,placebo tests,8
+JFE,data and sample selection,7
+JFE,preferences,7
+JFE,proof. see appendix a.3,7
+JFE,motivating evidence,7
+JFE,firms,7
+JFE,institutional details,7
+JFE,interpretation,7
+JFE,data and empirical methodology,7
+JFE,applications,7
+JFE,proof of lemma 1,7
+JFE,economic environment,7
+JFE,variable definitions,7
+JFE,implementation,7
+JFE,appendix b. variable definitions,7
+JFE,cross-sectional regressions,7
+JFE,other data,7
+JFE,the data,7
+JFE,motivation,7
+JFE,predictions,7
+JFE,empirical framework,7
+JFE,relation to the literature,7
+JFE,variable construction,7
+JFE,proof. see appendix a. -,7
+JFE,model fit,7
+JFE,sample description,7
+JFE,experimental design,6
+JFE,model extensions,6
+JFE,out-of-sample predictability,6
+JFE,declaration of generative ai and ai-assisted technologies in the writing process,6
+JFE,falsification tests,6
+JFE,model calibration,6
+JFE,appendix. variable definitions,6
+JFE,regression results,6
+JFE,production,6
+JFE,additional robustness checks,6
+JFE,proof. see appendix a.2,6
+JFE,historical background,6
+JFE,trading strategy,6
+JFE,main empirical results,6
+JFE,inspecting the mechanism,6
+JFE,assumptions,6
+JFE,appendix. supplementary material,6
+JFE,data and estimation,6
+JFE,background and data,6
+JFE,literature,6
+JFE,economic mechanisms,6
+JFE,table a3,6
+JFE,table a4,6
+JFE,appendix a. data,6
+JFE,table a2,6
+JFE,proof. see internet appendix a. -,6
+JFE,table a1,6
+JFE,panel a,6
+JFE,discussion of assumptions,5
+JFE,framework,5
+JFE,timing,5
+JFE,see table a.1,5
+JFE,equilibrium conditions,5
+JFE,quantitative results,5
+JFE,proposition 2,5
+JFE,empirical findings,5
+JFE,preliminaries,5
+JFE,hypotheses development,5
+JFE,main analysis,5
+JFE,asset prices,5
+JFE,model implications,5
+JFE,final sample,5
+JFE,graphical evidence,5
+JFE,equilibrium analysis,5
+JFE,cross-sectional heterogeneity,5
+JFE,discussions,5
+JFE,counterfactual analysis,5
+JFE,firm-level analysis,5
+JFE,alternative specifications,5
+JFE,banks,5
+JFE,sample and variables,5
+JFE,variables,5
+JFE,data and measurement,5
+JFE,appendix b. proofs,5
+JFE,transaction costs,5
+JFE,dynamics,5
+JFE,additional analysis,5
+JFE,data and empirical strategy,5
+JFE,persistence,5
+JFE,data collection,5
+JFE,testable hypotheses,5
+JFE,baseline specification,5
+JFE,disclosure statement,5
+JFE,table a5,5
+JFE,model predictions,5
+JFE,assets,5
+JFE,placebo test,5
+JFE,baseline estimates,5
+JFE,appendix a. variable definition,5
+JFE,example,5
+JFE,[insert table 1 about here],5
+JFE,[insert table 7 here],5
+JFE,[insert table 2 near here],5
+JFE,[insert table 3 near here],5
+JFE,[insert table 2 about here],5
+JFE,a.5. proof of proposition 2,4
+JFE,lenders,4
+JFE,proof. see appendix a.1,4
+JFE,model discussion,4
+JFE,estimation procedure,4
+JFE,sample and data,4
+JFE,descriptive evidence,4
+JFE,performance,4
+JFE,return predictability,4
+JFE,estimation approach,4
+JFE,parameterization,4
+JFE,model results,4
+JFE,set-up,4
+JFE,summary and conclusion,4
+JFE,robustness and discussion,4
+JFE,data construction,4
+JFE,economic mechanism,4
+JFE,the economic mechanism,4
+JFE,mutual funds,4
+JFE,instrumental variable analysis,4
+JFE,proof of proposition 6,4
+JFE,a.2. proof of proposition 1,4
+JFE,appendix d. supplementary data,4
+JFE,funding,4
+JFE,appendix c,4
+JFE,a.2. proof of proposition 2,4
+JFE,solution method,4
+JFE,solution,4
+JFE,acknowledgement,4
+JFE,other robustness tests,4
+JFE,operating performance,4
+JFE,main findings,4
+JFE,borrowers,4
+JFE,table a.3,4
+JFE,the optimal contract,4
+JFE,table 16,4
+JFE,code availability,4
+JFE,table a.1,4
+JFE,robustness analyses,4
+JFE,firm problem,4
+JFE,alternative channels,4
+JFE,extensions and robustness,4
+JFE,stochastic discount factor,4
+JFE,empirical implementation,4
+JFE,heterogeneous effects,4
+JFE,stock characteristics,4
+JFE,table a6,4
+JFE,international evidence,4
+JFE,empirical analyses,4
+JFE,investors,4
+JFE,data and variable definitions,4
+JFE,a1. proof of lemma 1,4
+JFE,out-of-sample analysis,4
+JFE,table a.2,4
+JFE,propensity score matching,4
+JFE,survey results,4
+JFE,agents,4
+JFE,subsample analysis,4
+JFE,economic interpretation,4
+JFE,further evidence,4
+JFE,empirical setting,4
+JFE,preliminary evidence,4
+JFE,investment,4
+JFE,quantitative implications,4
+JFE,household,4
+JFE,appendix: variable definitions,4
+JFE,numerical example,4
+JFE,additional evidence,4
+JFE,ownership structure,4
+JFE,risk premiums,4
+JFE,robustness check,4
+JFE,market clearing,4
+JFE,methods,4
+JFE,[insert table 2 here],4
+JFE,[insert table 5 here],4
+JFE,[insert table 8 here],4
+JFE,tables,4
+JFE,[insert table 8 near here],4
+JFE,benchmarks,3
+JFE,proposition 5,3
+JFE,equilibria,3
+JFE,data and research design,3
+JFE,quantitative model,3
+JFE,interest rates,3
+JFE,instrumental variables,3
+JFE,proposition 1,3
+JFE,intuition,3
+JFE,discussion of model assumptions,3
+JFE,empirical application,3
+JFE,a.3. proof of proposition 5,3
+JFE,endogeneity tests,3
+JFE,first-best benchmark,3
+JFE,data and methods,3
+JFE,spanning regressions,3
+JFE,entry into entrepreneurship,3
+JFE,share repurchases,3
+JFE,simulation analysis,3
+JFE,simulation results,3
+JFE,retirement account participation,3
+JFE,bank account participation,3
+JFE,identifying assumptions,3
+JFE,cross-sectional results,3
+JFE,simulation,3
+JFE,conclusion and discussion,3
+JFE,changes in risk,3
+JFE,proof of proposition 3,3
+JFE,proof of proposition 5,3
+JFE,information structure,3
+JFE,trading,3
+JFE,appendix a. additional figures and tables,3
+JFE,visual evidence,3
+JFE,real effects,3
+JFE,alternative explanations and robustness,3
+JFE,wages,3
+JFE,beliefs,3
+JFE,prospect theory,3
+JFE,event study,3
+JFE,time-series regressions,3
+JFE,technology,3
+JFE,expected returns,3
+JFE,test assets,3
+JFE,credit risk,3
+JFE,markets,3
+JFE,estimation and identification,3
+JFE,testable predictions,3
+JFE,reaching for yield,3
+JFE,sample summary statistics,3
+JFE,investor characteristics,3
+JFE,portfolio returns,3
+JFE,proof. see appendix a.6,3
+JFE,supply,3
+JFE,competition,3
+JFE,turnover,3
+JFE,model primitives,3
+JFE,mergers and acquisitions,3
+JFE,a.3. proof of lemma 1,3
+JFE,other variables,3
+JFE,parallel trends,3
+JFE,models,3
+JFE,macroeconomic announcements,3
+JFE,appendix a. model solution,3
+JFE,investor heterogeneity,3
+JFE,additional data sources,3
+JFE,table a.4,3
+JFE,exploring the mechanism,3
+JFE,design,3
+JFE,appendix c. supplementary material,3
+JFE,sensitivity analyses,3
+JFE,firm outcomes,3
+JFE,appendix a. additional tables,3
+JFE,empirical model,3
+JFE,the baseline model,3
+JFE,appendix a. omitted proofs,3
+JFE,the general case,3
+JFE,parameter values,3
+JFE,econometric methodology,3
+JFE,portfolio approach,3
+JFE,empirical facts,3
+JFE,the mechanism,3
+JFE,fama–macbeth regressions,3
+JFE,spanning tests,3
+JFE,a.3. proof of proposition 3,3
+JFE,financial data,3
+JFE,difference-in-differences,3
+JFE,measurement,3
+JFE,cost of capital,3
+JFE,implications,3
+JFE,predictive regressions,3
+JFE,methodology and data,3
+JFE,estimation method,3
+JFE,institutional setting and data,3
+JFE,matching,3
+JFE,survey design,3
+JFE,welfare,3
+JFE,lemma 2,3
+JFE,setting and data,3
+JFE,measurement error,3
+JFE,proof. see appendix f,3
+JFE,appendix a. model,3
+JFE,definition,3
+JFE,data and preliminary analysis,3
+JFE,table a7,3
+JFE,trading stage,3
+JFE,motivating facts,3
+JFE,baseline analysis,3
+JFE,stock market,3
+JFE,model set-up,3
+JFE,government,3
+JFE,"data, sample, and variables",3
+JFE,economic implications,3
+JFE,a2. proof of proposition 1,3
+JFE,a7. proof of proposition 4,3
+JFE,a8. proof of proposition 5,3
+JFE,other data sources,3
+JFE,corporate bond returns,3
+JFE,cross-sectional implications,3
+JFE,robustness analysis,3
+JFE,sample and summary statistics,3
+JFE,out-of-sample tests,3
+JFE,estimation methodology,3
+JFE,empirical tests and results,3
+JFE,model and calibration,3
+JFE,further reading,3
+JFE,validation tests,3
+JFE,cross-sectional variation,3
+JFE,endogeneity,3
+JFE,channels,3
+JFE,out-of-sample performance,3
+JFE,beta-sorted portfolios,3
+JFE,individual stocks,3
+JFE,table 15,3
+JFE,asymmetric information,3
+JFE,pooling equilibria,3
+JFE,threats to identification,3
+JFE,portfolio holdings,3
+JFE,panel b,3
+JFE,main variables,3
+JFE,time series momentum,3
+JFE,data sources and sample selection,3
+JFE,table d.1,3
+JFE,appendix c. variable definitions,3
+JFE,structural estimation,3
+JFE,idiosyncratic risk,3
+JFE,main analyses,3
+JFE,summary and conclusions,3
+JFE,graphical analysis,3
+JFE,firm-level outcomes,3
+JFE,unconditional moments,3
+JFE,alternative samples,3
+JFE,proof. see the appendix,3
+JFE,cross-sectional tests,3
+JFE,model parameters,3
+JFE,economic significance,3
+JFE,corporate governance,3
+JFE,outsider-only fractions,3
+JFE,baseline model,3
+JFE,financial constraints,3
+JFE,a.5. proof of proposition 4,3
+JFE,portfolio construction,3
+JFE,appendix a. sample construction,3
+JFE,method,3
+JFE,background and hypothesis development,3
+JFE,appendix a. data construction,3
+JFE,regression equation,3
+JFE,financing,3
+JFE,appendices,3
+JFE,[insert table 4 here],3
+JFE,[insert table 9 here],3
+JFE,[insert table 1 here],3
+JFE,[insert table 10 here],3
+JFE,[insert table 4 near here],3
+JFE,[insert table 5 near here],3
+JFE,[insert table 6 near here],3
+JFE,[insert table 7 near here],3
+JFE,[insert table 3 about here],3
+JFE,[insert table 7 about here],3
+JFE,[insert table 9 about here],3
+JFE,[insert table 10 about here],3
+JFE,proof. see the appendix. -,3
+JFE,[insert table 1 near here],3
+JFE,mapping the model to the data,2
+JFE,solving the model,2
+JFE,empirical validation,2
+JFE,berkowitz test,2
+JFE,knüppel test,2
+JFE,experimental evidence,2
+JFE,a.3. proof of proposition 1,2
+JFE,a.9. proof of proposition 3,2
+JFE,a.11. proof of proposition 5,2
+JFE,calibration strategy,2
+JFE,proof. see appendix a.4,2
+JFE,funding sources,2
+JFE,risk factors,2
+JFE,bank-level analysis,2
+JFE,ex-post performance,2
+JFE,univariate results,2
+JFE,multivariate results,2
+JFE,data description and sample construction,2
+JFE,interpretation and mechanisms,2
+JFE,table b.1,2
+JFE,loan characteristics,2
+JFE,endowments,2
+JFE,iv results,2
+JFE,the buyer’s problem,2
+JFE,parameter estimates and model fit,2
+JFE,parameter identification,2
+JFE,key variables,2
+JFE,treatment assignment,2
+JFE,consumers,2
+JFE,model assumptions,2
+JFE,market size,2
+JFE,auction data,2
+JFE,econometric model,2
+JFE,affected firms,2
+JFE,other robustness,2
+JFE,executive compensation,2
+JFE,overview,2
+JFE,sample overview,2
+JFE,a.1. variable definitions,2
+JFE,credit lines,2
+JFE,labor market equilibrium,2
+JFE,discussion and implications,2
+JFE,a.1. proofs for section 3,2
+JFE,a.2. proofs for section 4,2
+JFE,a.3. proofs for section 5.1,2
+JFE,"time series, 1629-2022",2
+JFE,"cross-section, 1945-2022",2
+JFE,appendix. additional figures and tables,2
+JFE,model extensions and discussion,2
+JFE,macroeconomic predictability,2
+JFE,a.1. model derivations,2
+JFE,administrative tax data,2
+JFE,equilibrium loan rates,2
+JFE,household data,2
+JFE,survey description,2
+JFE,ai-generated business descriptions,2
+JFE,performance evaluation,2
+JFE,extensive margin,2
+JFE,numerical results,2
+JFE,estimation framework,2
+JFE,total esg tilts,2
+JFE,green and brown portfolio tilts,2
+JFE,cluster analysis,2
+JFE,individual characteristics,2
+JFE,benchmark results,2
+JFE,comparative statics with respect to ??,2
+JFE,student loans,2
+JFE,heterogeneity with respect to ??,2
+JFE,abnormal returns,2
+JFE,experiment,2
+JFE,proof of lemma 2,2
+JFE,proof of lemma 3,2
+JFE,proof of proposition 4,2
+JFE,patent data,2
+JFE,empirical relevance,2
+JFE,recursive competitive equilibrium,2
+JFE,subsample estimation,2
+JFE,stock market volatility,2
+JFE,data and main variables,2
+JFE,see table b.1,2
+JFE,a.4. proof of lemma 2,2
+JFE,a.6. proof of proposition 3,2
+JFE,model equilibrium,2
+JFE,welfare implications,2
+JFE,optimal policy with quasi-linear utility,2
+JFE,optimal policy with strictly concave utility,2
+JFE,optimal policy,2
+JFE,numerical illustration,2
+JFE,appendix a. proofs and derivations,2
+JFE,institutional detail,2
+JFE,liquidity,2
+JFE,ambiguity aversion,2
+JFE,supplementary data,2
+JFE,borrower problem,2
+JFE,financial intermediary,2
+JFE,parameter choices,2
+JFE,aggregation and equilibrium,2
+JFE,a simple calibration,2
+JFE,withdrawal rates,2
+JFE,changes in risky share and net equity flows,2
+JFE,data source,2
+JFE,analysis and results,2
+JFE,appendix a. additional results,2
+JFE,laissez-faire,2
+JFE,ramsey regulator,2
+JFE,markov-perfect regulator,2
+JFE,demand,2
+JFE,identification and estimation,2
+JFE,default results,2
+JFE,summary of results and economic interpretation,2
+JFE,economic channels,2
+JFE,extrapolation,2
+JFE,dividend play,2
+JFE,dataset,2
+JFE,market equilibrium,2
+JFE,institutional trading,2
+JFE,regression evidence with individual predictors,2
+JFE,appendix 5 (continued ),2
+JFE,merchant profitability analysis,2
+JFE,robustness checks and sensitivity analyses,2
+JFE,robustness and threats to instrument validity,2
+JFE,market structure,2
+JFE,currency excess returns,2
+JFE,summing up,2
+JFE,cross-sectional asset pricing tests,2
+JFE,sensitivity analysis,2
+JFE,proof. see appendix b.2,2
+JFE,proof. see appendix b.3,2
+JFE,proof. see appendix c,2
+JFE,financial markets,2
+JFE,appendix f. supplementary data,2
+JFE,earnings announcements,2
+JFE,model environment,2
+JFE,valuation model,2
+JFE,nominal bonds,2
+JFE,investor data,2
+JFE,representativeness,2
+JFE,instrumental variable estimates,2
+JFE,equity value,2
+JFE,cross-sectional evidence,2
+JFE,incentives,2
+JFE,proof. see appendix b.5,2
+JFE,contract terms,2
+JFE,consumption,2
+JFE,welfare gains,2
+JFE,stock market participation,2
+JFE,clustering,2
+JFE,investor demand,2
+JFE,quantitative model implications,2
+JFE,defining counterfactuals,2
+JFE,aggregate implications,2
+JFE,pairwise model comparison,2
+JFE,multiple model comparison,2
+JFE,a.1. proof of proposition 2,2
+JFE,a.2. proof of proposition 3,2
+JFE,conditional risk in the capm,2
+JFE,additional results and robustness,2
+JFE,alternative clustering,2
+JFE,the effect of stock price fragility,2
+JFE,contributions to the literature,2
+JFE,robustness and alternative explanations,2
+JFE,alternative measures of uncertainty,2
+JFE,appendix a. theoretical framework,2
+JFE,the decentralized competitive equilibrium,2
+JFE,the social planner’s second-best constrained problem,2
+JFE,evidence,2
+JFE,the equity premium,2
+JFE,cooling-off period,2
+JFE,dynamic model,2
+JFE,quantitative evaluation,2
+JFE,the contribution of ????,2
+JFE,cross-sectional implications of the model,2
+JFE,other robustness checks,2
+JFE,a.8. proof of lemma 3,2
+JFE,model overview,2
+JFE,measuring common ownership,2
+JFE,optimal contract,2
+JFE,a.4. proof of proposition 4,2
+JFE,a.6. proof of proposition 5,2
+JFE,related literature and contribution,2
+JFE,data sources and summary statistics,2
+JFE,difference-in-differences design,2
+JFE,contribution to the literature,2
+JFE,demographics,2
+JFE,alternative mechanisms,2
+JFE,proportional costs,2
+JFE,trading strategies,2
+JFE,price impact,2
+JFE,the setup,2
+JFE,aggregate moments,2
+JFE,conditional moments,2
+JFE,bond return predictability,2
+JFE,theoretical predictions,2
+JFE,short-term effects,2
+JFE,media coverage,2
+JFE,learning,2
+JFE,empirical methodology and identification,2
+JFE,main empirical findings,2
+JFE,main hypotheses,2
+JFE,compensation structure,2
+JFE,old-minus-new stocks,2
+JFE,li et al,2
+JFE,jel classification: g12,2
+JFE,cross-sectional analysis,2
+JFE,bank relationships,2
+JFE,instrumental variable approach,2
+JFE,multiple groups,2
+JFE,broker-dealers,2
+JFE,regtech,2
+JFE,counterfactual exercise,2
+JFE,data and institutional background,2
+JFE,additional extensions,2
+JFE,financial assets,2
+JFE,a.6. proof of proposition 8,2
+JFE,discussion and extensions,2
+JFE,data and key variables,2
+JFE,the cartel of loan shark syndicates,2
+JFE,related work,2
+JFE,trading volume,2
+JFE,elasticity estimates,2
+JFE,systematic risk exposures,2
+JFE,proof. see appendix e,2
+JFE,proof. see appendix g,2
+JFE,appendix f,2
+JFE,natural disasters,2
+JFE,trade data,2
+JFE,exchange rate predictability,2
+JFE,performance measures,2
+JFE,impact of transaction costs,2
+JFE,further analysis,2
+JFE,data and institutional setting,2
+JFE,appendix a. equilibrium conditions,2
+JFE,sample statistics,2
+JFE,panel regression,2
+JFE,relative performance evaluation,2
+JFE,lemma 3,2
+JFE,proof of lemma 4,2
+JFE,proof of lemma 5,2
+JFE,proof of lemma 7,2
+JFE,proof of corollary 1,2
+JFE,identification challenges,2
+JFE,dealers,2
+JFE,survivorship bias,2
+JFE,investment advisers,2
+JFE,realized returns,2
+JFE,rich households and the ivol puzzle,2
+JFE,treasury bond market,2
+JFE,foreign exchange market,2
+JFE,commodity futures market,2
+JFE,a2. proof of proposition 2,2
+JFE,a3. proof of theorem 1,2
+JFE,a5. proof of proposition 3,2
+JFE,appendix c. variable definition,2
+JFE,adverse selection,2
+JFE,testable implications,2
+JFE,asset managers,2
+JFE,central bank swap lines,2
+JFE,preferences and technology,2
+JFE,complete markets,2
+JFE,economy without guarantees,2
+JFE,deposit insurance,2
+JFE,table c.2,2
+JFE,sampling scheme,2
+JFE,longer holding periods,2
+JFE,appendix a. additional empirical results,2
+JFE,transition matrix,2
+JFE,pricing kernel,2
+JFE,the setting,2
+JFE,the impact of open banking,2
+JFE,a3. proof of proposition 2,2
+JFE,a4. proof of corollary 1,2
+JFE,test portfolios,2
+JFE,the entrant prices in tokens,2
+JFE,data matching,2
+JFE,speculation,2
+JFE,reduced-form evidence,2
+JFE,bonds,2
+JFE,sample and methodology,2
+JFE,taking the model to the data,2
+JFE,appendix a. appendix for section 2,2
+JFE,appendix b. appendix for section 3,2
+JFE,appendix c. appendix for section 4,2
+JFE,preliminary analysis,2
+JFE,institutions and data,2
+JFE,potential explanations,2
+JFE,moral hazard,2
+JFE,the global factor structure of exchange rates,2
+JFE,bankruptcy data,2
+JFE,additional results and robustness tests,2
+JFE,benchmark model,2
+JFE,definitions,2
+JFE,negative comovement,2
+JFE,capital investment,2
+JFE,a2. proof of lemma 2,2
+JFE,a4. proof of proposition 1,2
+JFE,a6. proof of proposition 3,2
+JFE,proof. see appendix a.1. -,2
+JFE,proof. see appendix a.3. -,2
+JFE,declarations of competing interest,2
+JFE,treasuries,2
+JFE,explanations,2
+JFE,difference-in-differences analysis,2
+JFE,table a.5,2
+JFE,interpretation of results,2
+JFE,proposition 3,2
+JFE,proposition 4,2
+JFE,c1. proof of proposition 1,2
+JFE,econometric framework,2
+JFE,further robustness checks,2
+JFE,simulations,2
+JFE,table b5,2
+JFE,variable measurement,2
+JFE,potential channels,2
+JFE,disappearing and reappearing dividends,2
+JFE,momentum,2
+JFE,earnings news,2
+JFE,conclusion and policy implications,2
+JFE,raw data,2
+JFE,sample construction and summary statistics,2
+JFE,update,2
+JFE,journal of financial economics,2
+JFE,model specification,2
+JFE,sample selection and descriptive statistics,2
+JFE,empirical specifications,2
+JFE,credit supply,2
+JFE,estimates,2
+JFE,b.2. proof of proposition 1,2
+JFE,b.3. proof of proposition 2,2
+JFE,b.4. proof of proposition 3,2
+JFE,portfolio similarity,2
+JFE,systemic risk,2
+JFE,bid-rent curve,2
+JFE,changes against distance,2
+JFE,changes against pre-pandemic levels,2
+JFE,migration,2
+JFE,present-value model,2
+JFE,further discussion,2
+JFE,exchange rates,2
+JFE,model analysis,2
+JFE,appendix c. additional tables,2
+JFE,mispricing,2
+JFE,weighted least squares,2
+JFE,(i) callaway & sant'anna estimator,2
+JFE,competition and participation externalities,2
+JFE,borrower access to credit,2
+JFE,information channel,2
+JFE,additional fixed effects,2
+JFE,ownership data,2
+JFE,the related literature,2
+JFE,a conceptual framework,2
+JFE,issuer,2
+JFE,recursive formulation,2
+JFE,counterfactual experiments,2
+JFE,policy experiments,2
+JFE,entrepreneurial interest,2
+JFE,asset pricing moments,2
+JFE,leverage,2
+JFE,financial intermediaries,2
+JFE,descriptive analysis,2
+JFE,equilibrium outcomes,2
+JFE,literature review and hypothesis development,2
+JFE,dependent variables,2
+JFE,instrumental variable regression,2
+JFE,portfolio analysis,2
+JFE,in-sample predictability,2
+JFE,sparsity,2
+JFE,heterogeneity across firms,2
+JFE,univariate portfolio sorts,2
+JFE,impulse response functions,2
+JFE,other control variables,2
+JFE,empirical method,2
+JFE,examiner busyness and patent quality,2
+JFE,balance tests,2
+JFE,empirical estimation,2
+JFE,industry analysis,2
+JFE,minimum dispersion risk-neutral measures,2
+JFE,option price bounds,2
+JFE,marginal risk-neutral measures and implied γ,2
+JFE,"s.t. e[m(r − r f )] = 0, m ≥ 0,",2
+JFE,entry,2
+JFE,reference,2
+JFE,appendix a. proof of proposition 1,2
+JFE,falsification test,2
+JFE,appendix a: variable definitions,2
+JFE,bivariate portfolio sorts,2
+JFE,country characteristics,2
+JFE,equilibrium properties,2
+JFE,additional predictions,2
+JFE,proof. immediate from lemmas 3 and 9. -,2
+JFE,sample construction and descriptive statistics,2
+JFE,silence is safest,2
+JFE,related theoretical literature,2
+JFE,impulse responses,2
+JFE,survey,2
+JFE,question 1,2
+JFE,question 2,2
+JFE,question 3,2
+JFE,question 4,2
+JFE,question 5,2
+JFE,volume,2
+JFE,robustness and subsample analysis,2
+JFE,data and sample description,2
+JFE,empirical methodology and results,2
+JFE,expected variance reduction,2
+JFE,portfolios sorted on expected sensitivity,2
+JFE,estimation of the model,2
+JFE,appendix b. data,2
+JFE,appendix a. appendix,2
+JFE,the maturity premium,2
+JFE,sbu survey of business uncertainty,2
+JFE,firm-level evidence,2
+JFE,network channel,2
+JFE,firm characteristics and the secured premium,2
+JFE,brokercheck data,2
+JFE,implicit trading costs (price impact),2
+JFE,broker fixed effects,2
+JFE,stock and bond return variances,2
+JFE,macroeconomic dynamics,2
+JFE,proof. see appendix b.1. -,2
+JFE,table c1,2
+JFE,factors,2
+JFE,background and motivation,2
+JFE,corporate bond data,2
+JFE,liquidity measures,2
+JFE,robustness of the results,2
+JFE,state variables,2
+JFE,where,2
+JFE,undercapitalized banks,2
+JFE,lead bank incentives,2
+JFE,value of information production,2
+JFE,trade-off with other loan provisions,2
+JFE,covenant-based monitoring,2
+JFE,parallel trends assumption,2
+JFE,banking sector,2
+JFE,proof. see appendix b. -,2
+JFE,proof. see appendix c. -,2
+JFE,swap spreads,2
+JFE,cds,2
+JFE,appendix a. proof of propositions 1 and 2,2
+JFE,core versus peripheral yields,2
+JFE,participation stage,2
+JFE,uninformed trading case,2
+JFE,informed trading case,2
+JFE,proof. see appendix. -,2
+JFE,data and empirical measures,2
+JFE,alternative hypotheses,2
+JFE,appendix a. description of variables,2
+JFE,csr,2
+JFE,meetings,2
+JFE,summary and discussion,2
+JFE,identification and selection of moments,2
+JFE,acquisition synergies,2
+JFE,acquirer abnormal returns,2
+JFE,description,2
+JFE,a.4. proof of proposition 3,2
+JFE,welfare considerations,2
+JFE,access index,2
+JFE,firm leverage and employment dynamics,2
+JFE,"data, methodology, and summary statistics",2
+JFE,firm characteristics,2
+JFE,financial adviser data,2
+JFE,table c2,2
+JFE,numerical solution,2
+JFE,empirical strategy and results,2
+JFE,portfolio characteristics,2
+JFE,test statistics,2
+JFE,macro-news announcements,2
+JFE,empirical framework and data,2
+JFE,the impact of government debt and excess reserves,2
+JFE,literature review and hypotheses development,2
+JFE,additional robustness,2
+JFE,univariate portfolio analysis,2
+JFE,bivariate portfolio analysis,2
+JFE,macro risks,2
+JFE,main variable construction,2
+JFE,(a) cumulative response to hy-neio,2
+JFE,us data,2
+JFE,international data,2
+JFE,out-of-sample evidence,2
+JFE,firm performance,2
+JFE,out-of-sample results,2
+JFE,economic reallocation proxies,2
+JFE,empirical analysis and results,2
+JFE,covid-19 search share,2
+JFE,appendix b. additional figures,2
+JFE,table c3,2
+JFE,institutional background and hypothesis development,2
+JFE,government contracts,2
+JFE,regulatory actions,2
+JFE,table b4,2
+JFE,the economy,2
+JFE,"how this account compares,",2
+JFE,bank debt share,2
+JFE,panel regressions,2
+JFE,matching approach,2
+JFE,regression approach,2
+JFE,innovation,2
+JFE,the rate of communication,2
+JFE,the short duration premium,2
+JFE,portfolios sorted on equity duration,2
+JFE,instrumented fama–french model,2
+JFE,exchange rates and intermediaries,2
+JFE,bank concentration,2
+JFE,capital accumulation,2
+JFE,[insert table 6 here],2
+JFE,figures and tables,2
+JFE,insert table 1 here,2
+JFE,table 1 here,2
+JFE,table 3 here,2
+JFE,face-saving benefits and reputational concerns,2
+JFE,a.2. proof of lemma 2,2
+JFE,banks’ leverage choices,2
+JFE,table 14,2
+JFE,discussions and extensions,2
+JFE,optimal capital structure,2
+JFE,aggregation of the product market,2
+JFE,relation to berk and green (2004),2
+JFE,dynamic currency factor hedging,2
+JFE,[insert table 3 here],2
+JFE,[insert figure 1 here],2
+JFE,[insert figure 3 here],2
+JFE,value functions,2
+JFE,exchange rate,2
+JFE,trade volume,2
+JFE,price dynamics,2
+JFE,[insert table 9 near here],2
+JFE,parameters,2
+JFE,objective function,2
+JFE,benchmark policies,2
+JFE,liquidity risk,2
+JFE,regression model,2
+JFE,[insert figure 1 near here],2
+JFE,[insert figure 2 near here],2
+JFE,[insert figure 3 near here],2
+JFE,[insert table 4 about here],2
+JFE,[insert table 5 about here],2
+JFE,[insert table 6 about here],2
+JFE,[insert table 8 about here],2
+JFE,[insert table 11 about here],2
+JFE,prices and returns,2
+JFE,large buys,2
+JFE,[insert table 11 here],2
+JFE,fundamental linkages,2
+JFE,long-run performance,2
+JFE,long-term shorting flows,2
+JFE,news,2
+JFE,anomalies,2
+JFE,effects of the pilot program on the control stocks,2
+JFE,effects of the pilot program beyond the top of the book,2
+JFE,[insert fig. 3 near here],2
+JFE,[insert fig. 5 near here],2
+RFS,references,585
+RFS,conclusion,568
+RFS,data,241
+RFS,appendix,166
+RFS,results,90
+RFS,model,73
+RFS,summary statistics,71
+RFS,conclusions,70
+RFS,robustness,61
+RFS,discussion,59
+RFS,empirical results,55
+RFS,related literature,53
+RFS,main results,43
+RFS,empirical strategy,42
+RFS,the model,41
+RFS,concluding remarks,39
+RFS,data sources,34
+RFS,methodology,34
+RFS,institutional background,34
+RFS,equilibrium,33
+RFS,robustness tests,32
+RFS,robustness checks,31
+RFS,calibration,29
+RFS,descriptive statistics,28
+RFS,model setup,28
+RFS,data and summary statistics,28
+RFS,appendix a,25
+RFS,baseline results,24
+RFS,empirical analysis,24
+RFS,alternative explanations,23
+RFS,setup,21
+RFS,data and descriptive statistics,20
+RFS,identification strategy,20
+RFS,proofs,19
+RFS,data and methodology,18
+RFS,empirical methodology,18
+RFS,proof of proposition 2,18
+RFS,proof of proposition 1,17
+RFS,background,16
+RFS,estimation,16
+RFS,proof of proposition 3,16
+RFS,identification,16
+RFS,hypothesis development,15
+RFS,institutional setting,14
+RFS,extensions,14
+RFS,conceptual framework,14
+RFS,data description,14
+RFS,introduction,14
+RFS,literature review,13
+RFS,empirical implications,13
+RFS,proof of lemma 1,13
+RFS,proof of proposition 4,13
+RFS,appendix b,13
+RFS,data and variables,12
+RFS,hypotheses,12
+RFS,empirical predictions,12
+RFS,a.1 proof of proposition 1,12
+RFS,sample construction,11
+RFS,empirical specification,11
+RFS,data and sample construction,10
+RFS,the data,10
+RFS,external validity,10
+RFS,model solution,10
+RFS,mechanisms,10
+RFS,additional results,10
+RFS,appendix: proofs,10
+RFS,evidence,9
+RFS,empirical design,9
+RFS,data and sample,9
+RFS,proof of proposition 5,9
+RFS,implications,9
+RFS,additional tests,9
+RFS,theoretical framework,9
+RFS,comparative statics,9
+RFS,sample,8
+RFS,background and data,8
+RFS,quantitative analysis,8
+RFS,code availability,8
+RFS,summary,8
+RFS,model estimation,8
+RFS,a.2 proof of proposition 2,8
+RFS,real effects,8
+RFS,estimation results,8
+RFS,variable definitions,8
+RFS,sample selection,8
+RFS,appendix. variable definitions,8
+RFS,proof of lemma 2,8
+RFS,empirical findings,8
+RFS,appendix b. proofs,7
+RFS,households,7
+RFS,cross-sectional analysis,7
+RFS,additional analyses,7
+RFS,predictions,7
+RFS,assumption 1,7
+RFS,inspecting the mechanism,7
+RFS,empirical strategy and results,7
+RFS,quantitative results,7
+RFS,model extensions,7
+RFS,literature,7
+RFS,proof of proposition 6,7
+RFS,placebo tests,7
+RFS,appendix c,7
+RFS,policy implications,7
+RFS,appendix a. proofs,7
+RFS,discussion and extensions,6
+RFS,a.3 proof of proposition 2,6
+RFS,control variables,6
+RFS,empirical model,6
+RFS,mechanism,6
+RFS,institutional details,6
+RFS,assumptions,6
+RFS,proof of proposition 7,6
+RFS,baseline model,6
+RFS,model fit,6
+RFS,empirical framework,6
+RFS,data and measurement,6
+RFS,robustness and extensions,6
+RFS,appendix d,6
+RFS,additional robustness tests,6
+RFS,model implications,6
+RFS,data and variable definitions,6
+RFS,proposition 1,6
+RFS,a.3 proof of proposition 3,6
+RFS,preferences,5
+RFS,summary and conclusions,5
+RFS,asset prices,5
+RFS,model calibration,5
+RFS,a.2 proof of proposition 1,5
+RFS,data and variable construction,5
+RFS,implementation,5
+RFS,simulation results,5
+RFS,-next page,5
+RFS,proposition 3,5
+RFS,theory,5
+RFS,returns,5
+RFS,institutional background and data,5
+RFS,household,5
+RFS,definition of equilibrium,5
+RFS,economic framework,5
+RFS,robustness analysis,5
+RFS,research design,5
+RFS,data and empirical methodology,5
+RFS,data construction,5
+RFS,data and sample selection,5
+RFS,welfare,5
+RFS,variable construction,5
+RFS,environment,5
+RFS,a.4 proof of proposition 4,5
+RFS,baseline analysis,4
+RFS,empirical tests,4
+RFS,alternative mechanisms,4
+RFS,empirical setup,4
+RFS,dynamics,4
+RFS,discussion and robustness,4
+RFS,hypotheses development,4
+RFS,equilibrium concept,4
+RFS,preliminaries,4
+RFS,extensions and robustness,4
+RFS,methodology and data,4
+RFS,proof,4
+RFS,stylized facts,4
+RFS,michael weber,4
+RFS,framework,4
+RFS,parameter values,4
+RFS,empirical evidence,4
+RFS,empirical methodology and results,4
+RFS,technology,4
+RFS,fama-macbeth regressions,4
+RFS,empirical approach,4
+RFS,equilibrium definition,4
+RFS,banks,4
+RFS,a.5 proof of proposition 4,4
+RFS,general equilibrium,4
+RFS,additional robustness checks,4
+RFS,firm-level data,4
+RFS,baseline specification,4
+RFS,institutional setting and data,4
+RFS,proof of proposition 8,4
+RFS,appendix a: proofs,4
+RFS,firms,4
+RFS,proof. see appendix a,4
+RFS,model discussion,4
+RFS,data and institutional background,4
+RFS,main findings,4
+RFS,estimation strategy,4
+RFS,data and estimation,4
+RFS,additional analysis,4
+RFS,structural estimation,4
+RFS,proof of lemma 3,4
+RFS,data and methods,4
+RFS,channels,4
+RFS,panel regressions,4
+RFS,numerical example,4
+RFS,firm value,4
+RFS,option prices,4
+RFS,summary and conclusion,4
+RFS,a.5 proof of proposition 5,4
+RFS,firm-level analysis,4
+RFS,proof of corollary 1,4
+RFS,equilibrium prices,3
+RFS,falsification tests,3
+RFS,market clearing and equilibrium,3
+RFS,the basic model,3
+RFS,appendix a. variable definitions,3
+RFS,dacheng xiu,3
+RFS,sascha steffen,3
+RFS,contribution to the literature,3
+RFS,additional tests and robustness,3
+RFS,the equilibrium,3
+RFS,a.1 proof of lemma 1,3
+RFS,experiment,3
+RFS,sample description,3
+RFS,equilibrium analysis,3
+RFS,welfare and policy implications,3
+RFS,model properties,3
+RFS,placebo test,3
+RFS,simulations,3
+RFS,paul smeets,3
+RFS,experimental design,3
+RFS,data description and summary statistics,3
+RFS,predictive regressions,3
+RFS,the sample,3
+RFS,robustness analyses,3
+RFS,empirical application,3
+RFS,asset pricing implications,3
+RFS,average annual total returns(1),3
+RFS,the setting,3
+RFS,existence,3
+RFS,parameter estimates,3
+RFS,appendix b: proofs,3
+RFS,bank data,3
+RFS,other considerations,3
+RFS,specification,3
+RFS,magnitudes,3
+RFS,sheridan titman,3
+RFS,assets,3
+RFS,yao zeng,3
+RFS,earnings surprises,3
+RFS,cross-sectional heterogeneity,3
+RFS,appendix: variable definitions,3
+RFS,regression results,3
+RFS,setting,3
+RFS,return predictability,3
+RFS,parameterization,3
+RFS,model analysis,3
+RFS,a.4 proof of proposition 3,3
+RFS,a.6 proof of proposition 5,3
+RFS,proposition 2,3
+RFS,sample characteristics,3
+RFS,agents,3
+RFS,appendices,3
+RFS,data appendix,3
+RFS,proof. in internet appendix,3
+RFS,proof. see appendix a.3,3
+RFS,proof. see internet appendix e,3
+RFS,the environment,3
+RFS,asset pricing,3
+RFS,stationary equilibrium,3
+RFS,house prices,3
+RFS,event study,3
+RFS,appendix c. variable definitions,3
+RFS,a.6 proof of proposition 3,3
+RFS,instrumental variable estimation,3
+RFS,economic significance,3
+RFS,theoretical motivation,3
+RFS,potential channels,3
+RFS,information structure,3
+RFS,testable predictions,3
+RFS,proof of lemma 4,3
+RFS,proof of lemma 5,3
+RFS,institutional context,3
+RFS,data and empirical strategy,3
+RFS,study design,3
+RFS,regression analysis,3
+RFS,trading volume,3
+RFS,proof of corollary 2,3
+RFS,solution,3
+RFS,counterfactuals,3
+RFS,intuition,3
+RFS,model description,3
+RFS,sample and summary statistics,3
+RFS,firm-level evidence,3
+RFS,model specification,3
+RFS,possible explanations,3
+RFS,(a) banking crisis states,3
+RFS,heterogeneity,3
+RFS,lemma 2,3
+RFS,hypothesis,3
+RFS,proposition 4,3
+RFS,estimates,3
+RFS,description of the data,3
+RFS,data and empirical approach,3
+RFS,main result,3
+RFS,economic magnitudes,3
+RFS,falsification test,3
+RFS,model robustness,3
+RFS,examples,3
+RFS,unconditional moments,3
+RFS,further discussion,3
+RFS,competition,3
+RFS,parameters,3
+RFS,monetary policy,3
+RFS,interpretation,3
+RFS,a.6 proof of proposition 6,3
+RFS,threats to identification,3
+RFS,cross-sectional regressions,3
+RFS,b changes,3
+RFS,proof. in appendix a.3,3
+RFS,nonbank market sharea,3
+RFS,instrumental variables estimates,3
+RFS,hedge funds,3
+RFS,royal dutch shell case,3
+RFS,wei xiong,3
+RFS,fund performance,3
+RFS,discussion and conclusion,3
+RFS,out-of-sample performance,3
+RFS,economic mechanisms,3
+RFS,loan description,3
+RFS,proof. see appendix b,3
+RFS,analytical results,2
+RFS,economic intuition,2
+RFS,the cip deviations,2
+RFS,hedge fund data,2
+RFS,mutual fund data,2
+RFS,alessio saretto,2
+RFS,sample and variable construction,2
+RFS,empirical regularities,2
+RFS,which characteristics matter?,2
+RFS,equilibrium characterization,2
+RFS,propensity score matching,2
+RFS,other robustness checks,2
+RFS,neural networks,2
+RFS,risk premiums,2
+RFS,reduced-form evidence,2
+RFS,theoretical background,2
+RFS,data and measures,2
+RFS,empirical applications,2
+RFS,municipal bond data,2
+RFS,asaf manela,2
+RFS,methods,2
+RFS,external validation,2
+RFS,benchmark model,2
+RFS,evidence from survey data,2
+RFS,data and setting,2
+RFS,reinvestment decisions,2
+RFS,census data,2
+RFS,further discussions,2
+RFS,analysis,2
+RFS,benchmarks,2
+RFS,appendix b. proofs for section 3,2
+RFS,complete information and multiple equilibria,2
+RFS,appendix a. data,2
+RFS,gender stereotypes and entrepreneur financing,2
+RFS,data and empirical design,2
+RFS,reinsurance,2
+RFS,appendix d. variable definitions,2
+RFS,investment response,2
+RFS,economic mechanism,2
+RFS,empirical performance,2
+RFS,general framework,2
+RFS,baseline environment,2
+RFS,unlearnable payoff component,2
+RFS,longer horizons,2
+RFS,structural models,2
+RFS,limitations,2
+RFS,experiment 1,2
+RFS,experiment 2,2
+RFS,relevance for your extra payment,2
+RFS,jianfeng yu,2
+RFS,#,2
+RFS,model motivation,2
+RFS,supplemental results,2
+RFS,alternative models,2
+RFS,liquidity providers,2
+RFS,model intuition,2
+RFS,firm characteristics,2
+RFS,analyst forecasts,2
+RFS,discussion and conclusions,2
+RFS,rank normalization versus raw characteristics,2
+RFS,return decomposition,2
+RFS,appendix c. supplemental results,2
+RFS,the relaxed problem,2
+RFS,other variables,2
+RFS,aggregate trends,2
+RFS,lu zheng,2
+RFS,financial markets,2
+RFS,a.4 proof of proposition 5,2
+RFS,a.5 proof of proposition 6,2
+RFS,characterization,2
+RFS,blockchain,2
+RFS,b.2 proof of proposition 1,2
+RFS,b.3 proof of proposition 2,2
+RFS,firm data,2
+RFS,other potential explanations,2
+RFS,robustness results,2
+RFS,additional tables,2
+RFS,design,2
+RFS,investments,2
+RFS,discussion of assumptions and extensions,2
+RFS,return predictability around earnings announcements,2
+RFS,proposition 5,2
+RFS,numerical illustration,2
+RFS,historical background,2
+RFS,method,2
+RFS,appendix. key variable definitions,2
+RFS,estimation details,2
+RFS,potential explanations,2
+RFS,timing,2
+RFS,recursive formulation,2
+RFS,estimation and calibration,2
+RFS,model predictions,2
+RFS,investment,2
+RFS,financial constraints,2
+RFS,market structure,2
+RFS,descriptive evidence,2
+RFS,etf heartbeat trades,2
+RFS,extension and robustness,2
+RFS,mergers and synergies,2
+RFS,data and measurements,2
+RFS,firm,2
+RFS,jun yu,2
+RFS,model results,2
+RFS,calibrated parameters,2
+RFS,investor data,2
+RFS,results and discussion,2
+RFS,discussion of modeling assumptions,2
+RFS,the economy,2
+RFS,term structure of interest rates,2
+RFS,robustness and additional results,2
+RFS,survey data,2
+RFS,data sources and descriptive statistics,2
+RFS,appendix b: variable definitions,2
+RFS,equilibria,2
+RFS,proposition 2. if,2
+RFS,survey evidence,2
+RFS,industry classification,2
+RFS,analysis and results,2
+RFS,innovation,2
+RFS,test assets,2
+RFS,empirical analysis and results,2
+RFS,the natural experiment,2
+RFS,robustness check,2
+RFS,proof of proposition 9,2
+RFS,proof of proposition 10,2
+RFS,proof of proposition 11,2
+RFS,proof of proposition 12,2
+RFS,proof of proposition 13,2
+RFS,endogeneity,2
+RFS,life cycle model,2
+RFS,other data,2
+RFS,proof. see internet appendix e.2,2
+RFS,a.1 proof of theorem 1,2
+RFS,a.2 proof of theorem 2,2
+RFS,zihan ye,2
+RFS,aggregate implications,2
+RFS,cross-sectional implications,2
+RFS,effect on worker preferences,2
+RFS,effect on firms,2
+RFS,employer-sponsored health benefits,2
+RFS,health insurance market competition,2
+RFS,tort reforms,2
+RFS,estimation approach,2
+RFS,a returns in excess of the risk-free rate,2
+RFS,discussion of results,2
+RFS,timing premium,2
+RFS,data and model calibration,2
+RFS,a.2 proof of corollary 1,2
+RFS,discussion of assumptions,2
+RFS,agency conflicts,2
+RFS,a.6 proof of lemma 3,2
+RFS,loan-level analysis,2
+RFS,place your bets? the value of investment research on reddit’s wallstreetbets,2
+RFS,event study analysis,2
+RFS,definitions,2
+RFS,selection issues,2
+RFS,the bank,2
+RFS,a.3 proof of lemma 1,2
+RFS,bank-level data,2
+RFS,additional results and robustness,2
+RFS,main variables,2
+RFS,a.2 explanatory variables,2
+RFS,discussion of model assumptions,2
+RFS,wages,2
+RFS,the bank’s problem,2
+RFS,final remarks,2
+RFS,erwan morellec,2
+RFS,main specification,2
+RFS,"a lhs var: ever reo, liquidated with a loss, or 90+ days delinquent",2
+RFS,spillovers,2
+RFS,specification of aggregate shocks,2
+RFS,aggregate moments,2
+RFS,model primitives,2
+RFS,cross-sectional predictions,2
+RFS,lemma 1,2
+RFS,empirical details,2
+RFS,unsmoothing returns of commercial real estate funds,2
+RFS,portfolio results,2
+RFS,valuing financial data,2
+RFS,equilibrium solution,2
+RFS,seed words,2
+RFS,out-of-sample analysis,2
+RFS,diagnostic test,2
+RFS,stock return predictability,2
+RFS,additional analyses and robustness tests,2
+RFS,multivariate results,2
+RFS,findings,2
+RFS,preferences and technology,2
+RFS,optimal contracting,2
+RFS,aggregation,2
+RFS,identification approach,2
+RFS,implications for the price of risk,2
+RFS,descriptive analysis,2
+RFS,modeling framework,2
+RFS,governance,2
+RFS,empirical facts,2
+RFS,validation,2
+RFS,setting and data,2
+RFS,price informativeness,2
+RFS,empirical strategy and data,2
+RFS,sample and data,2
+RFS,identification concerns,2
+RFS,pre-trends,2
+RFS,additional controls,2
+RFS,participants,2
+RFS,comprehension question,2
+RFS,graphical evidence,2
+RFS,heterogeneity and mechanisms,2
+RFS,bias due to measurement error,2
+RFS,empirical setting and data,2
+RFS,factor momentum,2
+RFS,sample selection and summary statistics,2
+RFS,proof of corollary 3,2
+RFS,counterfactual,2
+RFS,b,2
+RFS,other robustness tests,2
+RFS,haoxiang zhu,2
+RFS,equilibrium and comparative statics,2
+RFS,theoretical predictions,2
+RFS,equity and credit spread term structures,2
+RFS,portfolio sorts,2
+RFS,other control variables,2
+RFS,the data set,2
+RFS,b.6 proof of proposition 3,2
+RFS,b.7 proof of proposition 4,2
+RFS,import penetration and executive compensation,2
+RFS,cross-sectional results,2
+RFS,representative household,2
+RFS,sources,2
+RFS,increasing demand for credit,2
+RFS,benchmark results,2
+RFS,sample and descriptive statistics,2
+RFS,data collection,2
+RFS,the information channel,2
+RFS,basic results,2
+RFS,informational efficiency,2
+RFS,market reactions,2
+RFS,option returns,2
+RFS,pricing kernel,2
+RFS,costly external finance,2
+RFS,government interventions,2
+RFS,credit bureau data,2
+RFS,hmda data,2
+RFS,reduced-form estimates,2
+RFS,out-of-sample return forecasts,2
+RFS,proposition 6,2
+RFS,quantitative easing,2
+RFS,literature review and hypothesis development,2
+RFS,characteristics,2
+RFS,labor market,2
+RFS,government,2
+RFS,fixed effects,2
+RFS,impulse responses: transitory shock (εz),2
+RFS,first-best,2
+RFS,proof. see appendix a.2,2
+RFS,jinqiang yang,2
+RFS,market equilibrium,2
+RFS,empirical specifications,2
+RFS,board compositions,2
+RFS,monitoring,2
+RFS,study 1,2
+RFS,study 2,2
+RFS,conclusion and discussion,2
+RFS,fitting the model to the data,2
+RFS,continuation values,2
+RFS,samuel lee,2
+RFS,appendix. proofs,2
+RFS,model-implied discrete-time dynamics,2
+RFS,estimation and results,2
+RFS,counterfactual analysis,2
+RFS,subjective long-run growth expectations,2
+RFS,kalman filtering interpretation,2
+RFS,data and stylized facts,2
+RFS,portfolio characteristics,2
+RFS,instrumental variable estimates,2
+RFS,proof of proposition a.1,2
+RFS,proof. see appendix c,2
+RFS,multiple rating agencies,2
+RFS,a.1 preliminaries,2
+RFS,empirical analyses,2
+RFS,main data,2
+RFS,ruling out the indirect mechanism,2
+RFS,explaining the factor structure in currency returns,2
+RFS,alternative interpretations,2
+RFS,solving the model,2
+RFS,baseline regression results,2
+RFS,alternative factor models,2
+RFS,optimization problem,2
+RFS,identifying assumptions,2
+RFS,firm heterogeneity,2
+RFS,variance risk premium,2
+RFS,jump risk,2
+RFS,performance,2
+RFS,a.1 optimal contract,2
+RFS,economic channels,2
+RFS,appendix a. proofs of lemmas and propositions,2
+RFS,auction data,2
+RFS,mutual fund sample,2
+RFS,joint model,2
+RFS,international evidence,2
+RFS,transaction costs,2
+RFS,implications for institutional investors,2
+RFS,other data sources,2
+RFS,bank assets,2
+RFS,robustness and alternative specifications,2
+RFS,stock returns,2
+RFS,a levels,2
+RFS,proof. in appendix a.2,2
+RFS,quarter-end effects,2
+RFS,the party structure of mutual funds,2
+RFS,regression specification,2
+RFS,housing market,2
+RFS,employment and wages,2
+RFS,entrepreneurship,2
+RFS,volatility risk pass-through,2
+RFS,technical appendix,2
+RFS,appendix b. variable definitions,2
+RFS,extensions and robustness checks,2
+RFS,loan terms,2
+RFS,simulation,2
+RFS,variable construction and summary statistics,2
+RFS,identification and empirical model,2
+RFS,capital investment,2
+RFS,direct effects of neighborhood through credit demand,2
+RFS,direct effects of neighborhood through credit supply,2
+RFS,data set construction,2
+RFS,return reversals,2
+RFS,subsample analyses,2
+RFS,experimental designs,2
+RFS,multivariate analysis,2
+RFS,the influence of your choice,2
+RFS,economic implication,2
+RFS,steven ongena,2
+RFS,cyclical properties of inflation and bond pricing,2
+RFS,term structure of idiosyncratic risk,2
+RFS,nonparametric implied stochastic volatility model,2
+RFS,empirical implementation,2
+RFS,portfolio sorting,2
+RFS,example of information content in labor flows: production costs,2
+RFS,sample descriptive statistics,2
+RFS,sampling issues,2
+RFS,data sources and sample,2
+RFS,undercapitalization and bank balance sheets,2
+RFS,loan volume,2
+RFS,"data, preprocessing and parsing, and learning phrases",2
+RFS,monitoring incentives and bank value,2
+RFS,planner’s problem,2
+RFS,parallel trends,2
+RFS,proof. internet appendix,2
+RFS,portfolio pumping and managerial structure,2
+RFS,proof: see appendix b,2
+RFS,bail-in versus bailout,2
+RFS,within-firm analysis,2
+RFS,alternative specifications and robustness,2
+RFS,the sir-macro model,2
+RFS,competitive equilibrium,2
+RFS,medical preparedness model,2
+RFS,the treatment and vaccination models,2
+RFS,a model,2
+RFS,yields,2
+RFS,country heterogeneity,2
+RFS,benchmark models,2
+RFS,a.5 proof of proposition 2,2
+RFS,a.7 proof of proposition 4,2
+RFS,persistence,2
+RFS,lu zhang,2
+RFS,baseline model specification,2
+RFS,nominal bond prices,2
+RFS,cross-sectional tests,2
+RFS,russ wermers,2
+RFS,theoretical motivation and institutional background,2
+RFS,learning,2
+RFS,hedging climate change news,2
+RFS,noise trader demand,2
+RFS,out-of-sample tests,2
+RFS,limit-order market,2
+RFS,otc market,2
+RFS,comparing market structures,2
+RFS,control treatment,2
+RFS,low dw cost treatment,2
+RFS,low detection treatment,2
+RFS,random borrowing treatment,2
+RFS,peer financial distress and individual leverage,2
+RFS,soe investment around national elections,2
+RFS,consumption damages,2
+RFS,predicting future betas,2
+RFS,methodology and research design,2
+RFS,product recalls,2
+RFS,employment risk across industries,2
