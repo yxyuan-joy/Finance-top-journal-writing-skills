@@ -14,8 +14,6 @@ State treatment cohorts, timing, comparison observations, event window, anticipa
 
 Explain what event-study leads can diagnose and their limited power. Do not write `no significant pre-trends proves parallel trends`.
 
-Map every lead and lag bin to calendar time relative to announcement and implementation. Do not explain an adverse lead as anticipation unless that bin's observation window actually overlaps the documented anticipation window; when the mapping is unavailable, retain both timing ambiguity and differential pre-movement as unresolved threats.
-
 For staggered adoption, choose the estimand before choosing a named estimator or software command. Record cohort-specific treatment timing, eligible controls at each date, support by cohort and event time, anticipation, treatment reversals, and whether the target is an overall, cohort-time, or event-time average effect. Then verify that the implementation aggregates only comparisons compatible with that estimand and report the weighting/aggregation rule. A fashionable estimator name does not resolve poor overlap, forbidden controls, few clusters, spillovers, or a policy that changes intensity rather than switching on once. If those inputs are missing, provide a bounded design blueprint rather than pretending to select a production-ready estimator.
 
 ## Instrumental variables

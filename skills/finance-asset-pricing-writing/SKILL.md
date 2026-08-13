@@ -101,7 +101,7 @@ Before delivery, verify:
 1. Availability dates preclude mechanical look-ahead.
 2. Discovery and evaluation samples are not rhetorically conflated.
 3. Benchmark models and factor construction are defined.
-4. Magnitudes use consistent monthly/annual and percentage/basis-point units; turnover and cost-side conventions are explicit before any net-return arithmetic.
+4. Magnitudes use consistent monthly/annual and percentage/basis-point units.
 5. The short leg, microcaps, or a few periods do not silently drive the headline.
 6. Multiple-testing and implementability limits remain visible.
 7. Prediction, pricing, causal, risk, and mispricing claims use distinct wording.

@@ -81,17 +81,8 @@ class SkillEvalTests(unittest.TestCase):
 
     def test_behavioral_layer_validates_schema_only(self) -> None:
         behavior = self.report["behavioral_schema"]
-        self.assertEqual(behavior["cases"], 13)
-        self.assertEqual(
-            behavior["by_skill"],
-            {
-                "finance-top-journal-writing": 2,
-                "finance-asset-pricing-writing": 3,
-                "finance-causal-empirical-writing": 3,
-                "finance-intermediation-markets-writing": 2,
-                "finance-theory-structural-writing": 3,
-            },
-        )
+        self.assertEqual(behavior["cases"], 10)
+        self.assertEqual(behavior["by_skill"], {skill: 2 for skill in MODULE.SKILLS})
         self.assertGreaterEqual(behavior["expectations"], 20)
         self.assertGreaterEqual(behavior["hard_failures"], 20)
         self.assertNotIn("pass_rate", behavior)

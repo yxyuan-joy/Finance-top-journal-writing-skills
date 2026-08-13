@@ -134,39 +134,5 @@ class GoldCaseTests(unittest.TestCase):
                 self.assertIn("SYNTHETIC", (case / "reference-output.md").read_text().upper())
 
 
-class MaintainerSelfUseTests(unittest.TestCase):
-    def test_five_synthetic_tasks_have_complete_outputs(self) -> None:
-        root = ROOT / "evals" / "self-use-v1"
-        expected = {
-            "core-literature-positioning.md",
-            "asset-pricing-validation.md",
-            "causal-repair.md",
-            "intermediation-incidence.md",
-            "theory-counterfactual.md",
-        }
-        self.assertEqual({path.name for path in (root / "tasks").glob("*.md")}, expected)
-        self.assertEqual({path.name for path in (root / "outputs").glob("*.md")}, expected)
-        for folder in ("tasks", "outputs"):
-            for name in expected:
-                text = (root / folder / name).read_text(encoding="utf-8")
-                self.assertIn("SYNTHETIC", text.upper())
-                self.assertGreater(len(text.split()), 100)
-
-    def test_new_failure_modes_pass_their_saved_regressions(self) -> None:
-        behavior = json.loads((ROOT / "evals" / "cases" / "behavior-v1.json").read_text())
-        cases = {case["id"]: case for case in behavior["cases"]}
-        mappings = {
-            "behavior-ap-turnover-cost-convention": "asset-pricing-validation.md",
-            "behavior-causal-calendar-anticipation": "causal-repair.md",
-            "behavior-theory-surplus-denominators": "theory-counterfactual.md",
-        }
-        for case_id, output_name in mappings.items():
-            response = (
-                ROOT / "evals" / "self-use-v1" / "outputs" / output_name
-            ).read_text(encoding="utf-8")
-            result = MODULE.grade_case(cases[case_id], response)
-            self.assertTrue(result["passed"], result)
-
-
 if __name__ == "__main__":
     unittest.main()

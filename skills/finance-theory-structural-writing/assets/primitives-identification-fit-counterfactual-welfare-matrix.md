@@ -113,7 +113,6 @@ Complete only when making normative claims.
 
 - Planner information and commitment: [ ]
 - Distributional weights or criterion: [ ]
-- Denominator/base for each percentage change and aggregation into the reported total: [ ]
 - Winners: [ ]; losers: [ ]
 - Transition versus steady state: [ ]
 - Welfare ranking and uncertainty: [ ]

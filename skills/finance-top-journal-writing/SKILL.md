@@ -95,7 +95,7 @@ Read the section-specific reference before drafting:
 
 ## Adapt to the target journal conservatively
 
-Read [journal-adapters.md](references/journal-adapters.md) when the user asks for journal-specific formatting, section organization, or near-final manuscript adaptation. A journal name in a bounded content task does not by itself justify loading the adapter or changing substantive prose.
+Read [journal-adapters.md](references/journal-adapters.md) whenever the user specifies JF, JFE, or RFS.
 Read [journal-fit-and-targeting.md](references/journal-fit-and-targeting.md) when the user asks which journal to target or whether the contribution fits JF/JFE/RFS.
 Read [official-submission-sources.md](references/official-submission-sources.md) for compliance-related requests, then recheck the linked live page at submission time.
 

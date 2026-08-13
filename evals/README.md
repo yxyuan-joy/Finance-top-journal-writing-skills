@@ -60,8 +60,8 @@ agent judgment.
 
 ## Layer 2 contract: behavioral schema
 
-[`cases/behavior-v1.json`](cases/behavior-v1.json) contains at least two
-contracts for each skill. Every contract supplies facts and machine-checkable:
+[`cases/behavior-v1.json`](cases/behavior-v1.json) contains two contracts for
+each skill. Every contract supplies facts and machine-checkable:
 
 - `expectations`: content or boundary markers a future response must contain;
 - `hard_failures`: unsupported claims whose presence must fail the case.
@@ -125,14 +125,3 @@ skills. Every case keeps `input.md`, `expected-criteria.json`, and
 for observable handoff quality and human calibration, not stylistic imitation
 or evidence about journal preferences. Gold outputs are one defensible answer,
 not text that a model must reproduce verbatim.
-
-## Main-thread self-use cases
-
-[`self-use-v1/`](self-use-v1/) records five additional synthetic tasks and the
-complete outputs produced by the repository maintainer in a progressive-loading
-run. These cases are not gold answers and are not used to claim a model pass
-rate. Their purpose is to make real use friction inspectable. The run exposed
-three rule gaps—turnover/cost conventions, calendar mapping of event-study
-leads, and percentage-surplus aggregation—and one execution error involving
-offered versus realized fees. The tasks, corrected outputs, file-reading trace,
-and disposition of each finding are summarized in the directory report.

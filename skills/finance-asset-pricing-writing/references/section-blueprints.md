@@ -83,7 +83,7 @@ An independent researcher should be able to reconstruct the information set, por
 3. **Benchmark adjustment or model fit.** Separate raw returns from alpha, fit gains from forecast gains, and average pricing errors from economically important misspecification.
 4. **Influence and stability.** Diagnose microcaps, short legs, extreme periods, industries, countries, liquidity, alternative weights, and reasonable construction choices. Say whether the result attenuates, disappears, reverses, or becomes imprecise.
 5. **Independent validation.** Report frozen-holdout, post-discovery, postpublication, international, other-asset, or live evidence separately from discovery evidence. Preserve null or weaker validation results.
-6. **Economic survival.** If feasible-investment language is material, report turnover and cost assumptions, net performance, shorting/capacity limits, and sensitivity to delay. Before converting turnover into costs, define what the turnover statistic counts and whether each quoted cost applies per trading side or per round trip. If either convention is missing, leave net performance unresolved rather than silently inserting a factor of two.
+6. **Economic survival.** If feasible-investment language is material, report turnover and cost assumptions, net performance, shorting/capacity limits, and sensitivity to delay.
 
 ### Overclaim traps
 

@@ -42,8 +42,6 @@ Do not relabel an assignment effect as an exposure effect. Record whether each r
 Eligibility measurement date:
 Announcement date:
 Anticipation window:
-Event-time-bin to calendar-time mapping:
-Lead/lag bins that actually overlap the announcement or anticipation window:
 Assignment / treatment dates:
 Implementation and compliance dates:
 Outcome measurement window:
