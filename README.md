@@ -114,6 +114,8 @@ scripts/                # 仓库验证与可复现语料审计
 
 项目先用 17 个隔离的真实用户式压力任务测试第一版，覆盖三刊摘要/引言/结果/结论、期刊匹配、资产定价发现与验证、银行信贷供给、市场微观结构、多期 DID、材料冲突、双语统计歧义、纯理论、结构识别、反事实与福利。测试代理只看到 skill 与任务事实，不看到预期修复；观察到的过载、冗长、预测设计缺口和 linter 误报随后直接驱动第二版。第二版另对 8 篇从未参与规则归纳的真实 held-out 论文做 section-level transfer audit，结果为 5 Pass / 3 Partial / 0 Fail；三个 Partial 均推动 hybrid 路由修订。详细结果与复测见 [`evals/manual-test-report-2026-08-13.md`](evals/manual-test-report-2026-08-13.md)。
 
+仓库维护者随后在主任务线程中亲自完成 5 个新冻结的合成任务（每个 skill 一项），逐数字、逐主张复核，而不是再次委托测试代理。首稿真实暴露出 turnover/单边成本换算、event-time lead 与公告窗口映射、福利百分比聚合三处可迁移缺口，以及一处 offered/realized fee 执行错误；修订、完整输出、读取轨迹和回归处置见 [`evals/self-use-v1/`](evals/self-use-v1/)。
+
 测试分三层：仓库/package 静态验证、确定性触发与冲突路由、模型行为任务。路由和行为 case 的公开格式见 [`evals/README.md`](evals/README.md)；它们不会把关键词命中冒充写作质量。
 
 skill 的目录遵循当前 Agent Skills/Codex 约定：`SKILL.md` 是必需入口，`agents/openai.yaml` 提供界面元数据，详细规则放在按需读取的 `references/` 中。设计依据见 [OpenAI 官方 Build skills 文档](https://learn.chatgpt.com/docs/build-skills)。

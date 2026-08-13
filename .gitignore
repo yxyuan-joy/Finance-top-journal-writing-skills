@@ -8,3 +8,4 @@ build/
 *.egg-info/
 audit-output/
 tmp/
+evals/self-use-*/run-notes/

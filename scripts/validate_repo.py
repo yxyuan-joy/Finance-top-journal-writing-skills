@@ -401,6 +401,7 @@ def main() -> int:
         "skills/finance-theory-structural-writing/assets/primitives-identification-fit-counterfactual-welfare-matrix.md",
         "evals/forward-test-results.md",
         "evals/manual-test-report-2026-08-13.md",
+        "evals/self-use-v1/README.md",
     ):
         if not (ROOT / required).exists():
             errors.append(f"missing repository file: {required}")

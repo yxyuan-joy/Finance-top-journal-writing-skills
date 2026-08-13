@@ -96,7 +96,7 @@ Another researcher should be able to identify exactly which observations and con
 
 1. **Assignment and first stage.** Show treatment take-up, intensity, manipulation, or first-stage strength before downstream outcomes when relevant.
 2. **Main effect.** Report estimate, confidence interval, units, baseline, target population, horizon, and specification. Separate ITT, reduced form, IV/TOT, and dynamic effects.
-3. **Dynamics and support.** Show anticipation windows, event-time support, cohort composition, omitted endpoints, or local bandwidth. Interpret leads as diagnostics with limited power.
+3. **Dynamics and support.** Show anticipation windows, event-time support, cohort composition, omitted endpoints, or local bandwidth. Map event-time bins to calendar dates before attributing a lead to announcement or anticipation; the bin must overlap the documented window. Interpret leads as diagnostics with limited power.
 4. **Threat-to-test evidence.** Organize by differential trends/sorting, concurrent shocks, compliance, manipulation, spillovers, composition, measurement, and inference—not by a miscellaneous list of alternative specifications.
 5. **Sensitivity and bounds.** State attenuation, sign change, imprecision, or economically relevant confidence bounds. Preserve informative nulls and failed diagnostics.
 6. **External validity and equilibrium.** Distinguish the identified local/partial-equilibrium effect from broader incidence, displacement, or general-equilibrium claims.

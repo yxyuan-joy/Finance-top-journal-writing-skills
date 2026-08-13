@@ -66,6 +66,8 @@ Validation result weaker than discovery result? If yes, how will the claim narro
 
 ## 5. Implementability bridge
 
+Before performing gross-to-net arithmetic, record the exact turnover definition and the cost application rule (per side, per round trip, or another stated convention). If either is unknown, retain the symbolic calculation and mark net performance unresolved; never infer or silently insert a factor of two.
+
 | Friction | Main assumption | Data/source | Sensitivity range | Gross-to-net effect | Residual boundary |
 |---|---|---|---|---|---|
 | Turnover |  |  |  |  |  |
