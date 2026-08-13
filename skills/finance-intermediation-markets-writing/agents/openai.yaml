@@ -1,4 +1,4 @@
 interface:
   display_name: "Finance Intermediation & Markets"
   short_description: "Write intermediation and market-structure finance papers"
-  default_prompt: "Use $finance-intermediation-markets-writing to revise my finance paper."
+  default_prompt: "Use $finance-intermediation-markets-writing to revise my [section] for [JF/JFE/RFS] using the supplied institution, agents, constraint, price/quantity/selection evidence, substitution, and incidence limits."

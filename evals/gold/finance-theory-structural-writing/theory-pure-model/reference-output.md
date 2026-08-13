@@ -1,0 +1,13 @@
+# Synthetic reference output — not source text
+
+## Introduction contribution paragraph
+
+Public disclosure can strengthen an intermediary's commitment to hold liquidity while simultaneously sharpening depositors' incentives to run. We study this tension in a two-period model in which an intermediary chooses a liquidity buffer before privately informed depositors decide whether to withdraw and early liquidation is costly. When the buffer is publicly observable, it becomes both a commitment device and a coordination signal. Our main proposition shows that, when liquidation costs exceed a threshold L*, greater disclosure induces the intermediary to hold a larger equilibrium buffer but can also expand the set of fundamentals that support self-fulfilling runs. The result identifies a conditional tradeoff rather than a universal case against disclosure: it relies on common observation of the buffer and strategic complementarity in withdrawals. Because the model is neither estimated nor calibrated and does not provide an aggregate-welfare ranking, its contribution is to isolate a mechanism and its boundary conditions, not to quantify the effects of a disclosure policy.
+
+## Proposition intuition
+
+The proposition contains two linked forces. First, disclosure lets depositors observe whether the intermediary has committed resources to meet early withdrawals. Anticipating that the buffer will affect withdrawal behavior, the intermediary raises its buffer when costly liquidation makes inadequate liquidity especially damaging. This is the commitment force: observability changes the intermediary's ex ante choice in a direction that can make withdrawals easier to serve.
+
+Second, the same observation becomes an input into each depositor's belief about what other depositors will do. With strategic complementarity, withdrawing is more attractive when others are expected to withdraw. The public buffer therefore coordinates beliefs as well as reveals capacity. For liquidation cost above L*, the intermediary's stronger buffer response does not necessarily dominate this coordination force; disclosure can support run equilibria for a broader range of fundamentals even while equilibrium liquidity is higher.
+
+Common observability and strategic complementarity do substantive work. If depositors did not share the signal, or if one depositor's withdrawal did not raise another's incentive to withdraw, the coordination channel would weaken or disappear. The proposition should accordingly be read as a map of when commitment and coordination move in opposite directions. A larger run region is not, without a specified welfare criterion and equilibrium selection rule, an aggregate-welfare ranking or a general recommendation to reduce disclosure.

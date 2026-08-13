@@ -43,7 +43,7 @@ Match process and output to task size:
 
 Do not recursively load every file named by a specialist skill. Use the core reference for the requested section and the one specialist reference that governs the central design or claim. A genuine hybrid may add one auxiliary specialist when a second evidence logic performs an independent core job—for example, asset-pricing evidence plus IV identification, or a causal estimate used to discipline a calibrated model. State which claim each specialist owns and load only its relevant reference. Do not emit every internal ledger. Use them as working tools and show only artifacts the user requested or that materially change what can be claimed.
 
-For full papers, read [full-paper-workflow.md](references/full-paper-workflow.md). Copy the relevant templates from `assets/` into the working output when useful.
+For full papers, read [full-paper-workflow.md](references/full-paper-workflow.md). Copy the relevant templates from `assets/` into the working output when useful, including [cross-section-consistency-ledger.md](assets/cross-section-consistency-ledger.md) when the same numbers or claims recur across sections.
 
 ## Route by evidence logic
 
@@ -57,6 +57,8 @@ Use this skill alone for descriptive or mixed finance papers. When an installed 
 Route by how the main claim is supported, not by a broad field label. A corporate bond return paper may be asset pricing; a governance natural experiment may be causal; a bank-run model may be theory.
 
 Invoke a second specialist only for a true hybrid whose second evidence logic carries an independent central claim, not merely because its vocabulary or setting appears in the paper. Route by section and claim ownership: a bank setting does not by itself require the intermediation skill, and a return outcome does not by itself require the asset-pricing skill.
+
+For non-causal corporate finance, governance, household finance, or international/cross-country evidence without a dominant specialist logic, stay in the core skill and read [corporate-household-governance-archetypes.md](references/corporate-household-governance-archetypes.md). Use its archetypes to separate decisions, mechanisms, stakeholders, incidence, and scope; do not treat a field label as an evidence design.
 
 ## Build the section as an argument
 
@@ -82,11 +84,14 @@ Treat the architectures below as function checklists rather than fixed paragraph
 Read the section-specific reference before drafting:
 
 - title or abstract → [title-and-abstract.md](references/title-and-abstract.md)
-- introduction, contribution, or literature → [introduction-and-positioning.md](references/introduction-and-positioning.md)
+- introduction or contribution → [introduction-and-positioning.md](references/introduction-and-positioning.md)
+- literature synthesis, stream mapping, or citation verification → [literature-synthesis-and-citation-workflow.md](references/literature-synthesis-and-citation-workflow.md)
 - theory, hypotheses, setting, data, or design → [theory-data-and-design.md](references/theory-data-and-design.md)
-- results, robustness, mechanism, discussion, or conclusion → [results-through-conclusion.md](references/results-through-conclusion.md)
+- results, robustness, mechanism, ordinary discussion, or conclusion → [results-through-conclusion.md](references/results-through-conclusion.md)
+- limitations, external validity, policy implications, welfare boundaries, or overgeneralization risk → [discussion-limitations-and-scope.md](references/discussion-limitations-and-scope.md)
 - tables, figures, equations, or appendices → [tables-figures-and-appendices.md](references/tables-figures-and-appendices.md)
 - predictive models, machine-learning/text measures, validation splits, or construct validity → [predictive-and-measurement-studies.md](references/predictive-and-measurement-studies.md)
+- editor/referee responses, revision plans, or response-to-manuscript synchronization → [referee-response-and-revision-strategy.md](references/referee-response-and-revision-strategy.md)
 
 ## Adapt to the target journal conservatively
 
@@ -141,7 +146,13 @@ If a draft file is available, run:
 python3 scripts/lint_finance_draft.py path/to/paper.md
 ```
 
-Treat linter findings as review prompts, not automatic errors.
+For a full paper split across files, also inventory repeated numbers and claim markers:
+
+```bash
+python3 scripts/check_manuscript_consistency.py abstract.md introduction.md results.md conclusion.md
+```
+
+Treat both tools as review prompts, not automatic errors. The consistency inventory never decides that two values are comparable or chooses an authoritative specification.
 
 ## Deliver a reviewable result
 

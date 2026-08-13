@@ -10,6 +10,8 @@
 
 拆得太细会造成触发冲突、规则重复和上下文浪费。这里采用“一个全论文核心 + 四种证据逻辑专项”的结构；五个 skill 都明确覆盖 JF、JFE 和 RFS。
 
+**本项目固定为这 5 个 skills。** 后续更新只会纵向深化现有 skill 的章节工作流、模板、工具和评测，不再按小领域继续增加 skill 数量。
+
 | Skill | 适用任务 | 典型关键词 |
 |---|---|---|
 | [`finance-top-journal-writing`](skills/finance-top-journal-writing/) | 全文或任一章节；默认入口 | title, abstract, introduction, literature, data, design, results, robustness, mechanism, conclusion, tables, appendix |
@@ -108,6 +110,8 @@ evals/                  # 路由案例、对抗性案例和评分表
 scripts/                # 仓库验证与可复现语料审计
 ```
 
+[`evals/gold/`](evals/gold/) 另提供每个 skill 两个完全合成的端到端案例：任务输入、可审计标准与参考交付物分开保存，不使用或仿写任何论文段落。
+
 项目先用 17 个隔离的真实用户式压力任务测试第一版，覆盖三刊摘要/引言/结果/结论、期刊匹配、资产定价发现与验证、银行信贷供给、市场微观结构、多期 DID、材料冲突、双语统计歧义、纯理论、结构识别、反事实与福利。测试代理只看到 skill 与任务事实，不看到预期修复；观察到的过载、冗长、预测设计缺口和 linter 误报随后直接驱动第二版。第二版另对 8 篇从未参与规则归纳的真实 held-out 论文做 section-level transfer audit，结果为 5 Pass / 3 Partial / 0 Fail；三个 Partial 均推动 hybrid 路由修订。详细结果与复测见 [`evals/manual-test-report-2026-08-13.md`](evals/manual-test-report-2026-08-13.md)。
 
 测试分三层：仓库/package 静态验证、确定性触发与冲突路由、模型行为任务。路由和行为 case 的公开格式见 [`evals/README.md`](evals/README.md)；它们不会把关键词命中冒充写作质量。
@@ -119,6 +123,7 @@ skill 的目录遵循当前 Agent Skills/Codex 约定：`SKILL.md` 是必需入�
 ```bash
 python3 scripts/validate_repo.py
 python3 scripts/run_skill_evals.py
+python3 scripts/run_behavior_evals.py --scaffold /tmp/finance-behavior-run
 python3 -m unittest discover -s tests -v
 ```
 
@@ -129,6 +134,15 @@ python3 skills/finance-top-journal-writing/scripts/lint_finance_draft.py paper.m
 ```
 
 它只标记占位符、潜在过度因果措辞、章节缺口和明显的不一致风险，不会把近年已发表论文的长度或标题习惯误当作投稿硬门槛。
+
+若全稿分成多个 Markdown/纯文本文件，可先生成跨章节数值和 claim-marker inventory：
+
+```bash
+python3 skills/finance-top-journal-writing/scripts/check_manuscript_consistency.py \
+  abstract.md introduction.md results.md conclusion.md
+```
+
+该工具不会判断两个数值是否可比，也不会擅自选择“正确”规格；它只把需要人工追溯的位置显示出来。
 
 ## 证据、版权与更新
 

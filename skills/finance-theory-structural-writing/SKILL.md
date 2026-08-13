@@ -24,6 +24,8 @@ Within calibrated work, distinguish an illustrative quantitative exercise from a
 
 ## Build the model ledger
 
+For a quantitative, structural, counterfactual, welfare, or complex hybrid paper, copy and complete the [primitives–identification–fit–counterfactual–welfare matrix](assets/primitives-identification-fit-counterfactual-welfare-matrix.md). Mark inapplicable modules rather than forcing pure theory into an empirical template.
+
 Record:
 
 1. Economic question and why a model is needed.
@@ -36,6 +38,8 @@ Record:
 8. Identification/calibration sources for parameters.
 9. Targeted and untargeted moments, fit, and validation.
 10. Counterfactual closure, policy experiment, welfare criterion, and sensitivity.
+
+When the requested prose depends on an exact theorem condition, inequality, or proof step that was not supplied, keep a visible placeholder such as `[EXACT CONDITION NEEDED]`. Preserve only the logical strength actually supplied (for example, sufficient rather than necessary) and do not reverse-engineer a condition from the desired result.
 
 Never invent a theorem condition, parameter source, moment, or welfare number.
 

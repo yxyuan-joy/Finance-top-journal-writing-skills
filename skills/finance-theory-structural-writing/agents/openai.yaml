@@ -1,4 +1,4 @@
 interface:
   display_name: "Finance Theory & Structural Writing"
   short_description: "Write theory, structural, and quantitative finance papers"
-  default_prompt: "Use $finance-theory-structural-writing to revise my model-based finance paper."
+  default_prompt: "Use $finance-theory-structural-writing to revise my [section] for [JF/JFE/RFS] from the supplied primitives, equilibrium, propositions or estimates, fit, counterfactual closure, and welfare boundary."

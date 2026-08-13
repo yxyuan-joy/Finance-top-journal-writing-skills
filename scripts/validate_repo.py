@@ -44,6 +44,14 @@ EVIDENCE_FIELDS = {
     "transfer_limit",
     "metadata_note",
 }
+GOLD_CRITERIA_FIELDS = {
+    "case_id",
+    "skill",
+    "task_type",
+    "must_include",
+    "must_avoid",
+    "human_review",
+}
 
 
 def parse_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -280,6 +288,75 @@ def validate_skill_evals() -> list[str]:
     return errors
 
 
+def validate_gold_cases() -> list[str]:
+    """Validate two synthetic, human-reviewable gold cases per fixed skill."""
+
+    errors: list[str] = []
+    root = ROOT / "evals" / "gold"
+    if not root.is_dir():
+        return ["evals/gold: missing"]
+    found_skills = {path.name for path in root.iterdir() if path.is_dir()}
+    if found_skills != EXPECTED_SKILLS:
+        errors.append(
+            "evals/gold: expected skill folders "
+            + ", ".join(sorted(EXPECTED_SKILLS))
+            + "; found "
+            + ", ".join(sorted(found_skills))
+        )
+    seen_ids: set[str] = set()
+    for skill in sorted(EXPECTED_SKILLS & found_skills):
+        cases = sorted(path for path in (root / skill).iterdir() if path.is_dir())
+        if len(cases) != 2:
+            errors.append(f"evals/gold/{skill}: expected exactly 2 cases; found {len(cases)}")
+        for case_dir in cases:
+            relative = case_dir.relative_to(ROOT)
+            required_files = {"input.md", "expected-criteria.json", "reference-output.md"}
+            actual_files = {path.name for path in case_dir.iterdir() if path.is_file()}
+            if actual_files != required_files:
+                errors.append(
+                    f"{relative}: expected files {sorted(required_files)}; found {sorted(actual_files)}"
+                )
+                continue
+            input_text = (case_dir / "input.md").read_text(encoding="utf-8")
+            output_text = (case_dir / "reference-output.md").read_text(encoding="utf-8")
+            if "SYNTHETIC" not in input_text.upper():
+                errors.append(f"{relative}/input.md: must visibly declare SYNTHETIC input")
+            if "SYNTHETIC" not in output_text.upper():
+                errors.append(f"{relative}/reference-output.md: must visibly declare SYNTHETIC output")
+            if len(output_text.split()) < 120:
+                errors.append(f"{relative}/reference-output.md: too short for an end-to-end example")
+            try:
+                criteria = json.loads((case_dir / "expected-criteria.json").read_text(encoding="utf-8"))
+            except json.JSONDecodeError as exc:
+                errors.append(f"{relative}/expected-criteria.json: invalid JSON: {exc}")
+                continue
+            if not isinstance(criteria, dict) or set(criteria) != GOLD_CRITERIA_FIELDS:
+                errors.append(
+                    f"{relative}/expected-criteria.json: fields must be {sorted(GOLD_CRITERIA_FIELDS)}"
+                )
+                continue
+            case_id = criteria.get("case_id")
+            if case_id != case_dir.name:
+                errors.append(f"{relative}/expected-criteria.json: case_id must match folder")
+            elif case_id in seen_ids:
+                errors.append(f"{relative}/expected-criteria.json: duplicate case_id")
+            else:
+                seen_ids.add(case_id)
+            if criteria.get("skill") != skill:
+                errors.append(f"{relative}/expected-criteria.json: skill must match parent folder")
+            if not isinstance(criteria.get("task_type"), str) or not criteria.get("task_type", "").strip():
+                errors.append(f"{relative}/expected-criteria.json: task_type must be non-empty")
+            for field in ("must_include", "must_avoid", "human_review"):
+                value = criteria.get(field)
+                if not isinstance(value, list) or not value or any(
+                    not isinstance(item, str) or not item.strip() for item in value
+                ):
+                    errors.append(
+                        f"{relative}/expected-criteria.json: {field} must be a non-empty string list"
+                    )
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     actual = {path.name for path in SKILLS_DIR.iterdir() if path.is_dir()} if SKILLS_DIR.exists() else set()
@@ -311,6 +388,17 @@ def main() -> int:
         "evals/README.md",
         "evals/cases/routing-v1.json",
         "evals/cases/behavior-v1.json",
+        "scripts/run_behavior_evals.py",
+        "skills/finance-top-journal-writing/assets/cross-section-consistency-ledger.md",
+        "skills/finance-top-journal-writing/references/corporate-household-governance-archetypes.md",
+        "skills/finance-top-journal-writing/references/discussion-limitations-and-scope.md",
+        "skills/finance-top-journal-writing/references/literature-synthesis-and-citation-workflow.md",
+        "skills/finance-top-journal-writing/references/referee-response-and-revision-strategy.md",
+        "skills/finance-top-journal-writing/scripts/check_manuscript_consistency.py",
+        "skills/finance-asset-pricing-writing/assets/real-time-validation-implementability-ledger.md",
+        "skills/finance-causal-empirical-writing/assets/estimand-threat-to-test-ledger.md",
+        "skills/finance-intermediation-markets-writing/assets/mechanism-incidence-map.md",
+        "skills/finance-theory-structural-writing/assets/primitives-identification-fit-counterfactual-welfare-matrix.md",
         "evals/forward-test-results.md",
         "evals/manual-test-report-2026-08-13.md",
     ):
@@ -319,6 +407,7 @@ def main() -> int:
 
     errors.extend(validate_evidence_sets())
     errors.extend(validate_skill_evals())
+    errors.extend(validate_gold_cases())
     for markdown in sorted(ROOT.rglob("*.md")):
         if ".git" not in markdown.parts:
             errors.extend(validate_local_links(markdown))

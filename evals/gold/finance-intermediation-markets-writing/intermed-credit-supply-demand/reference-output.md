@@ -1,0 +1,11 @@
+# Synthetic reference output — not source text
+
+## Results sequence
+
+Banks with greater predetermined exposure to the funding shock reduce loan originations by 6.0% relative to less-exposed banks. Loan volume alone cannot distinguish supply from borrower demand, so we next examine sequential margins of the credit process. Applications to exposed banks are essentially unchanged: the estimate is −0.4% with a 95% confidence interval from −2.3% to 1.5%. Conditional on an application, however, approval probability falls by 4.5 percentage points, while offered loan rates rise by 38 basis points. The joint movement in conditional approvals and offered prices, against a stable application margin, is consistent with exposed banks tightening credit supply rather than a decline in demand alone.
+
+Observable applicant risk and requested loan size do not materially change after the shock. These patterns reduce concern that the approval result is mechanically driven by changes in those measured applicant characteristics, but they do not prove that selection on unobserved characteristics is absent. The bank-level evidence should therefore be described as a supply contraction supported by price, quantity, and approval margins, not as “pure” supply free of all selection concerns.
+
+Borrower substitution materially changes the aggregate interpretation. Borrowers replace approximately 60% of the lost amount through other lenders. Consistent with that offset, total credit across observed lenders falls by 1.8%, far less than the 6.0% decline at exposed banks. The exposed-bank response and the borrower-level change are consequently different empirical objects: the first captures a local intermediary margin, whereas the second incorporates reallocation within the observed lender network.
+
+Even the 1.8% figure is not an economy-wide credit estimate because informal and other unobserved lenders are outside the data. The defensible conclusion is that the funding shock induces exposed banks to tighten terms and approvals, with substantial but incomplete substitution toward observed alternatives. It is not evidence of no borrower response, nor does it by itself establish the full aggregate contraction or welfare incidence.

@@ -1,0 +1,23 @@
+{
+  "case_id": "core-rr-claim-conflict",
+  "skill": "finance-top-journal-writing",
+  "task_type": "referee-response-and-claim-synchronization",
+  "must_include": [
+    "The response thanks or directly acknowledges the reviewer and states what was checked and changed.",
+    "The authoritative estimate is −0.06 standard deviations with a 95% confidence interval of −0.10 to −0.02.",
+    "The obsolete −0.09 value is identified as the source of the conflict and removed.",
+    "Causal and welfare claims are explicitly withdrawn or downgraded.",
+    "The synchronization checklist covers Table 4, abstract or introduction, results text, and conclusion."
+  ],
+  "must_avoid": [
+    "Defending the obsolete −0.09 value.",
+    "Claiming that a cross-sectional estimate proves causality.",
+    "Claiming any welfare improvement without a benchmark and incidence analysis.",
+    "Invented page numbers, exhibits, analyses, or citations."
+  ],
+  "human_review": [
+    "The response is candid, non-defensive, and auditable.",
+    "The replacement sentence can be pasted into a manuscript without meta-commentary.",
+    "The checklist prevents the corrected value from remaining inconsistent elsewhere."
+  ]
+}

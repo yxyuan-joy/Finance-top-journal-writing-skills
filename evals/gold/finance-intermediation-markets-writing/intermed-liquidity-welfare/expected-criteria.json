@@ -1,0 +1,23 @@
+{
+  "case_id": "intermed-liquidity-welfare",
+  "skill": "finance-intermediation-markets-writing",
+  "task_type": "market-quality-and-welfare-boundary",
+  "must_include": [
+    "Quoted spread, depth, price impact, execution cost, volume, and price efficiency are treated as distinct constructs.",
+    "The response reports the opposing small-order and large-order execution-cost changes.",
+    "The evidence is characterized as mixed across liquidity dimensions rather than a single improvement.",
+    "Incomplete trader identities are connected to an incidence limitation.",
+    "The absence of a welfare objective, externalities, and counterfactual benchmark precludes a welfare claim."
+  ],
+  "must_avoid": [
+    "Using lower quoted spreads alone to declare improved liquidity.",
+    "Calling higher volume a welfare gain.",
+    "Claiming benefits for all traders despite opposing order-size effects.",
+    "Inventing a market-design mechanism, trader identity, or price-efficiency effect."
+  ],
+  "human_review": [
+    "The response names which market-quality dimension each statistic measures.",
+    "Incidence and welfare are separated from descriptive market-quality effects.",
+    "The prose preserves economically important tensions instead of averaging them away."
+  ]
+}

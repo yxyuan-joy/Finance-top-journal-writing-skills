@@ -1,0 +1,11 @@
+# Synthetic reference output — not source text
+
+## IV interpretation and mechanism boundary
+
+Eligibility for expedited review increases completed credit approval by 7.5 percentage points near the internal-score cutoff, with a first-stage F-statistic of 18. The fuzzy-discontinuity IV estimate indicates that receiving approval raises investment/assets by 2.1 percentage points (95% confidence interval: 0.4 to 3.8 percentage points). This estimate is local: it applies to firms near the cutoff whose approval status changes because the eligibility rule changes. It should not be interpreted as an average treatment effect for all applicants, firms far from the cutoff, or firms whose approval decision is unaffected by eligibility.
+
+Smooth predetermined covariates and the absence of visible bunching in the score density reduce concerns about sorting and discontinuous changes in observed firm characteristics at the cutoff. These diagnostics do not test the exclusion restriction. A causal interpretation additionally requires eligibility to affect investment only through completed credit approval. That restriction is contestable here because expedited review may change the timing of investment even when it does not change ultimate approval. The first-stage strength cannot resolve this separate channel, so the local IV estimate remains conditional on the exclusion restriction and the other fuzzy-discontinuity assumptions.
+
+Approved firms also increase equipment purchases. This intermediate-outcome pattern supports a channel in which newly available credit finances fixed investment, but it is not definitive mediation evidence. The analysis does not measure the competing possibility that approval relaxes working-capital needs and indirectly frees internal funds for equipment. Thus, the equipment result narrows the interpretation toward an investment channel without uniquely identifying the path.
+
+The appropriate conclusion is that eligibility-induced approval raises measured investment for cutoff-near compliers, subject to the maintained exclusion restriction. The local design, diagnostic evidence, and mechanism result each have a distinct job: the discontinuity defines comparison, the first stage maps eligibility into approval, the IV maps approval into investment, and equipment purchases supply suggestive—not exclusive—channel evidence.

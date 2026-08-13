@@ -1,0 +1,23 @@
+{
+  "case_id": "ap-realtime-predictor",
+  "skill": "finance-asset-pricing-writing",
+  "task_type": "data-timing-and-validation-results",
+  "must_include": [
+    "The filing timestamp and one-calendar-month lag are explained as the real-time availability rule.",
+    "Discovery and holdout periods and returns are not conflated.",
+    "The holdout estimate is 0.21% per month with t = 2.30, while the discovery estimate is 0.44% per month.",
+    "The microcap-excluded holdout result of 0.13% per month with t = 1.71 is interpreted as a boundary.",
+    "The absence of transaction-cost, borrow, turnover, and capacity evidence precludes an implementability claim."
+  ],
+  "must_avoid": [
+    "Calling 0.44% per month an out-of-sample return.",
+    "Calling the gross portfolio implementable or tradable.",
+    "Inventing a net return, cost estimate, breakpoint, or significance statement.",
+    "Treating a lower microcap-excluded return as irrelevant."
+  ],
+  "human_review": [
+    "The paragraphs distinguish economic predictability from trading feasibility.",
+    "Timing choices are reproducible enough to diagnose look-ahead bias.",
+    "The interpretation is concise and does not bury the validation boundary."
+  ]
+}

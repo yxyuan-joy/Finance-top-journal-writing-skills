@@ -27,6 +27,8 @@ For a multi-stage treatment chain, separate assignment, the first-stage change i
 
 Do not claim that `DID`, `IV`, or `RDD` “solves endogeneity.” Explain why this variation recovers this estimand.
 
+For a full-paper draft, identification audit, or incomplete design, copy and complete [estimand-threat-to-test-ledger.md](assets/estimand-threat-to-test-ledger.md). Do not load or emit the entire template for a narrow paragraph edit.
+
 Read [design-router.md](references/design-router.md) for design-specific requirements.
 
 ## Build the identification narrative

@@ -22,6 +22,8 @@ Read [mechanism-router.md](references/mechanism-router.md). Use at most two lane
 
 ## Build the institutional fact ledger
 
+For a mechanism, policy, or welfare section, copy and complete the [mechanism–price–quantity–selection–substitution–incidence map](assets/mechanism-incidence-map.md). Use it as an internal control; deliver it only when requested.
+
 Record:
 
 1. Agents, contracts/venues, sequence, and information.

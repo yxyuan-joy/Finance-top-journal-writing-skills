@@ -1,0 +1,23 @@
+{
+  "case_id": "core-section-coherence",
+  "skill": "finance-top-journal-writing",
+  "task_type": "draft-and-cross-section-audit",
+  "must_include": [
+    "The abstract reports 18,420 firm-year observations from 2004–2022.",
+    "The main result is stated as a 0.8 percentage-point association with a 95% confidence interval of 0.3 to 1.3 percentage points.",
+    "The 12.4% mean is used as an economic benchmark without changing the unit of the estimate.",
+    "The financing-risk evidence is described as suggestive rather than definitive.",
+    "The consistency note explicitly resolves the 1.2-versus-0.8 conflict, causal language, and universal-scope claim."
+  ],
+  "must_avoid": [
+    "Causal verbs that imply the descriptive design identifies an effect.",
+    "Any invented citation, test, coefficient, sample restriction, or mechanism result.",
+    "Claims that the association holds for every firm.",
+    "Presenting the unrated-firm split as proof of financing risk."
+  ],
+  "human_review": [
+    "Abstract follows a question–design–finding–interpretation–boundary sequence.",
+    "The same authoritative magnitude, unit, and scope appear throughout the response.",
+    "The prose is readable as manuscript text rather than an evaluator checklist."
+  ]
+}

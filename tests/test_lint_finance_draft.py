@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import importlib.util
+import json
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -13,6 +16,13 @@ MODULE_PATH = (
     / "finance-top-journal-writing"
     / "scripts"
     / "lint_finance_draft.py"
+)
+CONSISTENCY_PATH = (
+    ROOT
+    / "skills"
+    / "finance-top-journal-writing"
+    / "scripts"
+    / "check_manuscript_consistency.py"
 )
 SPEC = importlib.util.spec_from_file_location("lint_finance_draft", MODULE_PATH)
 assert SPEC and SPEC.loader
@@ -70,6 +80,44 @@ class LintFinanceDraftTests(unittest.TestCase):
             "journal-heading-review",
             self.codes("# 1. Introduction\nText.", "RFS"),
         )
+
+
+class ConsistencyInventoryTests(unittest.TestCase):
+    def test_inventories_values_and_claim_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            first = Path(temp_dir) / "abstract.md"
+            second = Path(temp_dir) / "results.md"
+            first.write_text(
+                "The estimate is 4.2 percentage points and the sample size is 1,200. "
+                "We predict defaults.",
+                encoding="utf-8",
+            )
+            second.write_text(
+                "The coefficient is 5.1 percentage points with 1,050 observations. "
+                "This association is not a causal effect.",
+                encoding="utf-8",
+            )
+            completed = subprocess.run(
+                [sys.executable, str(CONSISTENCY_PATH), "--json", str(first), str(second)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            payload = json.loads(completed.stdout)
+            self.assertIn("sample size", payload["labeled_values"])
+            self.assertIn("coefficient", payload["labeled_values"])
+            self.assertTrue(any(key.startswith("predict") for key in payload["claim_markers"]))
+            self.assertTrue(any(key.startswith("caus") for key in payload["claim_markers"]))
+
+    def test_missing_file_exits_nonzero(self) -> None:
+        completed = subprocess.run(
+            [sys.executable, str(CONSISTENCY_PATH), "/definitely/missing/manuscript.md"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertNotEqual(completed.returncode, 0)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,11 @@
+# Synthetic reference output — not source text
+
+## Empirical design
+
+We estimate the average treatment effect on treated firms during the first three years after their state adopts the policy. Adoption is staggered between 2010 and 2018, with treatment defined at the state-year level and outcomes observed at the firm-year level. For each adoption cohort and calendar year, we compare treated firms with firms in states that have not yet adopted; states already treated never serve as controls. We aggregate the resulting cohort-time effects over event time to recover the stated three-year ATT. Identification requires that, absent adoption, treated cohorts' bank-debt outcomes would have evolved like those of their not-yet-treated controls, conditional on the design. Because the event-time evidence cannot rule out adjustment in the year immediately before adoption, the preferred sample censors that year. Standard errors are clustered by state, the level of treatment assignment, across 42 clusters.
+
+## Results
+
+During the first three post-adoption years, the policy is associated with a **1.6-percentage-point reduction** in bank debt/assets among treated firms (95% confidence interval: 0.7 to 2.5 percentage points lower). Relative to the pre-treatment mean of 18.0%, the point estimate is approximately 8.9% of that mean. The event-time coefficients before adoption are individually imprecise, and their joint test yields p = 0.18. This diagnostic does not reject a zero-pretrend restriction, but it does not prove parallel trends: the estimates may have limited power, and the possible one-year anticipation response motivates the censoring choice.
+
+Accordingly, we interpret the result as an ATT for treated firms over the specified three-year horizon under the comparison and no-remaining-differential-trend assumptions. It is not an effect for all firms, all states, or later post-adoption years. The cohort-time estimator prevents already-treated states from contaminating the control group under staggered adoption; it does not by itself eliminate anticipation or validate the counterfactual. Those boundaries should remain next to the main causal estimate rather than being relegated to a generic robustness discussion.

@@ -1,0 +1,23 @@
+{
+  "case_id": "theory-structural-counterfactual",
+  "skill": "finance-theory-structural-writing",
+  "task_type": "structural-counterfactual-and-welfare",
+  "must_include": [
+    "All counterfactual quantities are labeled model-implied and conditional on the estimated structure.",
+    "Approval, entry, borrower-surplus, lender-profit, and total-surplus changes are reported as distinct margins.",
+    "The total-surplus estimate of +0.6% is paired with its −0.2% to +1.4% bootstrap interval.",
+    "The seven-of-eight targeted fit and 18% untargeted duration miss are both disclosed.",
+    "Equal welfare weights, omitted default externalities, and omitted funding-cost equilibrium responses bound the welfare interpretation."
+  ],
+  "must_avoid": [
+    "Saying the data prove the counterfactual or welfare result.",
+    "Calling the total-surplus gain statistically or economically certain.",
+    "Hiding lender-entry and lender-profit losses behind borrower gains.",
+    "Inventing a new fit test, policy response, externality, or citation."
+  ],
+  "human_review": [
+    "Fit, identification, counterfactual mechanics, incidence, and welfare are not rhetorically conflated.",
+    "Uncertainty and model misspecification remain visible near the headline result.",
+    "The section explains which omitted margins could change the welfare ranking."
+  ]
+}

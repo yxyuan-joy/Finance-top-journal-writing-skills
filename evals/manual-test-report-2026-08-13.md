@@ -2,6 +2,25 @@
 
 Run date: 2026-08-13.
 
+## v1.2.0 release-candidate blind rerun
+
+After deepening the four specialist section workflows and adding their fillable
+control ledgers, ten behavioral cases were rerun with clean agents. Each agent
+saw only the task-local facts, the target skill, and task-needed references;
+the versioned expectations and hard-failure matchers were hidden. The first
+score exposed two evaluator false positives (explicit negation and harmless
+hyphenation/synonym differences) and one real behavior gap: when an exact
+theorem condition was absent, the response described the gap but did not leave
+a visible replacement placeholder. The evaluator was narrowed to avoid the
+false positives, the theory skill gained an explicit missing-condition rule,
+and only that case was rerun under the same isolation rule.
+
+Final result: **10/10 cases passed, 30/30 positive expectations passed, and
+0/23 hard failures triggered**. The saved-response runner now scaffolds
+assertion-free task files, treats comment-only responses and incomplete run
+metadata as missing, preserves raw outputs outside the repository, and still
+requires human review for semantic false positives or negatives.
+
 ## Scope
 
 This report records model-backed and source-backed checks that cannot be reduced to repository validation. Raw synthetic prompts, complete outputs, and per-task run records were retained outside the public repository under `/tmp` during development; the repository publishes the method, aggregate results, and failure modes rather than bulky transcripts. No local PDF, MinerU article text, or protected corpus artifact is published.

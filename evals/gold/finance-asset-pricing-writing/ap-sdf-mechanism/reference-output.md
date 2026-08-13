@@ -1,0 +1,11 @@
+# Synthetic reference output — not source text
+
+## Model comparison and interpretation
+
+The proposed funding-stress factor improves the augmented model's fit for the 36 portfolios sorted on intermediary dependence and duration. Over 2001–2022, adding the factor lowers the mean absolute pricing error from 22 to 14 basis points per month. The reduction is concentrated among portfolios with high intermediary dependence, which is the cross-sectional pattern predicted by a funding-based account. This comparison shows that the added factor organizes an economically relevant part of the pricing-error variation left by the baseline model.
+
+The same tests, however, do not validate the stochastic discount factor. Although the estimated price of funding-stress risk is positive, its 95% confidence interval includes zero. Moreover, the augmented model's overidentifying-restrictions test yields p = 0.03, rejecting the joint pricing restrictions at the 5% level. Lower average pricing errors therefore coexist with both an imprecisely estimated risk price and formal evidence of remaining model misspecification. Fit improvement and model acceptance are different empirical objects and should not be described interchangeably.
+
+The concentration of the fit improvement among intermediary-dependent portfolios is consistent with the proposed mechanism, but it does not establish that funding constraints are the source of expected returns. The paper does not directly measure marginal utility, dealer constraints, or an exogenous funding shock, so competing interpretations remain live. It also lacks an independent asset set or post-discovery period with which to assess whether the improvement generalizes beyond the test assets used here.
+
+Taken together, the evidence supports a bounded conclusion: the funding-stress factor sharpens relative fit where the proposed channel predicts, but the data neither identify the channel nor rescue all restrictions of the augmented SDF. Direct measures of the underlying constraint and independent pricing tests would be needed to distinguish an economic funding mechanism from a factor that summarizes the same cross-sectional pricing errors more parsimoniously.

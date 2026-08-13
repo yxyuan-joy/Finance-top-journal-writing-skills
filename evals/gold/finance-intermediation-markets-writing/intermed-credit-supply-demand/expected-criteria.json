@@ -1,0 +1,23 @@
+{
+  "case_id": "intermed-credit-supply-demand",
+  "skill": "finance-intermediation-markets-writing",
+  "task_type": "credit-supply-demand-selection-substitution-results",
+  "must_include": [
+    "The 6.0% originations decline is paired with unchanged applications, lower conditional approvals, and 38-basis-point higher offered rates.",
+    "Applicant risk and requested size are used as bounded selection evidence rather than proof of no selection.",
+    "Approximately 60% lender substitution separates the exposed-bank margin from borrower-level credit access.",
+    "The 1.8% observed-lender total-credit decline is distinguished from the 6.0% bank-level response.",
+    "Unobserved and informal lenders limit the aggregate-credit conclusion."
+  ],
+  "must_avoid": [
+    "Calling loan volume alone pure credit supply.",
+    "Saying borrowers do not respond when substitution is supplied.",
+    "Equating observed-lender credit with economy-wide credit.",
+    "Inventing welfare, default, borrower-quality, or causal evidence."
+  ],
+  "human_review": [
+    "Price, quantity, application, approval, composition, and substitution margins have distinct roles.",
+    "Institutional claims follow the level at which each outcome is measured.",
+    "The evidence sequence narrows alternatives without overstating identification."
+  ]
+}

@@ -3,8 +3,8 @@
 
 The routing layer is intentionally deterministic: it tests whether realistic
 prompts can be mapped to the public skill descriptions without calling a
-model.  Behavioral cases are contracts for a future model-backed layer; this
-script validates only that their assertions are machine-checkable.
+model. Behavioral cases are contracts consumed by ``run_behavior_evals.py``;
+this script validates only that their assertions are machine-checkable.
 """
 
 from __future__ import annotations

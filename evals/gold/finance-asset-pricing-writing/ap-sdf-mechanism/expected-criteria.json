@@ -1,0 +1,23 @@
+{
+  "case_id": "ap-sdf-mechanism",
+  "skill": "finance-asset-pricing-writing",
+  "task_type": "sdf-model-comparison-and-mechanism-boundary",
+  "must_include": [
+    "The pricing-error improvement from 22 to 14 basis points per month is reported as model fit.",
+    "The confidence interval containing zero limits the price-of-risk claim.",
+    "The p = 0.03 overidentification result is treated as model rejection or tension, not validation.",
+    "Concentration among intermediary-dependent portfolios is framed as mechanism-consistent evidence.",
+    "Missing direct constraint measures and independent validation remain visible."
+  ],
+  "must_avoid": [
+    "Saying the model or SDF is validated.",
+    "Saying funding constraints are proven to cause expected returns.",
+    "Equating lower pricing errors with a correct economic mechanism.",
+    "Inventing a significant risk price or new test assets."
+  ],
+  "human_review": [
+    "Fit, formal rejection, risk-price uncertainty, and mechanism evidence have distinct sentences and jobs.",
+    "The prose explains the economic object before celebrating a statistical improvement.",
+    "The conclusion states what evidence would discriminate the proposed channel."
+  ]
+}

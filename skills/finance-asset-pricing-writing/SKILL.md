@@ -40,6 +40,8 @@ Record:
 
 Use placeholders rather than assuming a conventional CRSP construction.
 
+For a full-paper draft, validation audit, or strategy-feasibility claim, copy and complete [real-time-validation-implementability-ledger.md](assets/real-time-validation-implementability-ledger.md). Do not load or emit the entire template for a narrow paragraph edit.
+
 ## Draft the argument
 
 ### Abstract and introduction

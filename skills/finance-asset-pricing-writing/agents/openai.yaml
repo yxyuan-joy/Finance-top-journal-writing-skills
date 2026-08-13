@@ -1,4 +1,4 @@
 interface:
   display_name: "Finance Asset-Pricing Writing"
   short_description: "Write rigorous JF, JFE, and RFS asset-pricing papers"
-  default_prompt: "Use $finance-asset-pricing-writing to revise my asset-pricing paper."
+  default_prompt: "Use $finance-asset-pricing-writing to revise my [section] for [JF/JFE/RFS] using the supplied universe, signal/model, timing, benchmarks, estimates, validation sample, and implementation limits."

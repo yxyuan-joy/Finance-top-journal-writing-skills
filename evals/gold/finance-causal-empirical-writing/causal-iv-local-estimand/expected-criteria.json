@@ -1,0 +1,23 @@
+{
+  "case_id": "causal-iv-local-estimand",
+  "skill": "finance-causal-empirical-writing",
+  "task_type": "fuzzy-rd-iv-estimand-and-mechanism",
+  "must_include": [
+    "The 7.5 percentage-point first stage and F = 18 are distinguished from the outcome estimate.",
+    "The 2.1 percentage-point IV estimate and 0.4 to 3.8 confidence interval are reported with units.",
+    "The estimand is local to cutoff-near compliers whose approval changes with eligibility.",
+    "Smooth covariates and density are diagnostics, while the faster-review exclusion threat remains explicit.",
+    "Equipment purchases support a channel but do not establish mediation or eliminate working-capital alternatives."
+  ],
+  "must_avoid": [
+    "Generalizing the estimate to every firm or borrower.",
+    "Saying the exclusion restriction is tested or proven.",
+    "Conflating eligibility, approval, and investment in one treatment label.",
+    "Calling the equipment-purchase result definitive mechanism proof."
+  ],
+  "human_review": [
+    "Assignment, first stage, treatment received, outcome, and estimand remain separate.",
+    "Diagnostics are connected to the threat they address.",
+    "The paragraph makes the local and maintained-assumption boundaries prominent."
+  ]
+}

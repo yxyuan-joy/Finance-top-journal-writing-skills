@@ -1,0 +1,11 @@
+# Synthetic reference output — not source text
+
+## Counterfactual and welfare
+
+We use the estimated search model to evaluate a reduction in the maximum origination fee from 4% to 2%. These results are model-implied counterfactuals, conditional on the estimated structure and on agents responding to the policy as specified in the model; they are not direct policy effects observed in the data. The model closely matches seven of its eight targeted moments. In an untargeted validation, however, it underpredicts mean application duration by 18%. This miss is relevant because search duration helps determine the adjustment margins through which a fee cap operates.
+
+Under the counterfactual, approval probability rises by 3.8 percentage points, while lender entry falls by 7.0%. Borrower surplus increases by 2.4%, but lender profit declines by 5.1%. With borrower and lender surplus weighted equally, total surplus rises by 0.6%. The bootstrap 95% interval for this total-surplus change ranges from −0.2% to +1.4%, so the model does not deliver a precisely positive welfare effect. The modest point estimate also masks economically meaningful redistribution and an offsetting extensive-margin response by lenders.
+
+The welfare ranking depends on maintained choices and omitted margins. Equal weighting of borrower and lender surplus is part of the welfare criterion, not a fact identified from the data. The model also excludes default externalities and general-equilibrium changes in lenders' funding costs. If the fee cap changes either margin, the reported total-surplus change need not equal the policy's broader welfare effect. The 18% duration miss further cautions that the model may not reproduce all search responses that matter for the counterfactual.
+
+We therefore interpret the 0.6% result as a conditional point estimate: within the estimated model and stated welfare criterion, borrower gains slightly exceed lender losses and reduced entry, but the uncertainty interval includes zero and omitted externalities could alter the ranking. This formulation preserves the counterfactual's useful incidence decomposition without claiming that the observed data prove a welfare gain or that the policy has no offsetting effects.

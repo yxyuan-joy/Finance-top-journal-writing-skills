@@ -1,4 +1,4 @@
 interface:
   display_name: "Finance Causal-Empirical Writing"
   short_description: "Write identification-led empirical finance papers"
-  default_prompt: "Use $finance-causal-empirical-writing to revise my causal finance paper."
+  default_prompt: "Use $finance-causal-empirical-writing to revise my [section] for [JF/JFE/RFS] from the supplied treatment, estimand, variation, sample, estimates, assumptions, threats, and mechanism evidence."

@@ -1,0 +1,23 @@
+{
+  "case_id": "causal-staggered-did",
+  "skill": "finance-causal-empirical-writing",
+  "task_type": "staggered-did-design-and-results",
+  "must_include": [
+    "The ATT for treated firms over the first three post-adoption years is defined before the estimator.",
+    "Not-yet-treated states are controls and already-treated states are excluded as controls.",
+    "The estimate is −1.6 percentage points with a 95% confidence interval of −2.5 to −0.7 against an 18.0% mean.",
+    "The p = 0.18 pre-treatment test is interpreted as diagnostic rather than proof.",
+    "The one-year anticipation concern, censoring choice, state clustering, and 42 clusters are stated."
+  ],
+  "must_avoid": [
+    "Claiming that parallel trends has been proven or accepted because p exceeds 0.05.",
+    "Calling the estimand an effect for all firms, states, or horizons.",
+    "Replacing the supplied estimator with an unspecified conventional TWFE regression.",
+    "Inventing a robustness check, mechanism, policy detail, or citation."
+  ],
+  "human_review": [
+    "The design is understandable without relying on an equation.",
+    "The identifying assumption sits next to the comparison that requires it.",
+    "Magnitude, uncertainty, target population, anticipation, and inference are easy to audit."
+  ]
+}

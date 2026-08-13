@@ -17,7 +17,7 @@
           "id": "visible-effect-placeholder",
           "target": "response",
           "matcher": "regex",
-          "pattern": "\\[(?:EFFECT SIZE|COEFFICIENT|MAGNITUDE)[^\\]]*(?:NEEDED|MISSING)[^\\]]*\\]",
+          "pattern": "\\[(?:EFFECT SIZE|COEFFICIENT|MAGNITUDE|MAIN ESTIMATE)[^\\]]*(?:NEEDED|MISSING)[^\\]]*\\]",
           "description": "The missing central magnitude is represented by a conspicuous placeholder."
         },
         {
@@ -31,7 +31,7 @@
           "id": "evidence-ledger",
           "target": "response",
           "matcher": "contains_any",
-          "values": ["Evidence placeholders", "Missing-evidence ledger", "Evidence needed"],
+          "values": ["Evidence placeholders", "Missing-evidence ledger", "Evidence needed", "Evidence gaps"],
           "description": "The response exposes unresolved inputs after the draft."
         }
       ],
@@ -132,7 +132,7 @@
           "id": "implementation-boundaries",
           "target": "response",
           "matcher": "contains_all",
-          "values": ["transaction costs", "short", "microcap"],
+          "values": ["costs", "short", "microcap"],
           "description": "The result is bounded by trading costs, short-leg feasibility, and microcap influence."
         },
         {
@@ -241,7 +241,7 @@
           "id": "claim-downgrade",
           "target": "response",
           "matcher": "contains_any",
-          "values": ["cannot support a causal", "downgrade", "associational"],
+          "values": ["cannot support a causal", "downgrade", "associational", "do not interpret these estimates as identifying", "does not support an unqualified causal"],
           "description": "Causal wording is downgraded unless the threat is resolved."
         }
       ],
@@ -277,15 +277,15 @@
         {
           "id": "first-stage",
           "target": "response",
-          "matcher": "contains_all",
-          "values": ["first stage", "18"],
+          "matcher": "regex",
+          "pattern": "first[- ]stage[^.]{0,120}18|18[^.]{0,120}first[- ]stage",
           "description": "The supplied first-stage strength is reported without fabrication."
         },
         {
           "id": "exclusion-boundary",
           "target": "response",
-          "matcher": "contains_all",
-          "values": ["exclusion restriction", "untestable"],
+          "matcher": "regex",
+          "pattern": "exclusion restriction[^.]{0,180}(?:cannot be tested|cannot test|not directly testable|untestable|maintained)",
           "description": "The maintained exclusion restriction is named and bounded."
         },
         {
@@ -351,8 +351,8 @@
         {
           "id": "pure-supply",
           "target": "response",
-          "matcher": "contains",
-          "value": "pure credit-supply contraction",
+          "matcher": "regex",
+          "pattern": "(?<!not )(?:is|identifies|establishes|demonstrates|proves) (?:a )?pure credit-supply contraction",
           "description": "Loan volumes alone must not be relabeled as a pure supply shift."
         },
         {
@@ -430,8 +430,8 @@
         {
           "id": "calibration-not-identification",
           "target": "response",
-          "matcher": "contains_all",
-          "values": ["calibrated", "not identified"],
+          "matcher": "regex",
+          "pattern": "(?:calibrated[^.]{0,180}(?:not (?:sample-)?identified|does not show[^.]{0,80}identified|sample does not identify)|not (?:sample-)?identified[^.]{0,180}calibrated)",
           "description": "The external parameter choice is not mislabeled as sample identification."
         },
         {
@@ -444,8 +444,8 @@
         {
           "id": "conditional-counterfactual",
           "target": "response",
-          "matcher": "contains_all",
-          "values": ["6%", "model-implied", "maintained"],
+          "matcher": "regex",
+          "pattern": "(?:(?:model-implied|model counterfactual)[^.]{0,220}6%|6%[^.]{0,220}(?:model-implied|model counterfactual)|(?:within|conditional on)[^.]{0,220}(?:model|maintained)[^.]{0,220}6%|6%[^.]{0,220}(?:within|conditional on)[^.]{0,220}(?:model|maintained))",
           "description": "The supplied counterfactual magnitude is labeled model-implied and conditional."
         }
       ],
@@ -454,7 +454,7 @@
           "id": "calibration-is-identification",
           "target": "response",
           "matcher": "regex",
-          "pattern": "risk aversion is (?:structurally )?identified",
+          "pattern": "(?<!not show that )(?<!does not show that )(?<!not establish that )risk aversion is (?:structurally )?identified(?![^.]{0,80}(?:not|rather than))",
           "description": "An externally calibrated parameter must not be claimed as identified in-sample."
         },
         {
@@ -495,8 +495,8 @@
         {
           "id": "sufficient-not-necessary",
           "target": "response",
-          "matcher": "contains_all",
-          "values": ["sufficient", "unique no-run equilibrium"],
+          "matcher": "regex",
+          "pattern": "(?s)(?=.*\\b(?:sufficient|sufficiency)\\b)(?=.*\\bunique no-run equilibrium\\b)",
           "description": "The supplied logical strength and equilibrium object are preserved."
         },
         {

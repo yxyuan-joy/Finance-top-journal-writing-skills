@@ -1,0 +1,23 @@
+{
+  "case_id": "theory-pure-model",
+  "skill": "finance-theory-structural-writing",
+  "task_type": "pure-theory-contribution-and-proposition-intuition",
+  "must_include": [
+    "The economic tension between liquidity commitment and run coordination appears before formal notation.",
+    "The proposition is conditional on liquidation cost exceeding L*.",
+    "The response explains why disclosure can raise buffers yet expand self-fulfilling-run regions.",
+    "Common observability and strategic complementarity are named as assumptions doing substantive work.",
+    "The absence of estimation, calibration, and a welfare ranking bounds the contribution."
+  ],
+  "must_avoid": [
+    "Invented calibration, data, comparative-static magnitude, or citation.",
+    "Claiming disclosure always causes more runs or should be banned.",
+    "Calling a larger run region an aggregate-welfare loss without a welfare criterion.",
+    "Restating only notation without economic intuition."
+  ],
+  "human_review": [
+    "The proposition discussion separates result, intuition, assumptions, and scope.",
+    "The reader can understand the mechanism before seeing a proof.",
+    "The contribution is precise without overselling generality or policy implications."
+  ]
+}

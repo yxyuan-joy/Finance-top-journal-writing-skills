@@ -93,9 +93,35 @@ Fixtures use `schema_version: 1`. Add new cases to a versioned JSON file under
 update. The older `evals/routing-cases.json` is a small historical seed and is
 not part of the executable versioned suite.
 
-## Layer 3 (not implemented here)
+## Layer 3: saved-response behavioral grading
 
-A model-backed evaluation can later execute the behavioral contracts and score
-the assertions. That layer should pin the model and prompt, record raw outputs,
-distinguish deterministic match failures from human-judgment failures, and
-never overwrite the fixtures with model-generated expectations.
+The repository does not choose or call a paid model automatically. Instead,
+scaffold a clean response directory, run the cases with the model/agent under
+test, save one response per case, and grade the declared assertions:
+
+```bash
+python3 scripts/run_behavior_evals.py --scaffold /tmp/finance-behavior-run
+# Give the agent only CASE_ID/task.md, then save its answer as CASE_ID/response.md.
+python3 scripts/run_behavior_evals.py /tmp/finance-behavior-run \
+  --json-out /tmp/finance-behavior-report.json
+```
+
+The generated task files include the prompt and supplied facts but deliberately
+exclude expectations and hard-failure matchers. Record the model,
+prompt/harness version, run date, and isolation procedure in the generated
+`run-metadata.json`. Scaffolding is idempotent and does not overwrite existing
+responses. Unrecorded metadata and blank or comment-only scaffold files fail
+closed. The runner reports missing responses,
+expectation matches, and triggered hard failures and exits nonzero on failure.
+Because literal/regex assertions can produce semantic false positives or false
+negatives, review every failed case and a sample of passing cases manually.
+Never overwrite the versioned fixtures with model-generated expectations.
+
+## Synthetic gold cases
+
+[`gold/`](gold/) contains two end-to-end examples for each of the five fixed
+skills. Every case keeps `input.md`, `expected-criteria.json`, and
+`reference-output.md` separate. The inputs and outputs are synthetic: they are
+for observable handoff quality and human calibration, not stylistic imitation
+or evidence about journal preferences. Gold outputs are one defensible answer,
+not text that a model must reproduce verbatim.
