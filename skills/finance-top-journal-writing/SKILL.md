@@ -7,6 +7,8 @@ description: Draft, restructure, revise, or audit complete finance manuscripts a
 
 Build a defensible finance-paper argument from the author's evidence. Treat JF, JFE, and RFS as journals sharing a high bar for contribution and credibility, with some observable production conventions—not as three fixed prose personas.
 
+Read [evidence-basis.md](references/evidence-basis.md) when choosing a paper architecture, checking the empirical basis of a recommendation, or looking for a functionally similar teaching anchor. Select by writing function and transfer limit; never imitate an exemplar's wording or length.
+
 ## Establish the writing contract
 
 Before drafting, recover or ask for the smallest useful fact set:

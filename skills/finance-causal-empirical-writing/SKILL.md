@@ -7,6 +7,8 @@ description: Draft, revise, or audit causal empirical finance manuscripts for Th
 
 Make the identifying argument inspectable. Use `$finance-top-journal-writing` with this skill when installed for full-paper and journal-adapter guidance.
 
+Read [evidence-basis.md](references/evidence-basis.md) when selecting a design-specific argument order, threat-to-test architecture, or scope statement. Its independent 60-paper portfolio is a functional evidence map, not a source of sentences or a claim that all designs need the same checks.
+
 ## Define the estimand before the design label
 
 Write one sentence for each:

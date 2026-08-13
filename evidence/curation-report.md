@@ -1,54 +1,47 @@
-# Curated Writing-Evidence Report
+# Independent Writing-Evidence Portfolios
 
 Checked: 2026-08-13.
 
-## What was selected
+## Release decision
 
-The public set contains 36 deliberately selected teaching exemplars: 12 each from JF, JFE, and RFS. Every exemplar is attached to a specific writing function and a transfer limit in [`curated-exemplars.csv`](curated-exemplars.csv). A paper can be excellent research yet unsuitable as a general writing model.
+The five skills are supported by five independent, manually curated portfolios containing 270 set memberships and 224 unique papers. The general skill uses exactly 50 papers. Every specialist has its own 50- or 60-paper evidence base and is not a slice of the general 50.
 
-The set is not a ranking and is not random. It balances four evidence logics used by the five skills:
+| Portfolio | JF | JFE | RFS | Total | Overlap with general | Outside general |
+|---|---:|---:|---:|---:|---:|---:|
+| General writing | 17 | 17 | 16 | 50 | 50 | 0 |
+| Asset pricing | 16 | 18 | 16 | 50 | 8 | 42 |
+| Causal empirical | 20 | 20 | 20 | 60 | 11 | 49 |
+| Intermediation/markets | 20 | 20 | 20 | 60 | 14 | 46 |
+| Theory/structural | 17 | 17 | 16 | 50 | 10 | 40 |
 
-- asset pricing and investments;
-- causal empirical finance;
-- intermediation and market structure;
-- theory, structural estimation, and quantitative models.
+Pairwise overlap among specialists is also low; the highest specialist-to-specialist intersection is seven papers. Machine-readable counts and Jaccard coefficients are in [`sets/overlap-matrix.json`](sets/overlap-matrix.json).
 
-Company finance, household finance, FinTech, policy, and behavioral papers enter through these evidence logics rather than becoming overlapping skills.
+## Independent curation work
 
-## Selection funnel
+- **General writing (50):** deliberately balanced across journals and section functions, including abstracts, introductions, contribution positioning, measurement, institutional background, design/model exposition, results, robustness, mechanism, limitations, conclusion, and full evidence chains. It combines prior deep-read anchors with 14 additional papers selected to fill missing functions; it is not a journal-by-year sample.
+- **Asset pricing (50):** 775 high-recall candidates, 83 structural-review candidates, 68 four-section deep reads, and 50 finalists. Coverage: factor/SDF/model tests, return facts/anomalies, ML/prediction, fund performance, market efficiency/implementation, theory/measurement, and time-series/macro.
+- **Causal empirical (60):** 785 design/causal candidates; all 60 finalists reviewed across abstract/introduction, design, validation/robustness, mechanism/boundaries, and conclusion. The final set is 20 papers per journal and spans IV, DID/event study, RDD/RKD, RCT, threshold/bunching, and multi-design work.
+- **Intermediation/markets (60):** 414 high-recall candidates; all 60 finalists reviewed at section level. Bank/nonbank credit supply and dealer/venue/order-flow work each receive 12 papers; deposits/funding, screening/contracting, networks/runs, and regulation/FinTech/market design each receive nine.
+- **Theory/structural (50):** 1,241 high-recall candidates and 911 stricter review entries; all 50 finalists reviewed across the relevant model, discipline, fit/validation, counterfactual/welfare, and conclusion sections. The set contains 21 structural, 12 quantitative/calibrated, nine theory–empirics hybrid, and eight pure-theory papers.
 
-| Journal | Strict census | Discovery and comparison | Selected |
-|---|---:|---|---:|
-| JF | 452 | All titles, abstracts, and structures scanned; 37-paper cross-archetype pool; 12 finalists deeply read | 12 |
-| JFE | 896 | All records scanned; 500 broad structural/archetype candidates; 34 high-potential papers deeply read | 12 |
-| RFS | 717 | All records and headings scanned; 24 targeted candidates deeply read | 12 |
-
-Deep reading covered the abstract, full introduction, relevant design/model/results/mechanism section, and conclusion. The final portfolio also received an independent metadata-and-teaching-function audit, with targeted first-page PDF checks across all three production formats. Selection used the rubric in [`curation-rubric.md`](curation-rubric.md). It did not use citations, prizes, author reputation, or a hash/random draw.
+Candidate-pool counts are discovery counts, not claims that every candidate was suitable. Titles and headings never caused automatic inclusion. Every public record states its teaching function and its transfer boundary.
 
 ## Portfolio rules
 
-An exemplar entered the set only for a named function, such as estimand separation, competition among mechanisms, threat-driven validation, model-to-data mapping, or a prediction-to-test bridge. The selector then asked:
+An exemplar enters a portfolio only for a named function, such as estimand separation, competition among mechanisms, threat-driven validation, model-to-data mapping, prediction-to-test bridges, or a concise limitations-aware conclusion. The selector asks:
 
 1. Is the question–approach–evidence–claim chain visible?
-2. Does the evidence order teach a reusable reasoning move rather than a topic-specific trick?
+2. Does the evidence order teach a reusable reasoning move?
 3. Are causal, predictive, descriptive, and model-implied claims calibrated?
-4. Does the paper add an archetype or section function missing from the portfolio?
-5. What would be misleading if a user copied this paper too literally?
+4. Does the paper add a missing archetype or section function?
+5. What would become misleading if a user copied it too literally?
 
-`selection_tier=section_specific` means that only the named functions are recommended as anchors. It is not a lower judgment of research quality.
+`section_specific` and `supporting` are scope labels, not judgments of research quality.
 
-## Counterexamples and held-out cases
+## Held-out and metadata boundaries
 
-[`held-out-candidates.csv`](held-out-candidates.csv) retains strong papers that were deliberately excluded because their extraction was damaged, the exposition was unusually specialized, the structure duplicated another anchor, or the paper is more useful as a generalization test. These cases prevent the skills from learning that more headings, more robustness tables, or a memorable phrase automatically imply better writing.
-
-## Metadata corrections and date boundary
-
-- `10.1093/rfs/hhaf045` is officially titled *Π-CAPM: The Classical CAPM with Probability Weighting and Skewed Assets*. The local OCR rendered Π as `5`; the public curated record uses the verified OUP title.
-- `10.1093/rfs/hhad095` has canonical year 2024 but sits in a 2023 source folder. The census uses the canonical year and retains source-folder year separately.
-- `10.1093/rfs/hhaf080` was a strong intermediation candidate. The local canonical table places it in 2025, while the current OUP page reports online publication in 2025 and a July 2026 print issue. It is not in the 36-paper core set; `10.1093/rfs/hhaa119` is used instead so the selected portfolio stays within print years 2020–2025.
-
-The full census still follows the local canonical publication-year field. For article-level historical claims, verify online-first and print-issue dates on the publisher page.
+The public held-out file contains 61 portfolio-labeled cases. It includes complex but strong papers, overlapping architectures, and known extraction or date-boundary challenges. Notable metadata cautions include RFS papers whose canonical final year differs from the source folder, JFE accepted-manuscript/preproof wrappers, and the local OCR rendering of `Π-CAPM` as `5-CAPM`. Public titles and years use the strict canonical inventory plus documented official corrections.
 
 ## Copyright boundary
 
-The repository stores bibliographic metadata and original functional synthesis only. It does not store article prose, PDFs, or MinerU-derived full text. Writing skills must learn rhetorical functions, not reproduce or lightly paraphrase an exemplar.
+The repository stores bibliographic metadata and original functional synthesis only. It does not publish article prose, PDFs, MinerU Markdown, or JSON. Skills must learn rhetorical functions, not reproduce or lightly paraphrase an exemplar.

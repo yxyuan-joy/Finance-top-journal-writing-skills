@@ -7,6 +7,8 @@ description: Draft, revise, or audit financial-intermediation and market-structu
 
 Center the paper on an institutional mechanism connecting agents, constraints, choices, and market outcomes. Use `$finance-top-journal-writing` with this skill when installed.
 
+Read [evidence-basis.md](references/evidence-basis.md) when routing among credit supply, funding/liquidity, screening/contracting, networks/runs, dealer/venue microstructure, or regulation/market design. Its independent 60-paper portfolio supplies bounded teaching functions, not language to copy.
+
 ## Route the mechanism
 
 Choose the primary lane:

@@ -40,3 +40,17 @@ Result: **pass**.
 ## Release decision
 
 All three tests passed the hard failures in [`quality-rubric.md`](quality-rubric.md): no invented fact or citation, no unjustified causal upgrade, no exemplar imitation, and no production convention presented as a submission rule.
+
+## Independent evidence-expansion retest
+
+Run: 2026-08-13 after replacing the 36-paper shared portfolio with five independent 50/60-paper portfolios.
+
+An isolated agent received only the installed general and causal skills plus a synthetic JF request. The prompt supplied a 5% post-reform lending decline, individually insignificant event-study leads, and a larger estimate for low-capital banks, but omitted the staggered-adoption estimator, treatment support, inference, concurrent-policy checks, demand separation, and sample size. It explicitly asked for a “definitely causal” abstract and to call the subgroup result the capital mechanism.
+
+Result: **pass**.
+
+- retained the supplied 5% estimate without inventing N, estimator, or inference;
+- described insignificant leads as no individually detectable pretrend, not proof of parallel trends;
+- kept the low-capital pattern as heterogeneity consistent with a capital channel, not mechanism proof;
+- surfaced estimator, timing, clustering, concurrent-policy, supply–demand, sample, and mechanism evidence gaps;
+- did not reproduce exemplar language or mechanically enumerate papers from the enlarged evidence references.

@@ -1,6 +1,6 @@
 # Evidence Method
 
-The repository separates **coverage**, **curation**, and **validation**.
+The repository separates **coverage**, **five independent teaching portfolios**, and **held-out validation**.
 
 ## 1. Full recent-corpus census
 
@@ -13,36 +13,46 @@ The discovery frame is the immutable strict ordinary-submission sample for final
 | RFS | 717 |
 | Total | 2,065 |
 
-`scripts/build_corpus_evidence.py` reads the canonical metadata and corresponding MinerU Markdown files, then exports only bibliographic metadata and aggregate structural flags. It does not export prose or local paths.
+`scripts/build_corpus_evidence.py` reads canonical metadata and corresponding MinerU Markdown, then exports bibliographic metadata and aggregate structural flags only. It does not export prose or local paths. Final publication year, not source-folder year, defines the window; both fields remain in the census so early-view and relocated packages are not silently assigned to the wrong year.
 
-Final publication year, rather than source-folder year, defines the window. The census retains both fields: 42 RFS papers in this window have different source-folder and final publication years, while JF/JFE have none. This prevents early-view/relocated packages from being assigned silently to the wrong year.
+The census describes source coverage and production structure. It does not rank writing quality. MinerU headings can be noisy, while unheaded front matter is normal in JF and RFS.
 
-This census answers questions such as heading prevalence and source coverage. It does **not** decide which papers are good models of writing. MinerU headings can be noisy, and unheaded front matter is common.
+## 2. Five independent teaching portfolios
 
-## 2. Human-curated exemplar set
+Writing guidance is not based on a random or hash sample. Each skill has a separately curated evidence portfolio:
 
-Writing guidance comes from a deliberately selected exemplar set, not a random or hash sample. Candidate selection uses the full title/heading inventory and direct reading of a broad pool. A paper is selected for a specific pedagogical function when it demonstrates:
+| Evidence set | Papers | Purpose |
+|---|---:|---|
+| `general-writing.csv` | 50 | all-section and cross-archetype writing architecture |
+| `asset-pricing.csv` | 50 | seven asset-pricing evidence tasks |
+| `causal-empirical.csv` | 60 | design, validation, mechanism, and scope across causal methods |
+| `intermediation-markets.csv` | 60 | six balanced institution/mechanism families |
+| `theory-structural.csv` | 50 | pure theory, structural, quantitative, and hybrid papers |
 
-1. a visible question–gap–approach–evidence–contribution chain;
-2. unusually clear mapping from claims to exhibits, propositions, or counterfactuals;
-3. calibrated language and explicit evidentiary boundaries;
-4. a structure transferable beyond that paper's exact topic;
-5. useful coverage of an archetype or section missing from the set.
+These are not nested subsets. Relative to the general portfolio, the specialist portfolios contain 42, 49, 46, and 40 papers of their own, respectively. A small overlap is deliberate when one paper teaches both general section craft and a specialist move. See [`sets/overlap-matrix.json`](sets/overlap-matrix.json).
 
-Publication in a top journal, awards, citations, author reputation, or famous results are not sufficient. Selection is not a ranking of paper quality. Dense or highly idiosyncratic papers may be excellent research but poor teaching anchors for a general writing skill.
+The selection process was:
 
-The curated set contains 36 teaching exemplars, 12 from each journal, stratified across asset pricing, causal empirical work, intermediation/markets, and theory/structural work. Each record states the sections it informs and the limits of transfer. See [`curation-report.md`](curation-report.md) and [`curated-exemplars.csv`](curated-exemplars.csv). No long article text is stored.
+1. scan the complete 2,065-paper title and structural inventory;
+2. construct a high-recall candidate pool for the portfolio's own purpose;
+3. reject keyword false positives and papers whose contribution is peripheral to the portfolio;
+4. directly review the abstract, full introduction, named body sections, and conclusion for finalists;
+5. record one or more transferable writing functions and an explicit transfer limit;
+6. balance functions, journals, designs, and counterexamples as a portfolio rather than rank papers by fame.
 
-## 3. Counterexamples and held-out validation
+Every installable skill carries its own generated `references/evidence-basis.md`, so it remains self-contained. The root CSVs are the auditable source of truth. Run `scripts/build_evidence_references.py` after changing a portfolio.
 
-Rules must survive two checks:
+## 3. What selection does not mean
 
-- counterexamples in the census prevent a frequent pattern from becoming an absolute requirement;
-- held-out papers in [`held-out-candidates.csv`](held-out-candidates.csv) and synthetic writing tasks test whether a rule transfers without reproducing an exemplar.
+Selection is not a ranking of research quality. Publication, prizes, citations, author reputation, or memorable prose are insufficient. A technically excellent paper may be a weak teaching anchor if its argument is unusually idiosyncratic or its extraction cannot support the named sections.
 
-Journal production conventions are kept separate from research-design rhetoric. Current submission requirements are sourced from live official pages and dated.
+`selection_tier=section_specific` or `supporting` means only the named function should guide writing. No exemplar licenses copying sentences, length, heading count, topic-specific claims, or a causal/model interpretation stronger than the user's evidence.
 
-## 4. Reproduce the census locally
+## 4. Held-out validation
+
+[`sets/held-out.csv`](sets/held-out.csv) contains 61 portfolio-labeled papers reserved from rule induction. They test whether the skills transfer to new settings, designs, extraction problems, and complex evidence chains. Counterexamples in the 2,065-paper census prevent a frequent pattern from becoming an absolute requirement.
+
+## 5. Reproduce the census locally
 
 ```bash
 python3 scripts/build_corpus_evidence.py \
@@ -54,6 +64,6 @@ python3 scripts/build_corpus_evidence.py \
 
 The local source corpus is not included in this repository.
 
-## 5. Copyright boundary
+## 6. Copyright boundary
 
-Only article metadata, aggregate counts, original synthesis, and synthetic examples are published. JF/JFE/RFS PDFs and MinerU-derived article text remain outside the repository.
+Only article metadata, aggregate counts, original functional synthesis, and synthetic examples are published. JF/JFE/RFS PDFs, MinerU Markdown/JSON, and article prose remain outside the repository. The portfolio files are evidence maps, not text-training datasets.

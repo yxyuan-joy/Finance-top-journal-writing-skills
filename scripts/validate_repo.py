@@ -6,7 +6,7 @@ from __future__ import annotations
 import csv
 import json
 import re
-import sys
+from collections import Counter
 from pathlib import Path
 
 
@@ -23,6 +23,25 @@ FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.S)
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 TODO_RE = re.compile(r"\b(?:TODO|TBD|FIXME)\b|\[TODO", re.I)
 NAME_RE = re.compile(r"^[a-z0-9-]{1,63}$")
+EVIDENCE_SETS = {
+    "general-writing": 50,
+    "asset-pricing": 50,
+    "causal-empirical": 60,
+    "intermediation-markets": 60,
+    "theory-structural": 50,
+}
+EVIDENCE_FIELDS = {
+    "journal",
+    "canonical_year",
+    "doi",
+    "title",
+    "subtype",
+    "selection_tier",
+    "selected_sections",
+    "teaching_function",
+    "transfer_limit",
+    "metadata_note",
+}
 
 
 def parse_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -108,6 +127,119 @@ def validate_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
+def load_csv(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def validate_evidence_sets() -> list[str]:
+    errors: list[str] = []
+    census_path = ROOT / "evidence" / "corpus-census" / "article-index.csv"
+    if not census_path.exists():
+        return ["evidence/corpus-census/article-index.csv: missing"]
+    census = {row["doi"].lower(): row for row in load_csv(census_path)}
+    portfolios: dict[str, set[str]] = {}
+
+    for set_name, expected_count in EVIDENCE_SETS.items():
+        path = ROOT / "evidence" / "sets" / f"{set_name}.csv"
+        if not path.exists():
+            errors.append(f"{path.relative_to(ROOT)}: missing")
+            continue
+        rows = load_csv(path)
+        if len(rows) != expected_count:
+            errors.append(
+                f"{path.relative_to(ROOT)}: expected {expected_count} papers; found {len(rows)}"
+            )
+        if rows and set(rows[0]) != EVIDENCE_FIELDS:
+            errors.append(f"{path.relative_to(ROOT)}: unexpected schema")
+        dois = [row.get("doi", "").lower() for row in rows]
+        portfolios[set_name] = set(dois)
+        if len(dois) != len(set(dois)):
+            errors.append(f"{path.relative_to(ROOT)}: duplicate DOI")
+        for row_number, row in enumerate(rows, start=2):
+            doi = row.get("doi", "").lower()
+            if row.get("selection_tier") not in {"core", "section_specific", "supporting"}:
+                errors.append(f"{path.relative_to(ROOT)}:{row_number}: invalid selection_tier")
+            for field in EVIDENCE_FIELDS - {"metadata_note"}:
+                if not row.get(field, "").strip():
+                    errors.append(f"{path.relative_to(ROOT)}:{row_number}: missing {field}")
+            source = census.get(doi)
+            if source is None:
+                errors.append(f"{path.relative_to(ROOT)}:{row_number}: DOI absent from census")
+                continue
+            for left, right in (
+                ("journal", "journal"),
+                ("canonical_year", "final_publication_year"),
+            ):
+                if row.get(left) != source.get(right):
+                    errors.append(
+                        f"{path.relative_to(ROOT)}:{row_number}: {left} disagrees with census"
+                    )
+            if not row.get("metadata_note", "").strip() and row.get("title") != source.get("title"):
+                errors.append(
+                    f"{path.relative_to(ROOT)}:{row_number}: title disagrees with census without metadata_note"
+                )
+
+        if set_name == "general-writing" and rows:
+            counts = Counter(row["journal"] for row in rows)
+            if set(counts) != {"JF", "JFE", "RFS"} or max(counts.values()) - min(counts.values()) > 1:
+                errors.append(f"{path.relative_to(ROOT)}: general set must balance the three journals")
+
+    general = portfolios.get("general-writing", set())
+    if general:
+        for set_name, dois in portfolios.items():
+            if set_name == "general-writing":
+                continue
+            outside = len(dois - general)
+            if outside < 25:
+                errors.append(
+                    f"evidence/sets/{set_name}.csv: only {outside} papers outside general set; expected >=25"
+                )
+
+    for set_name in EVIDENCE_SETS:
+        skill_name = {
+            "general-writing": "finance-top-journal-writing",
+            "asset-pricing": "finance-asset-pricing-writing",
+            "causal-empirical": "finance-causal-empirical-writing",
+            "intermediation-markets": "finance-intermediation-markets-writing",
+            "theory-structural": "finance-theory-structural-writing",
+        }[set_name]
+        reference = ROOT / "skills" / skill_name / "references" / "evidence-basis.md"
+        if not reference.exists():
+            errors.append(f"{reference.relative_to(ROOT)}: missing self-contained evidence basis")
+
+    held_path = ROOT / "evidence" / "sets" / "held-out.csv"
+    if held_path.exists():
+        held_rows = load_csv(held_path)
+        held_dois = [row.get("doi", "").lower() for row in held_rows]
+        if len(held_dois) != len(set(held_dois)):
+            errors.append(f"{held_path.relative_to(ROOT)}: duplicate DOI across held-out sets")
+        selected_anywhere = set().union(*portfolios.values()) if portfolios else set()
+        global_leaks = sorted(set(held_dois) & selected_anywhere)
+        if global_leaks:
+            errors.append(
+                f"{held_path.relative_to(ROOT)}: held-out DOI selected in another portfolio: "
+                + ", ".join(global_leaks)
+            )
+        held_counts = Counter(row.get("evidence_set", "") for row in held_rows)
+        for set_name in EVIDENCE_SETS:
+            if held_counts[set_name] < 8:
+                errors.append(
+                    f"{held_path.relative_to(ROOT)}: {set_name} needs at least 8 held-out papers"
+                )
+            leaks = [
+                row.get("doi", "")
+                for row in held_rows
+                if row.get("evidence_set") == set_name
+                and row.get("doi", "").lower() in portfolios.get(set_name, set())
+            ]
+            if leaks:
+                errors.append(
+                    f"{held_path.relative_to(ROOT)}: {set_name} held-out leakage: {', '.join(leaks)}"
+                )
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     actual = {path.name for path in SKILLS_DIR.iterdir() if path.is_dir()} if SKILLS_DIR.exists() else set()
@@ -127,50 +259,20 @@ def main() -> int:
         "CITATION.cff",
         "evidence/README.md",
         "evidence/curation-report.md",
-        "evidence/curated-exemplars.csv",
-        "evidence/held-out-candidates.csv",
+        "evidence/sets/general-writing.csv",
+        "evidence/sets/asset-pricing.csv",
+        "evidence/sets/causal-empirical.csv",
+        "evidence/sets/intermediation-markets.csv",
+        "evidence/sets/theory-structural.csv",
+        "evidence/sets/held-out.csv",
+        "evidence/sets/overlap-matrix.json",
         "evidence/corpus-census/aggregate-patterns.json",
         "evals/forward-test-results.md",
     ):
         if not (ROOT / required).exists():
             errors.append(f"missing repository file: {required}")
 
-    curated_path = ROOT / "evidence" / "curated-exemplars.csv"
-    if curated_path.exists():
-        with curated_path.open(encoding="utf-8", newline="") as handle:
-            curated = list(csv.DictReader(handle))
-        expected_fields = {
-            "journal",
-            "canonical_year",
-            "doi",
-            "title",
-            "archetype",
-            "selection_tier",
-            "selected_sections",
-            "teaching_function",
-            "transfer_limit",
-            "metadata_note",
-        }
-        if not curated or set(curated[0]) != expected_fields:
-            errors.append("evidence/curated-exemplars.csv: unexpected schema")
-        counts = {
-            journal: sum(row.get("journal") == journal for row in curated)
-            for journal in ("JF", "JFE", "RFS")
-        }
-        if counts != {"JF": 12, "JFE": 12, "RFS": 12}:
-            errors.append(f"evidence/curated-exemplars.csv: expected 12 per journal; found {counts}")
-        dois = [row.get("doi", "").lower() for row in curated]
-        if len(dois) != len(set(dois)):
-            errors.append("evidence/curated-exemplars.csv: duplicate DOI")
-        for row_number, row in enumerate(curated, start=2):
-            if not row.get("teaching_function") or not row.get("transfer_limit"):
-                errors.append(
-                    f"evidence/curated-exemplars.csv:{row_number}: teaching function and transfer limit are required"
-                )
-            if row.get("selection_tier") not in {"core", "section_specific"}:
-                errors.append(
-                    f"evidence/curated-exemplars.csv:{row_number}: invalid selection_tier"
-                )
+    errors.extend(validate_evidence_sets())
 
     result = {
         "skills_expected": len(EXPECTED_SKILLS),

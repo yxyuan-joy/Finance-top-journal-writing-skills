@@ -7,6 +7,8 @@ description: Draft, revise, or audit empirical asset-pricing and investments man
 
 Write asset-pricing papers as tests of an economic object, not as collections of return regressions. Use `$finance-top-journal-writing` with this skill when it is installed; the core skill supplies full-paper and journal-adapter guidance.
 
+Read [evidence-basis.md](references/evidence-basis.md) when choosing among factor/SDF tests, return facts, prediction, fund performance, implementation, measurement, or macro/time-series architectures. Use its independent 50-paper portfolio by function and heed each transfer limit; do not reproduce source prose.
+
 ## Classify the paper before drafting
 
 Choose the dominant archetype:

@@ -78,6 +78,6 @@ Practical adaptation:
 - It does not establish current word, abstract, figure, file, or appendix limits.
 - It does not control fully for subfield composition.
 - It does not convert published production layout into author-submission requirements.
-- It does not imply that the 36 selected exemplars are the only good papers or that every section of an exemplar should be copied.
+- It does not imply that the independently curated portfolios contain the only good papers or that every section of an exemplar should be copied.
 
 When a rule affects eligibility or submission compliance, verify the current official page rather than relying on this adapter.

@@ -67,14 +67,24 @@ Use $finance-causal-empirical-writing to restructure the identification and robu
 
 ## 期刊适配是“证据层”，不是刻板印象
 
-写作方法不由随机抽样决定。本项目先对 2020–2025 正式普通投稿样本的 2,065 篇论文做全量结构普查（JF 452、JFE 896、RFS 717，MinerU Markdown 覆盖 100%），再从全量清单中按“教学清晰度、可迁移性、证据边界和类型覆盖”定向建立候选池，人工精读后选出 36 篇教学范例（每刊 12 篇）。每篇范例都绑定具体的教学功能和不可照搬之处；另留一组未参与规则形成的强论文用于泛化测试。全量普查可稳定观察到：
+写作方法不由随机抽样决定。本项目先对 2020–2025 正式普通投稿样本的 2,065 篇论文做全量结构普查（JF 452、JFE 896、RFS 717，MinerU Markdown 覆盖 100%），然后为五个 skill 各自建立候选池和人工策展集：
+
+| Skill 证据集 | 篇数 | 相对总写作 50 篇的独立论文 |
+|---|---:|---:|
+| 总写作 | 50 | — |
+| 资产定价 | 50 | 42 |
+| 因果实证 | 60 | 49 |
+| 金融中介/市场 | 60 | 46 |
+| 理论/结构 | 50 | 40 |
+
+因此专项集不是从总写作 50 篇里切出来的子集。五套证据共有 270 个入选席位、224 篇唯一论文；少量重叠只保留在同一篇同时教“通用章节动作”和“专项证据动作”时。入选必须经过摘要、完整引言、目标正文和结论的直接复核；标题和 heading 只用于高召回发现，不能直接入选。每篇都记录可迁移功能和不可照搬之处。全量普查可稳定观察到：
 
 - JF 452/452 有显式 Abstract 标题，0/452 有显式 Introduction 标题；
 - JFE 862/896（96.2%）有显式 Introduction 标题；其 Abstract 前置块受版式/OCR 影响，不用 heading 计数推断摘要是否存在；
 - RFS 仅 14/717（2.0%）有显式 Introduction 标题，0/717 有显式 Abstract 标题；
 - 独立 literature/related-work 标题只出现在 JF 83/452、JFE 169/896、RFS 111/717；多数论文把定位嵌入引言或模型/制度讨论。
 
-这些是已发表 PDF 的 production patterns，不是永恒的投稿规则。skill 会先服从用户模板和当前官方说明；不会仅因目标期刊不同而改变论文事实、识别强度或核心论证。策展漏斗、入选 DOI、教学功能、迁移边界和 held-out 候选均可审计：见 [`evidence/curation-report.md`](evidence/curation-report.md) 与 [`evidence/curated-exemplars.csv`](evidence/curated-exemplars.csv)。完整方法、样本与聚合结果见 [`evidence/README.md`](evidence/README.md)。
+这些是已发表 PDF 的 production patterns，不是永恒的投稿规则。skill 会先服从用户模板和当前官方说明；不会仅因目标期刊不同而改变论文事实、识别强度或核心论证。策展漏斗、入选 DOI、教学功能、迁移边界和 61 篇 held-out 均可审计：见 [`evidence/curation-report.md`](evidence/curation-report.md) 和 [`evidence/sets/`](evidence/sets/)。完整方法与聚合结果见 [`evidence/README.md`](evidence/README.md)。
 
 ## 关键安全门
 
@@ -119,7 +129,7 @@ python3 skills/finance-top-journal-writing/scripts/lint_finance_draft.py paper.m
 
 - 本仓库不分发本地 PDF、MinerU JSON/Markdown 或论文正文。
 - 公开证据只包含书目元数据、聚合计数、原创归纳和合成示例。
-- `article-index.csv` 与 `heading-frequencies.csv` 是 2,065 篇全量普查产物；`curated-exemplars.csv` 是人工选择，二者用途不混同。
+- `article-index.csv` 与 `heading-frequencies.csv` 是 2,065 篇全量普查产物；`evidence/sets/*.csv` 是五套独立人工策展证据，两者用途不混同。
 - `source-folder year` 与 final publication year 分开保存；跨年 early-view/relocated 记录不会被静默混用。
 - 投稿格式会变化。涉及字数、文件、匿名化、数据政策或收费时，必须重新核对三刊当前官方页面，不能从本仓库的历史语料推断。
 

@@ -1,0 +1,146 @@
+{
+  "method": "doi_set_overlap",
+  "memberships": 270,
+  "unique_papers": 224,
+  "sets": {
+    "general-writing": 50,
+    "asset-pricing": 50,
+    "causal-empirical": 60,
+    "intermediation-markets": 60,
+    "theory-structural": 50
+  },
+  "specialist_independence": {
+    "asset-pricing": {
+      "papers": 50,
+      "overlap_with_general": 8,
+      "outside_general": 42
+    },
+    "causal-empirical": {
+      "papers": 60,
+      "overlap_with_general": 11,
+      "outside_general": 49
+    },
+    "intermediation-markets": {
+      "papers": 60,
+      "overlap_with_general": 14,
+      "outside_general": 46
+    },
+    "theory-structural": {
+      "papers": 50,
+      "overlap_with_general": 10,
+      "outside_general": 40
+    }
+  },
+  "pairwise": {
+    "general-writing": {
+      "general-writing": {
+        "intersection": 50,
+        "jaccard": 1.0
+      },
+      "asset-pricing": {
+        "intersection": 8,
+        "jaccard": 0.087
+      },
+      "causal-empirical": {
+        "intersection": 11,
+        "jaccard": 0.1111
+      },
+      "intermediation-markets": {
+        "intersection": 14,
+        "jaccard": 0.1458
+      },
+      "theory-structural": {
+        "intersection": 10,
+        "jaccard": 0.1111
+      }
+    },
+    "asset-pricing": {
+      "general-writing": {
+        "intersection": 8,
+        "jaccard": 0.087
+      },
+      "asset-pricing": {
+        "intersection": 50,
+        "jaccard": 1.0
+      },
+      "causal-empirical": {
+        "intersection": 0,
+        "jaccard": 0.0
+      },
+      "intermediation-markets": {
+        "intersection": 0,
+        "jaccard": 0.0
+      },
+      "theory-structural": {
+        "intersection": 2,
+        "jaccard": 0.0204
+      }
+    },
+    "causal-empirical": {
+      "general-writing": {
+        "intersection": 11,
+        "jaccard": 0.1111
+      },
+      "asset-pricing": {
+        "intersection": 0,
+        "jaccard": 0.0
+      },
+      "causal-empirical": {
+        "intersection": 60,
+        "jaccard": 1.0
+      },
+      "intermediation-markets": {
+        "intersection": 7,
+        "jaccard": 0.0619
+      },
+      "theory-structural": {
+        "intersection": 0,
+        "jaccard": 0.0
+      }
+    },
+    "intermediation-markets": {
+      "general-writing": {
+        "intersection": 14,
+        "jaccard": 0.1458
+      },
+      "asset-pricing": {
+        "intersection": 0,
+        "jaccard": 0.0
+      },
+      "causal-empirical": {
+        "intersection": 7,
+        "jaccard": 0.0619
+      },
+      "intermediation-markets": {
+        "intersection": 60,
+        "jaccard": 1.0
+      },
+      "theory-structural": {
+        "intersection": 5,
+        "jaccard": 0.0476
+      }
+    },
+    "theory-structural": {
+      "general-writing": {
+        "intersection": 10,
+        "jaccard": 0.1111
+      },
+      "asset-pricing": {
+        "intersection": 2,
+        "jaccard": 0.0204
+      },
+      "causal-empirical": {
+        "intersection": 0,
+        "jaccard": 0.0
+      },
+      "intermediation-markets": {
+        "intersection": 5,
+        "jaccard": 0.0476
+      },
+      "theory-structural": {
+        "intersection": 50,
+        "jaccard": 1.0
+      }
+    }
+  }
+}

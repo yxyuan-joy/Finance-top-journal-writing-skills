@@ -7,6 +7,8 @@ description: Draft, revise, or audit formal-theory, structural-estimation, calib
 
 Make the model's economic mechanism, identification, and domain visible. Use `$finance-top-journal-writing` with this skill when installed.
 
+Read [evidence-basis.md](references/evidence-basis.md) when choosing among pure theory, structural estimation, quantitative/calibrated work, and theory–empirics hybrids. Its independent 50-paper portfolio records both the reusable move and its boundary; do not make fit or identification compulsory for pure theory.
+
 ## Route the paper
 
 Choose one primary type:
