@@ -9,6 +9,16 @@ Use this workflow for bank, nonbank, credit, market-structure, network, and regu
 3. Rank evidence by function, then draft from that ranking rather than narrating tables in numerical order.
 4. Remove claims that require an unfilled map cell.
 
+For a hybrid empirical intermediation paper, separate three evidence levels before drafting:
+
+```text
+institutional and descriptive evidence: what the intermediary, contract, or venue does
+→ identified intermediary response: how entry, supply, pricing, or substitution changes
+→ counterparty outcome: what happens to borrowers, traders, firms, or the market
+```
+
+The levels may use different units, comparisons, estimands, and selection assumptions. Agreement across them can build a mechanism chain, but evidence at one level does not inherit the causal strength of another. If several shocks support the same response, synthesize them by their different assumptions and populations rather than inventing separate contributions.
+
 ## Abstract
 
 **Function.** Compress the institutional mechanism and evidence into a self-contained claim. A useful five-sentence order is: institutional tension; setting and design/model; behavioral response; price, quantity, or incidence magnitude; interpretation and boundary. Use fewer sentences when they perform the same jobs.

@@ -11,6 +11,13 @@ Use this workflow for pure theory, quantitative models, structural estimation, a
 5. Draft counterfactual and welfare language only after fit on the policy-relevant margin is visible.
 6. Apply the section gates below; unresolved matrix cells become bounded qualifications, not invented content.
 
+Coordinate two orders rather than forcing them to coincide:
+
+- **Narrative order** in the abstract and introduction follows economic time—who chooses what, with which information, and how the mechanism propagates.
+- **Solution order** in the model and results follows logical dependence—often backward induction or continuation values before earlier choices.
+
+Signal the switch to solution order, and after solving each block translate the result back into the forward economic mechanism. Do not reorder a proof dependency merely to make the section titles mimic the timeline.
+
 ## Abstract
 
 **Function.** Present the economic puzzle, environment or friction, mechanism, decisive result, and implication without notation. For pure theory, state the proposition and conditions in economic language. For quantitative work, add the empirical discipline and quantitative result. For counterfactuals, state the intervention, benchmark, magnitude, and maintained-structure boundary.
@@ -60,6 +67,8 @@ Use this workflow for pure theory, quantitative models, structural estimation, a
 **Common overclaims.** A sufficient condition is not necessary; local comparative statics are not global; one selected equilibrium is not uniqueness; private optimality is not social efficiency; and a sign result need not imply quantitative importance.
 
 **Output gate.** Every result has economic intuition not reducible to restating its sign, every proof reference resolves, and the text never claims beyond the proposition's domain. The sequence of results answers the research question rather than cataloging derivations.
+
+Use robustness and extensions to map assumptions to economic forces. For each central result, identify the assumption that creates the force, vary that assumption, and state whether the force survives, weakens, reverses, or becomes indeterminate. This is more informative than a list of alternative functional forms. Keep an extension in the main text when it reveals the domain of the headline mechanism; move it to the appendix when it only repeats the same logic.
 
 ## Data, identification, and estimation
 

@@ -102,7 +102,7 @@ Read [mechanisms-and-heterogeneity.md](references/mechanisms-and-heterogeneity.m
 
 Use `supports`, `narrows`, or `is consistent with` unless the design directly distinguishes channels.
 
-When multiple designs are available, assign each a distinct job—assignment credibility, external validation, mechanism, or aggregate consequence. Do not describe several imperfect designs as if their mere number proves the same claim.
+When multiple designs are available, state whether they perform distinct jobs or test the same claim under meaningfully different assignment processes, assumptions, populations, or periods. For same-claim triangulation, report each design's estimand and leading threat, then explain exactly what convergence or divergence changes. Do not pool unlike estimates or describe several imperfect designs as if their mere number proves the claim.
 
 ## Apply hard gates
 

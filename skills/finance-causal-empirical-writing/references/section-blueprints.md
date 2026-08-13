@@ -41,6 +41,17 @@ A reader should understand `who is compared with whom, why, for what estimand, w
 7. **Mechanism and consequences.** Present timing, intermediate outcomes, cross-sectional predictions, or competing-channel tests after the main effect. Label heterogeneity as heterogeneity unless additional assumptions support mediation.
 8. **Contribution.** Compare against the closest question and design. State whether the paper changes the estimated effect, identification, mechanism, incidence, or policy understanding—not merely that the setting or dataset is new.
 
+Order evidence by inferential dependency, not automatically by outcome timing. When a policy shock is used to diagnose whether a preexisting choice was optimal, a defensible chain is:
+
+```text
+intervention changes the target behavior
+→ valuation or welfare diagnostic answers the optimality question
+→ reallocation or downstream outcomes explain why
+→ heterogeneity shows where the diagnosis changes
+```
+
+The valuation or welfare block has a different evidentiary job from an operational outcome. State the extra assumptions it needs; a favorable market reaction is not a complete social-welfare test.
+
 ### Required facts
 
 Complete an estimand ledger, institutional timeline, threat ranking, headline magnitude, and evidence-to-claim map before drafting. Use the fillable [estimand and threat-to-test ledger](../assets/estimand-threat-to-test-ledger.md).
@@ -100,6 +111,8 @@ Another researcher should be able to identify exactly which observations and con
 4. **Threat-to-test evidence.** Organize by differential trends/sorting, concurrent shocks, compliance, manipulation, spillovers, composition, measurement, and inference—not by a miscellaneous list of alternative specifications.
 5. **Sensitivity and bounds.** State attenuation, sign change, imprecision, or economically relevant confidence bounds. Preserve informative nulls and failed diagnostics.
 6. **External validity and equilibrium.** Distinguish the identified local/partial-equilibrium effect from broader incidence, displacement, or general-equilibrium claims.
+
+Before fixing subsection order, draw the dependency graph among the paper's claims. Place a result earlier when later interpretation logically requires it, even if the underlying outcome occurs later in calendar time. A first stage, valuation diagnostic, allocation response, mechanism test, and welfare calculation are not interchangeable `outcomes`; label the question each one unlocks.
 
 ### Overclaim traps
 

@@ -27,6 +27,18 @@ Use this as a functional order, not a rigid paragraph count. Lead with the resea
 
 The order is defeasible. A measurement paper may define the object before the gap; a theory paper may state the empirical facts before the missing mechanism; a causal paper may need a short institutional event before it can make the counterfactual problem intelligible. Preserve the dependency among functions even when their surface order changes.
 
+For a descriptive or measurement paper, a consequential unknown can replace a treatment-style question. One defensible architecture is:
+
+```text
+object that cannot be observed in existing data
+→ why each existing source reveals only part of it
+→ new measurement or linked evidence
+→ cumulative fact ladder
+→ interpretation and population boundary
+```
+
+Each fact in a fact ladder must answer a different unresolved question and make the next fact necessary. For example, establish the distribution of an object, then its heterogeneity, then whether it maps to observed choices, then which competing considerations coexist. Do not number findings that merely repeat the same association across outcomes, and do not force descriptive work into causal or hypothesis-testing language.
+
 ## 2. Give each paragraph one job
 
 ### Opening

@@ -41,6 +41,19 @@ A reader should be able to identify the economic object, test population, magnit
 7. **Contribution.** State precisely whether the paper changes a known fact, model assessment, mechanism, validation standard, or feasible-investment conclusion. Compare with the closest work by economic function.
 8. **Roadmap only if useful.** Include a short map when the paper has an unusual sequence; do not repeat the table of contents mechanically.
 
+For a factor-extraction, test-asset, or diagnostic methodology paper, add a conceptual bridge before treating construction as an empirical recipe:
+
+```text
+economic pricing object
+→ recoverability, spanning, or information condition
+→ observable failure if that condition is incomplete
+→ feasible sample construction
+→ holdings/return/factor structure
+→ pricing or model-diagnostic tests
+```
+
+The bridge may be formal theory or a transparent economic restriction. Its job is to explain why the proposed construction can recover the claimed object and which later tests can reveal missing priced dimensions. Do not place a long mathematical section first merely because the paper introduces a method; use it only when the empirical object would otherwise be uninterpretable.
+
 ### Required facts
 
 Complete the contribution test, construction/availability timeline, magnitude benchmark, discovery-versus-evaluation status, main failure mode, and interpretation boundary before drafting.
@@ -61,7 +74,7 @@ Every paragraph must advance `question → unresolved limitation → test → ev
 2. **Information timeline.** For every signal input, record measurement date, vendor release/publication date, revision policy, reporting lag, portfolio-formation date, and first feasible trade date. Distinguish today’s cleaned file from historically available information.
 3. **Construction.** Define transformations, winsorization, breakpoints, weights, long and short legs, rebalance frequency, holding horizon, overlapping returns, and treatment of microcaps or illiquid assets.
 4. **Estimating object.** Define the return, alpha, price of risk, pricing error, forecast target, loss function, or utility object. Explain benchmark factors/models, fixed choices, standard errors, and dependence.
-5. **Discovery and evaluation.** Identify what was searched or tuned, the candidate space, preprocessing, train/validation/test split, stopping rule, and whether entities or networks can leak across splits.
+5. **Discovery and evaluation.** Identify what was searched or tuned, the candidate space, preprocessing, train/validation/test split, stopping rule, and whether entities or networks can leak across splits. Label the evaluation regime precisely: a resampled or rolling temporal exercise, a frozen holdout, a post-discovery/postpublication period, an external market, and live evidence provide different kinds of support. Do not compress all of them into `out of sample`.
 6. **Implementation environment.** State turnover, delay, spreads/impact, borrow availability and fees, leverage/funding, capacity, and investability assumptions when strategy language is used.
 
 Use the fillable [real-time, validation, and implementability ledger](../assets/real-time-validation-implementability-ledger.md) before writing this section.

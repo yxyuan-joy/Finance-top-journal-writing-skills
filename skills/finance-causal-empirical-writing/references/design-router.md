@@ -38,4 +38,14 @@ State the conditional-independence assumption, overlap, timing of covariates, ma
 
 ## Multiple designs
 
-Choose one primary design tied to the headline estimand. Present secondary designs as triangulation only when their assumptions and target populations are explicit; do not imply that several weak designs mechanically create one strong causal claim.
+Choose one primary design tied to the headline estimand. A secondary design can either perform a different evidentiary job or estimate a related object under a different assignment process, assumption set, population, or period. For same-claim triangulation, use:
+
+```text
+common target claim
+→ design-specific estimand and comparison
+→ design-specific leading threat
+→ convergent or divergent result
+→ exact increment in credibility or scope
+```
+
+Keep unlike estimates separate and explain why their signs or magnitudes are comparable before synthesizing them. Several weak designs do not mechanically create one strong causal claim.
