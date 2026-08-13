@@ -7,7 +7,8 @@
 3. Claim ladder
 4. Citation integrity
 5. Missing evidence
-6. Copyright and imitation
+6. Bilingual and unit fidelity
+7. Copyright and imitation
 
 ## 1. Source hierarchy
 
@@ -20,6 +21,14 @@ Use evidence in this order:
 5. Clearly labeled inference.
 
 Do not let fluent prose override a conflict among sources. Surface the conflict and preserve the more authoritative record.
+
+For conflicts among author artifacts, use this compact protocol:
+
+1. Record the value, unit, specification, sample, timestamp/version, and source file for every candidate.
+2. Prefer a reproducible output tied to the designated final code and data over a manually copied table, slide, screenshot, or prose note.
+3. Do not assume that the newest timestamp or most polished exhibit is authoritative; ask which analysis is final when lineage is unclear.
+4. Never assemble one claim from pieces of different specifications. The coefficient, uncertainty, sample, baseline, and label must travel together.
+5. Keep `[CONFLICT: ...]` in working text until the lineage is resolved, then update every occurrence and cross-reference.
 
 ## 2. Build a fact ledger
 
@@ -73,7 +82,13 @@ Use explicit placeholders that state the missing object:
 
 Do not fill a placeholder with a plausible-looking number or reference. If the missing fact determines the argument's direction, draft an outline rather than full prose.
 
-## 6. Avoid imitation and protected-text reuse
+## 6. Preserve bilingual statistical meaning
+
+Translate the estimand, not only the words. Preserve the supplied sign, unit, denominator, transformation, comparison group, and uncertainty. Chinese phrases such as `提高 4.8%`, `上升 0.05`, `一个标准差`, and `显著` do not by themselves reveal whether the source means percent, percentage points, log points, a coefficient scale, economic magnitude, or statistical significance.
+
+When the source is ambiguous, retain the number only in a ledger and use a named placeholder such as `[CONFIRM WHETHER 4.8 IS PERCENT, PERCENTAGE POINTS, OR LOG POINTS]`. Do not convert units, signs, standard errors, confidence intervals, or significance language for fluency. Preserve English variable names and table labels when translating them would break the link to an exhibit.
+
+## 7. Avoid imitation and protected-text reuse
 
 - Extract rhetorical functions and structural patterns, not sentences.
 - Never copy long passages from published papers or MinerU text into an output.

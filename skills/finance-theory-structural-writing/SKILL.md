@@ -7,7 +7,7 @@ description: Draft, revise, or audit formal-theory, structural-estimation, calib
 
 Make the model's economic mechanism, identification, and domain visible. Use `$finance-top-journal-writing` with this skill when installed.
 
-Read [evidence-basis.md](references/evidence-basis.md) when choosing among pure theory, structural estimation, quantitative/calibrated work, and theory–empirics hybrids. Its independent 50-paper portfolio records both the reusable move and its boundary; do not make fit or identification compulsory for pure theory.
+Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a model-type anchor or provenance check would help; search by subtype/function and read only matching rows rather than loading all 50 papers. Do not make fit or identification compulsory for pure theory.
 
 ## Route the paper
 
@@ -19,6 +19,8 @@ Choose one primary type:
 - **Theory–empirics hybrid**: model generates discriminating predictions tested in data.
 
 Read [model-router.md](references/model-router.md). Do not describe calibration as identification or reduced-form validation as structural fit.
+
+Within calibrated work, distinguish an illustrative quantitative exercise from a model disciplined for counterfactual use. Do not force the former to claim global fit, parameter identification, or a policy counterfactual; describe which comparative mechanism or magnitude the illustration clarifies.
 
 ## Build the model ledger
 
@@ -97,4 +99,4 @@ Read [proofs-exhibits-and-appendix.md](references/proofs-exhibits-and-appendix.m
 10. Reduced-form evidence is not described as proof of the entire model.
 11. Every central friction is evaluated against a transparent benchmark without that friction or with a competing closure.
 
-Deliver revised text plus `Maintained structure`, `Identification/fit boundary`, and unresolved proof or counterfactual gaps.
+Deliver the requested text first. Add `Maintained structure` and an `Identification/fit boundary` for structural, calibrated, counterfactual, or welfare claims; for a routine pure-theory draft, use one compact domain/assumption boundary instead. Consolidate unresolved proof or counterfactual gaps rather than repeating them across artifacts.

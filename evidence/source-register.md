@@ -39,6 +39,8 @@ The following repositories were reviewed for abstract architecture only. No pros
 - [Business-Academic-Skill](https://github.com/Mat-Wong/Business-Academic-Skill) — compact capability suite; repository uses MIT.
 - [AER-Skills](https://github.com/brycewang-stanford/AER-Skills) — routing and quality-gate ideas; repository uses MIT.
 
+A second, broader architecture audit covered high-usage skill and agent-workflow repositories, including Anthropic Skills, Superpowers, Agent Skills by Addy Osmani, GitHub Spec Kit, the Agent Skills specification, OpenAI Codex/Plugins, gstack, Matt Pocock's skills, Scientific Agent Skills, and Planning with Files. See [`architecture-benchmark.md`](architecture-benchmark.md) for the adopted and rejected patterns. Star counts are deliberately omitted from durable design rules because they change and do not measure scientific or instructional quality.
+
 ## Stability rule
 
 Fees, deadlines, refund rules, AI policies, anonymity, file types, and production specifications can change. Check the live official page again at submission time and distinguish initial submission, revision, and accepted-manuscript requirements.

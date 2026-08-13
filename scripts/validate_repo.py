@@ -9,6 +9,8 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from run_skill_evals import build_report as build_eval_report
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_DIR = ROOT / "skills"
@@ -127,6 +129,26 @@ def validate_skill(skill_dir: Path) -> list[str]:
     return errors
 
 
+def validate_local_links(path: Path) -> list[str]:
+    """Check repository Markdown links without following external URLs."""
+
+    errors: list[str] = []
+    text = path.read_text(encoding="utf-8")
+    for link in LINK_RE.findall(text):
+        clean = link.strip().strip("<>").split("#", 1)[0]
+        if not clean or "://" in clean or clean.startswith("mailto:"):
+            continue
+        target = (path.parent / clean).resolve()
+        try:
+            target.relative_to(ROOT.resolve())
+        except ValueError:
+            errors.append(f"{path.relative_to(ROOT)}: link escapes repository: {link}")
+            continue
+        if not target.exists():
+            errors.append(f"{path.relative_to(ROOT)}: broken local link: {link}")
+    return errors
+
+
 def load_csv(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8", newline="") as handle:
         return list(csv.DictReader(handle))
@@ -240,6 +262,24 @@ def validate_evidence_sets() -> list[str]:
     return errors
 
 
+def validate_skill_evals() -> list[str]:
+    """Run deterministic routing and behavioral-fixture schema gates."""
+
+    report = build_eval_report(ROOT)
+    errors = [
+        f"skill eval schema: {error}"
+        for error in report["behavioral_schema"]["schema_errors"]
+    ]
+    errors.extend(
+        "skill eval routing: "
+        + failure["id"]
+        + " failed "
+        + ", ".join(failure["reasons"])
+        for failure in report["routing"]["failures"]
+    )
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     actual = {path.name for path in SKILLS_DIR.iterdir() if path.is_dir()} if SKILLS_DIR.exists() else set()
@@ -267,12 +307,21 @@ def main() -> int:
         "evidence/sets/held-out.csv",
         "evidence/sets/overlap-matrix.json",
         "evidence/corpus-census/aggregate-patterns.json",
+        "evidence/architecture-benchmark.md",
+        "evals/README.md",
+        "evals/cases/routing-v1.json",
+        "evals/cases/behavior-v1.json",
         "evals/forward-test-results.md",
+        "evals/manual-test-report-2026-08-13.md",
     ):
         if not (ROOT / required).exists():
             errors.append(f"missing repository file: {required}")
 
     errors.extend(validate_evidence_sets())
+    errors.extend(validate_skill_evals())
+    for markdown in sorted(ROOT.rglob("*.md")):
+        if ".git" not in markdown.parts:
+            errors.extend(validate_local_links(markdown))
 
     result = {
         "skills_expected": len(EXPECTED_SKILLS),

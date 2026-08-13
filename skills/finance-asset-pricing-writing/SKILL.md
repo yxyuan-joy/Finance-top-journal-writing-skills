@@ -7,7 +7,7 @@ description: Draft, revise, or audit empirical asset-pricing and investments man
 
 Write asset-pricing papers as tests of an economic object, not as collections of return regressions. Use `$finance-top-journal-writing` with this skill when it is installed; the core skill supplies full-paper and journal-adapter guidance.
 
-Read [evidence-basis.md](references/evidence-basis.md) when choosing among factor/SDF tests, return facts, prediction, fund performance, implementation, measurement, or macro/time-series architectures. Use its independent 50-paper portfolio by function and heed each transfer limit; do not reproduce source prose.
+Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when an asset-pricing anchor or provenance check is useful; search by subtype/function and read only matching rows rather than loading all 50 papers. Heed transfer limits and do not reproduce source prose.
 
 ## Classify the paper before drafting
 
@@ -106,4 +106,4 @@ Before delivery, verify:
 8. The conclusion does not generalize beyond the asset universe and period.
 9. A new factor, model, or diagnostic is explained first as an economic object, then defined formally, then compared against a meaningful benchmark.
 
-Deliver the revised text followed by unresolved asset-pricing evidence gaps and a short failure-mode audit.
+Deliver the requested text first. Add unresolved asset-pricing evidence gaps and a short failure-mode audit only when they materially constrain the claim; avoid repeating the same missing item in several ledgers.

@@ -84,6 +84,8 @@ def render_reference(set_id: str, config: SetConfig, rows: list[dict[str, str]])
         "",
         f"This skill is informed by an independently curated {len(rows)}-paper {config['label'].lower()} portfolio from the 2020–2025 JF/JFE/RFS strict ordinary-submission census. Use the catalog to choose a functionally similar architecture or to audit provenance. Do not copy sentences, paper length, section counts, or topic-specific claims.",
         "",
+        "Do not read this catalog end to end for a routine drafting task. Search the table for the relevant subtype, section, or writing function and inspect only the matching rows. The catalog is optional when the author has already supplied enough evidence and the task does not require a teaching anchor or provenance check.",
+        "",
         "Selection required direct reading of the abstract, full introduction, the named body sections, and conclusion. Title and heading screens were discovery aids only. Each record states both a transferable writing function and a transfer limit.",
         "",
         "## Portfolio",
@@ -101,13 +103,14 @@ def render_reference(set_id: str, config: SetConfig, rows: list[dict[str, str]])
             "",
             "## Exemplar catalog",
             "",
-            "| Journal/year | DOI | Title | Tier | Writing function | Transfer limit |",
-            "|---|---|---|---|---|---|",
+            "| Subtype | Journal/year | DOI | Title | Tier | Writing function | Transfer limit |",
+            "|---|---|---|---|---|---|---|",
         ]
     )
     for row in rows:
         lines.append(
-            "| {journal} {year} | `{doi}` | {title} | {tier} | {function} | {limit} |".format(
+            "| `{subtype}` | {journal} {year} | `{doi}` | {title} | {tier} | {function} | {limit} |".format(
+                subtype=compact(row["subtype"]),
                 journal=compact(row["journal"]),
                 year=compact(row["canonical_year"]),
                 doi=compact(row["doi"]),

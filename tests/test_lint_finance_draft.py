@@ -36,6 +36,22 @@ class LintFinanceDraftTests(unittest.TestCase):
             self.codes("The reform increases bank lending by 4 percentage points."),
         )
 
+    def test_does_not_flag_explicit_causal_boundary(self) -> None:
+        self.assertNotIn(
+            "causal-language-review",
+            self.codes("This association does not establish a causal effect."),
+        )
+        self.assertNotIn(
+            "causal-language-review",
+            self.codes("We do not identify a causal impact."),
+        )
+
+    def test_does_not_treat_ordinal_first_as_novelty(self) -> None:
+        self.assertNotIn(
+            "novelty-verification",
+            self.codes("The response is concentrated in the first six event months."),
+        )
+
     def test_flags_significance_without_magnitude(self) -> None:
         self.assertIn(
             "significance-without-magnitude",

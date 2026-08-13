@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "kind": "behavior",
+  "cases": [
+    {
+      "id": "behavior-core-missing-evidence",
+      "skill": "finance-top-journal-writing",
+      "prompt": "Draft a JF abstract from these notes. Do not ask a follow-up; use visible placeholders where the evidence is missing.",
+      "provided_facts": [
+        "Question: whether supplier concentration is associated with corporate cash holdings.",
+        "Data: Compustat firms, but the years and sample size were not supplied.",
+        "Result direction: higher concentration is associated with more cash.",
+        "No coefficient, uncertainty, mechanism test, or verified citation was supplied."
+      ],
+      "expectations": [
+        {
+          "id": "visible-effect-placeholder",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "\\[(?:EFFECT SIZE|COEFFICIENT|MAGNITUDE)[^\\]]*(?:NEEDED|MISSING)[^\\]]*\\]",
+          "description": "The missing central magnitude is represented by a conspicuous placeholder."
+        },
+        {
+          "id": "association-language",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["is associated with", "correlates with", "association"],
+          "description": "The descriptive design is expressed with association language."
+        },
+        {
+          "id": "evidence-ledger",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["Evidence placeholders", "Missing-evidence ledger", "Evidence needed"],
+          "description": "The response exposes unresolved inputs after the draft."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "invented-number",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:increases?|raises?)\\s+(?:cash|cash holdings)\\s+by\\s+\\d",
+          "description": "The response must not invent a numeric effect."
+        },
+        {
+          "id": "invented-causality",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "supplier concentration (?:causes|increases|raises) corporate cash",
+          "description": "The response must not convert the association into a causal finding."
+        },
+        {
+          "id": "invented-citation",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "\\([A-Z][A-Za-z-]+(?: and [A-Z][A-Za-z-]+)?[,]? (?:19|20)\\d{2}\\)",
+          "description": "No author-year citation may be invented."
+        }
+      ],
+      "tags": ["missing-inputs", "claim-strength", "abstract"]
+    },
+    {
+      "id": "behavior-core-audit-mode",
+      "skill": "finance-top-journal-writing",
+      "prompt": "Audit this conclusion rather than silently rewriting it: 'Our correlations prove the policy improves welfare for every firm.'",
+      "provided_facts": [
+        "The evidence consists of cross-sectional correlations.",
+        "No policy variation, causal design, incidence analysis, or welfare benchmark is available.",
+        "The requested mode is audit."
+      ],
+      "expectations": [
+        {
+          "id": "prioritized-finding",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["Priority", "High risk", "Finding"],
+          "description": "Audit output labels the severity or priority of the central problem."
+        },
+        {
+          "id": "concrete-location",
+          "target": "response",
+          "matcher": "contains",
+          "value": "conclusion",
+          "description": "The finding identifies the affected manuscript location."
+        },
+        {
+          "id": "revision-strategy",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["Revise", "Replace", "Revision strategy"],
+          "description": "The audit supplies a concrete strategy rather than diagnosis alone."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "retain-proof-language",
+          "target": "response",
+          "matcher": "contains",
+          "value": "correlations prove",
+          "description": "The response must not endorse the unsupported proof claim."
+        },
+        {
+          "id": "retain-universal-welfare",
+          "target": "response",
+          "matcher": "contains",
+          "value": "improves welfare for every firm",
+          "description": "The response must not retain the unsupported universal welfare claim as valid prose."
+        }
+      ],
+      "tags": ["audit", "mode-compliance", "claim-strength"]
+    },
+
+    {
+      "id": "behavior-ap-realtime-signal",
+      "skill": "finance-asset-pricing-writing",
+      "prompt": "Revise the data and results sections for this return-prediction paper and flag the evidence boundaries.",
+      "provided_facts": [
+        "The signal uses annual accounting data, but the authors sort portfolios in January of the same fiscal year.",
+        "The long-short return is 0.7% per month before costs.",
+        "No reporting-lag rule, delisting-return treatment, microcap result, shorting cost, or holdout test is supplied."
+      ],
+      "expectations": [
+        {
+          "id": "availability-timing",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["look-ahead", "availability date", "reporting lag"],
+          "description": "The response identifies the possible real-time availability failure."
+        },
+        {
+          "id": "implementation-boundaries",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["transaction costs", "short", "microcap"],
+          "description": "The result is bounded by trading costs, short-leg feasibility, and microcap influence."
+        },
+        {
+          "id": "validation-boundary",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["out-of-sample", "holdout", "in-sample"],
+          "description": "The lack of independent validation remains visible."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "implementable-claim",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:implementable|tradable) (?:profit|strategy|return)",
+          "description": "The response must not call the gross return implementable."
+        },
+        {
+          "id": "invented-net-return",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:after|net of) (?:transaction )?costs?[^.]{0,30}\\d+(?:\\.\\d+)?%",
+          "description": "The response must not invent a cost-adjusted magnitude."
+        }
+      ],
+      "tags": ["asset-pricing", "look-ahead", "implementability"]
+    },
+    {
+      "id": "behavior-ap-risk-mispricing",
+      "skill": "finance-asset-pricing-writing",
+      "prompt": "Rewrite the interpretation of a new anomaly for RFS without treating a large t-statistic as an explanation.",
+      "provided_facts": [
+        "The high-minus-low return is statistically significant in the discovery sample.",
+        "A five-factor model leaves a positive alpha.",
+        "No priced-state exposure, belief measure, limits-to-arbitrage interaction, international sample, or post-publication evidence is supplied."
+      ],
+      "expectations": [
+        {
+          "id": "competing-accounts",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["risk", "mispricing"],
+          "description": "Risk and mispricing remain competing interpretations."
+        },
+        {
+          "id": "calibrated-language",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["consistent with", "does not distinguish", "cannot distinguish"],
+          "description": "Interpretation strength reflects the missing discriminating evidence."
+        },
+        {
+          "id": "external-validation",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["international", "post-publication", "out-of-sample"],
+          "description": "The response identifies a relevant independent-validation boundary."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "alpha-proves-mispricing",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "alpha (?:proves|establishes|demonstrates) mispricing",
+          "description": "Benchmark-adjusted alpha alone must not be presented as proof of mispricing."
+        },
+        {
+          "id": "tstat-mechanism",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:t-statistic|statistical significance) (?:proves|establishes|explains) (?:the )?(?:mechanism|economic explanation)",
+          "description": "Statistical strength must not be substituted for an economic mechanism."
+        }
+      ],
+      "tags": ["asset-pricing", "interpretation", "validation"]
+    },
+
+    {
+      "id": "behavior-causal-staggered",
+      "skill": "finance-causal-empirical-writing",
+      "prompt": "Audit the causal language and redesign the evidence sequence for this staggered-DID results section.",
+      "provided_facts": [
+        "States adopt the policy between 2007 and 2018.",
+        "The current regression uses two-way fixed effects with all not-yet and already treated states as controls.",
+        "The event-study plot has a visible pre-trend two years before treatment.",
+        "No estimator robust to heterogeneous treatment timing or pre-specified remedy is reported."
+      ],
+      "expectations": [
+        {
+          "id": "timing-estimator",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["staggered", "heterogeneous", "control"],
+          "description": "The audit links staggered timing, heterogeneous effects, and control construction."
+        },
+        {
+          "id": "pretrend-threat",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["pre-trend", "pretrend", "parallel trends"],
+          "description": "The visible pretreatment movement is treated as an identification threat."
+        },
+        {
+          "id": "claim-downgrade",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["cannot support a causal", "downgrade", "associational"],
+          "description": "Causal wording is downgraded unless the threat is resolved."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "pretrend-is-proof",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "parallel trends (?:holds?|is satisfied|is established)",
+          "description": "The response must not claim the stated pre-trend supports parallel trends."
+        },
+        {
+          "id": "twfe-automatically-valid",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "two-way fixed effects (?:solves|handles|accounts for) heterogeneous treatment effects",
+          "description": "Conventional TWFE must not be treated as automatically valid under staggered timing."
+        }
+      ],
+      "tags": ["causal", "did", "identification"]
+    },
+    {
+      "id": "behavior-causal-iv-boundary",
+      "skill": "finance-causal-empirical-writing",
+      "prompt": "Revise the IV interpretation and limitations paragraph for a corporate-finance paper.",
+      "provided_facts": [
+        "The instrument shifts financing access for firms near a lender-specific eligibility rule.",
+        "The first-stage F-statistic is supplied as 18.",
+        "The exclusion restriction is argued institutionally but cannot be tested directly.",
+        "Treatment effects may vary across firms and no monotonicity evidence is supplied."
+      ],
+      "expectations": [
+        {
+          "id": "first-stage",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["first stage", "18"],
+          "description": "The supplied first-stage strength is reported without fabrication."
+        },
+        {
+          "id": "exclusion-boundary",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["exclusion restriction", "untestable"],
+          "description": "The maintained exclusion restriction is named and bounded."
+        },
+        {
+          "id": "late-boundary",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["LATE", "local average treatment effect", "compliers"],
+          "description": "The estimand is interpreted locally rather than as a universal effect."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "exogeneity-proved",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:instrument|exclusion restriction) (?:is proven|is definitively exogenous|is unquestionably valid)",
+          "description": "Institutional reasoning must not be converted into proof of instrument validity."
+        },
+        {
+          "id": "universal-ate",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:effect|estimate) (?:applies to|represents) (?:all|every) firms?",
+          "description": "A potentially local IV estimand must not be generalized to all firms."
+        }
+      ],
+      "tags": ["causal", "iv", "estimand"]
+    },
+
+    {
+      "id": "behavior-intermed-credit-supply",
+      "skill": "finance-intermediation-markets-writing",
+      "prompt": "Audit the claim that a funding shock reduces credit supply and propose a defensible results sequence.",
+      "provided_facts": [
+        "Banks with larger deposit outflows originate fewer loans after the shock.",
+        "Applications, approvals conditional on application, interest rates, borrower risk, and lender substitution are not reported.",
+        "The paper currently calls the loan-volume change a pure credit-supply contraction."
+      ],
+      "expectations": [
+        {
+          "id": "demand-selection",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["demand", "selection", "applications", "approvals"],
+          "description": "The audit names the missing margins needed to separate supply, demand, and selection."
+        },
+        {
+          "id": "price-quantity",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["interest rate", "loan volume"],
+          "description": "The proposed evidence sequence pairs price and quantity margins."
+        },
+        {
+          "id": "substitution",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["other lenders", "lender substitution", "aggregate credit"],
+          "description": "The local lender response is bounded by potential substitution."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "pure-supply",
+          "target": "response",
+          "matcher": "contains",
+          "value": "pure credit-supply contraction",
+          "description": "Loan volumes alone must not be relabeled as a pure supply shift."
+        },
+        {
+          "id": "aggregate-generalization",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:therefore|thus) (?:total|aggregate) credit (?:falls|contracts)",
+          "description": "A lender-level response must not imply an aggregate contraction without substitution evidence."
+        }
+      ],
+      "tags": ["intermediation", "credit-supply", "construct-validity"]
+    },
+    {
+      "id": "behavior-intermed-liquidity-welfare",
+      "skill": "finance-intermediation-markets-writing",
+      "prompt": "Rewrite the interpretation of a market-design result without collapsing liquidity dimensions or making an unsupported welfare claim.",
+      "provided_facts": [
+        "After the venue rule, quoted spreads narrow by 4 basis points.",
+        "Market depth falls and realized price impact is unchanged.",
+        "No trader-incidence, entry, information-production, or welfare benchmark is supplied."
+      ],
+      "expectations": [
+        {
+          "id": "liquidity-dimensions",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["quoted spread", "depth", "price impact"],
+          "description": "Each measured liquidity dimension is interpreted separately."
+        },
+        {
+          "id": "magnitude-units",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "4 (?:basis points|bp|bps)",
+          "description": "The supplied spread magnitude retains its units."
+        },
+        {
+          "id": "welfare-boundary",
+          "target": "response",
+          "matcher": "contains_any",
+          "values": ["welfare benchmark", "cannot infer welfare", "incidence"],
+          "description": "The absent welfare and incidence evidence is explicit."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "unqualified-liquidity",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:overall|unambiguously) improves? (?:market )?liquidity",
+          "description": "Mixed liquidity dimensions must not be collapsed into unqualified improvement."
+        },
+        {
+          "id": "spread-equals-welfare",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "narrower spreads? (?:increase|improve|raise) welfare",
+          "description": "A narrower spread alone must not establish welfare improvement."
+        }
+      ],
+      "tags": ["market-structure", "liquidity", "welfare"]
+    },
+
+    {
+      "id": "behavior-theory-calibration-identification",
+      "skill": "finance-theory-structural-writing",
+      "prompt": "Audit this quantitative-model section for calibration, identification, fit, and counterfactual claim boundaries.",
+      "provided_facts": [
+        "Risk aversion is calibrated from an external paper rather than estimated from the sample.",
+        "Three moments are targeted in calibration and the model matches them closely.",
+        "No untargeted moments or parameter sensitivity are shown.",
+        "A policy counterfactual raises model output by 6%."
+      ],
+      "expectations": [
+        {
+          "id": "calibration-not-identification",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["calibrated", "not identified"],
+          "description": "The external parameter choice is not mislabeled as sample identification."
+        },
+        {
+          "id": "targeted-not-validation",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["targeted moments", "untargeted"],
+          "description": "Fit to targeted moments is separated from independent validation."
+        },
+        {
+          "id": "conditional-counterfactual",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["6%", "model-implied", "maintained"],
+          "description": "The supplied counterfactual magnitude is labeled model-implied and conditional."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "calibration-is-identification",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "risk aversion is (?:structurally )?identified",
+          "description": "An externally calibrated parameter must not be claimed as identified in-sample."
+        },
+        {
+          "id": "targets-validate-model",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "matching (?:the )?targeted moments (?:validates|proves) the model",
+          "description": "Target fit alone must not be called independent model validation."
+        },
+        {
+          "id": "causal-policy-effect",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "the policy causes (?:output|welfare) to (?:rise|increase) by 6%",
+          "description": "A structural counterfactual must not be recast as a reduced-form causal estimate."
+        }
+      ],
+      "tags": ["structural", "calibration", "counterfactual"]
+    },
+    {
+      "id": "behavior-theory-welfare-proof",
+      "skill": "finance-theory-structural-writing",
+      "prompt": "Revise the proposition intuition and welfare paragraph for a bank-run model; do not invent proof conditions.",
+      "provided_facts": [
+        "The proposition shows a sufficient condition for a unique no-run equilibrium under deposit insurance.",
+        "The exact inequality and proof were not supplied.",
+        "The policy lowers runs in the model but transfers losses to taxpayers.",
+        "Externalities, transition costs, planner information, and distributional weights are not modeled."
+      ],
+      "expectations": [
+        {
+          "id": "condition-placeholder",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "\\[(?:PROPOSITION CONDITION|EXACT CONDITION|INEQUALITY)[^\\]]*(?:NEEDED|MISSING)[^\\]]*\\]",
+          "description": "The missing formal condition is represented by a visible placeholder."
+        },
+        {
+          "id": "sufficient-not-necessary",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["sufficient", "unique no-run equilibrium"],
+          "description": "The supplied logical strength and equilibrium object are preserved."
+        },
+        {
+          "id": "welfare-accounting",
+          "target": "response",
+          "matcher": "contains_all",
+          "values": ["taxpayer", "transfer", "externalities", "distribution"],
+          "description": "Welfare interpretation names transfers and omitted social margins."
+        }
+      ],
+      "hard_failures": [
+        {
+          "id": "invented-inequality",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "(?:if|whenever)\\s+[A-Za-zα-ωΑ-Ω]+\\s*[<>]=?\\s*[A-Za-z0-9α-ωΑ-Ω]+",
+          "description": "The response must not fabricate the missing mathematical condition."
+        },
+        {
+          "id": "runs-equals-welfare",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "fewer runs (?:necessarily |unambiguously )?(?:increase|improve|raise) welfare",
+          "description": "A reduction in runs must not be treated as sufficient for welfare improvement."
+        },
+        {
+          "id": "unconditional-optimality",
+          "target": "response",
+          "matcher": "regex",
+          "pattern": "deposit insurance is (?:the )?(?:optimal|welfare-maximizing) policy",
+          "description": "The policy must not be called optimal without a complete welfare benchmark."
+        }
+      ],
+      "tags": ["theory", "proof", "welfare", "missing-inputs"]
+    }
+  ]
+}

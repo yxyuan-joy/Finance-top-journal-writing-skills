@@ -25,9 +25,34 @@ CAUSAL_PATTERN = re.compile(
     re.I,
 )
 NOVELTY_PATTERN = re.compile(
-    r"\b(?:the first|first paper|first study|only paper|only study|"
+    r"\b(?:(?:we are|this is) the first to|first paper|first study|only paper|only study|"
     r"unprecedented|never before|no prior (?:paper|study|work))\b",
     re.I,
+)
+CAUSAL_BOUNDARY_PATTERNS = (
+    re.compile(
+        r"\b(?:does?|did|can(?:not)?|cannot|should|must|is|are|was|were)\s+"
+        r"(?:not|n't)\s+(?:identify|establish|show|support|justify|demonstrate|prove|"
+        r"permit|warrant|imply|represent)\b[^.!?;]{0,100}\bcaus\w*",
+        re.I,
+    ),
+    re.compile(
+        r"\b(?:cannot|can't|should not|must not|do not|does not)\s+be\s+"
+        r"interpreted\s+as\b[^.!?;]{0,60}\bcausal\b",
+        re.I,
+    ),
+    re.compile(
+        r"\b(?:not|no)\s+(?:a\s+)?causal\s+"
+        r"(?:claim|interpretation|estimate|evidence|identification|design)\b",
+        re.I,
+    ),
+    re.compile(
+        r"\b(?:does?|did|can(?:not)?|cannot|should|must|is|are|was|were|we\s+do)\s+"
+        r"(?:not|n't)\s+(?:identify|establish|show|support|justify|demonstrate|prove|"
+        r"permit|warrant|imply|represent)\b[^.!?;]{0,100}\b(?:effect|impact|increase|"
+        r"decrease|reduce|raise|drive|lead)\w*",
+        re.I,
+    ),
 )
 SIGNIFICANCE_PATTERN = re.compile(r"\bstatistically significant\b", re.I)
 NUMBER_PATTERN = re.compile(r"(?:\d|%|basis point|percentage point|standard deviation)", re.I)
@@ -73,6 +98,13 @@ def sentence_offsets(text: str):
         cursor = start + len(stripped)
 
 
+def has_unbounded_causal_language(sentence: str) -> bool:
+    review_text = sentence
+    for pattern in CAUSAL_BOUNDARY_PATTERNS:
+        review_text = pattern.sub("", review_text)
+    return CAUSAL_PATTERN.search(review_text) is not None
+
+
 def lint(text: str, journal: str | None = None) -> list[Finding]:
     findings: list[Finding] = []
 
@@ -89,7 +121,7 @@ def lint(text: str, journal: str | None = None) -> list[Finding]:
             )
 
     for sentence, offset in sentence_offsets(text):
-        if CAUSAL_PATTERN.search(sentence):
+        if has_unbounded_causal_language(sentence):
             findings.append(
                 Finding(
                     "causal-language-review",

@@ -7,7 +7,7 @@ description: Draft, revise, or audit causal empirical finance manuscripts for Th
 
 Make the identifying argument inspectable. Use `$finance-top-journal-writing` with this skill when installed for full-paper and journal-adapter guidance.
 
-Read [evidence-basis.md](references/evidence-basis.md) when selecting a design-specific argument order, threat-to-test architecture, or scope statement. Its independent 60-paper portfolio is a functional evidence map, not a source of sentences or a claim that all designs need the same checks.
+Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a design-specific teaching anchor or provenance check would help; search by design/function and read only matching rows rather than loading all 60 papers. It is not a source of sentences or a claim that all designs need the same checks.
 
 ## Define the estimand before the design label
 
@@ -22,6 +22,8 @@ Write one sentence for each:
 - identifying variation;
 - maintained assumptions;
 - interference, anticipation, selection, and measurement risks.
+
+For a multi-stage treatment chain, separate assignment, the first-stage change in the economically relevant exposure, and the final outcome. State the estimand at each link and do not rename assignment as the downstream exposure merely because the latter is the paper's economic object.
 
 Do not claim that `DID`, `IV`, or `RDD` “solves endogeneity.” Explain why this variation recovers this estimand.
 
@@ -113,4 +115,4 @@ When multiple designs are available, assign each a distinct job—assignment cre
 9. Abstract and conclusion do not claim more than the design.
 10. Every mechanism claim names a distinctive prediction and at least one live competing account.
 
-Deliver revised text plus an `Identification boundary` and unresolved threat-to-test gaps.
+Deliver the requested text first. For a high-risk or incomplete design, add one compact `Identification boundary` and a deduplicated threat-to-test list; do not repeat the full estimand ledger, threat matrix, and gap list unless the user requests an audit or design blueprint.

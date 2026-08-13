@@ -7,7 +7,7 @@ description: Draft, restructure, revise, or audit complete finance manuscripts a
 
 Build a defensible finance-paper argument from the author's evidence. Treat JF, JFE, and RFS as journals sharing a high bar for contribution and credibility, with some observable production conventions—not as three fixed prose personas.
 
-Read [evidence-basis.md](references/evidence-basis.md) when choosing a paper architecture, checking the empirical basis of a recommendation, or looking for a functionally similar teaching anchor. Select by writing function and transfer limit; never imitate an exemplar's wording or length.
+Treat [evidence-basis.md](references/evidence-basis.md) as a searchable provenance catalog, not required reading. Consult it only when the task genuinely needs a teaching anchor or provenance audit. Search first by subtype or writing function and read only nearby rows; do not load the full 50-paper catalog for ordinary drafting. Never imitate an exemplar's wording or length.
 
 ## Establish the writing contract
 
@@ -23,6 +23,8 @@ Before drafting, recover or ask for the smallest useful fact set:
 
 Do not block when some inputs are absent. Create a `Missing-evidence ledger`, use conspicuous placeholders such as `[EFFECT SIZE NEEDED]`, and draft only claims supported by supplied facts. Never invent a citation, coefficient, sample detail, institutional fact, theorem, or journal rule.
 
+Resolve conflicts before polishing. Rank supplied artifacts by authority: reproducible code/output and author-designated final exhibits usually outrank prose notes or screenshots, but do not assume which artifact is current. Record every conflicting value, sample, unit, or specification and use a placeholder until the author or source pipeline resolves it. Never combine a coefficient from one specification with the baseline, N, or uncertainty from another.
+
 Read [evidence-and-claim-policy.md](references/evidence-and-claim-policy.md) before making substantive claims or when inputs are incomplete.
 
 ## Choose the task mode
@@ -32,6 +34,14 @@ Read [evidence-and-claim-policy.md](references/evidence-and-claim-policy.md) bef
 - **Revise**: Improve argument, precision, and readability while returning a material-change note.
 - **Audit**: Diagnose problems and rank fixes; do not silently rewrite unless asked.
 - **Full-paper pass**: Create a reverse outline, claim–evidence matrix, and cross-section consistency check before line editing.
+
+Match process and output to task size:
+
+- **Direct section task**: read the core skill plus the one section reference and, if needed, one specialist reference; deliver the requested prose with only decisive gaps.
+- **High-risk section task**: add the evidence policy and the relevant design/threat reference.
+- **Full-paper or audit task**: use the complete ledgers, matrices, and quality gates.
+
+Do not recursively load every file named by a specialist skill. Use the core reference for the requested section and the one specialist reference that governs the central design or claim. A genuine hybrid may add one auxiliary specialist when a second evidence logic performs an independent core job—for example, asset-pricing evidence plus IV identification, or a causal estimate used to discipline a calibrated model. State which claim each specialist owns and load only its relevant reference. Do not emit every internal ledger. Use them as working tools and show only artifacts the user requested or that materially change what can be claimed.
 
 For full papers, read [full-paper-workflow.md](references/full-paper-workflow.md). Copy the relevant templates from `assets/` into the working output when useful.
 
@@ -45,6 +55,8 @@ Use this skill alone for descriptive or mixed finance papers. When an installed 
 - primitives, equilibrium, propositions, structural estimation, calibration, counterfactuals, or welfare → `$finance-theory-structural-writing`.
 
 Route by how the main claim is supported, not by a broad field label. A corporate bond return paper may be asset pricing; a governance natural experiment may be causal; a bank-run model may be theory.
+
+Invoke a second specialist only for a true hybrid whose second evidence logic carries an independent central claim, not merely because its vocabulary or setting appears in the paper. Route by section and claim ownership: a bank setting does not by itself require the intermediation skill, and a return outcome does not by itself require the asset-pricing skill.
 
 ## Build the section as an argument
 
@@ -74,10 +86,12 @@ Read the section-specific reference before drafting:
 - theory, hypotheses, setting, data, or design → [theory-data-and-design.md](references/theory-data-and-design.md)
 - results, robustness, mechanism, discussion, or conclusion → [results-through-conclusion.md](references/results-through-conclusion.md)
 - tables, figures, equations, or appendices → [tables-figures-and-appendices.md](references/tables-figures-and-appendices.md)
+- predictive models, machine-learning/text measures, validation splits, or construct validity → [predictive-and-measurement-studies.md](references/predictive-and-measurement-studies.md)
 
 ## Adapt to the target journal conservatively
 
 Read [journal-adapters.md](references/journal-adapters.md) whenever the user specifies JF, JFE, or RFS.
+Read [journal-fit-and-targeting.md](references/journal-fit-and-targeting.md) when the user asks which journal to target or whether the contribution fits JF/JFE/RFS.
 Read [official-submission-sources.md](references/official-submission-sources.md) for compliance-related requests, then recheck the linked live page at submission time.
 
 Apply only three classes of adaptation:
@@ -131,11 +145,11 @@ Treat linter findings as review prompts, not automatic errors.
 
 ## Deliver a reviewable result
 
-Return, in this order unless the user requests another format:
+Return the requested artifact first. Unless the user requests a detailed audit, follow it with only:
 
 1. The revised or drafted text.
-2. `Evidence placeholders` that still require author input.
-3. `Material choices` explaining any changed claim strength, paragraph order, or section scope.
-4. A short quality-gate result for high-risk tasks.
+2. `Evidence gaps` that block or materially limit the text; consolidate duplicates and normally keep this to eight or fewer.
+3. `Material choices` only when you changed claim strength, paragraph order, or section scope in a non-obvious way.
+4. A short boundary note only for causal, structural/welfare, severe-conflict, or other high-risk tasks.
 
 When auditing, instead return prioritized findings with location, consequence, and a concrete revision strategy. Preserve the author's contribution and voice; do not homogenize the paper into generic “top-journal English.”

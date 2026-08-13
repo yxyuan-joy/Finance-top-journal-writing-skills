@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "kind": "routing",
+  "cases": [
+    {
+      "id": "route-core-cash-holdings-en",
+      "prompt": "Polish the introduction of our descriptive corporate cash-holdings paper for JFE; keep the association language and make the contribution more precise.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["positive", "core-only", "descriptive"]
+    },
+    {
+      "id": "route-core-governance-zh",
+      "prompt": "帮我把这篇公司治理论文的摘要捋顺，目标是 JF；现在只是描述性关联，别写成因果。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["positive", "core-only", "colloquial", "claim-calibration"]
+    },
+    {
+      "id": "route-core-merger-literature-en",
+      "prompt": "Restructure two literature-review paragraphs in a finance manuscript about merger announcement disclosure; this is a positioning task, not an identification claim.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["positive", "core-only", "literature-positioning"]
+    },
+    {
+      "id": "route-core-household-response-zh",
+      "prompt": "请改写家庭金融论文的 reviewer 回复信，解释为什么我们把结果降格为相关性证据。",
+      "language": "mixed",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": [],
+      "negative_for": ["finance-causal-empirical-writing", "finance-theory-structural-writing"],
+      "tags": ["positive", "core-only", "response-letter"]
+    },
+    {
+      "id": "route-core-payout-table-en",
+      "prompt": "Rewrite the table narration and conclusion of an RFS finance paper documenting payout-policy patterns across firms; no treatment or formal model is used.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": [],
+      "negative_for": ["finance-causal-empirical-writing", "finance-theory-structural-writing"],
+      "tags": ["positive", "core-only", "results-writing"]
+    },
+
+    {
+      "id": "route-ap-cross-section-en",
+      "prompt": "Rewrite the abstract of our JF paper on a new signal that predicts cross-sectional returns, and report the expected-return spread without overselling it.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing"]
+    },
+    {
+      "id": "route-ap-sdf-zh",
+      "prompt": "润色这篇 RFS 资产定价论文的引言：我们比较三个因子模型和随机贴现因子的定价误差。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-theory-structural-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing", "chinese"]
+    },
+    {
+      "id": "route-ap-fund-colloquial-zh",
+      "prompt": "帮我捋顺这份基金绩效稿子的结果段，核心是 mutual fund 在样本外还有没有 alpha，交易成本后也要说清楚。",
+      "language": "mixed",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-intermediation-markets-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing", "colloquial"]
+    },
+    {
+      "id": "route-ap-implicit-sorts-en",
+      "prompt": "Revise the results section of this finance paper: we sort stocks into deciles, report the high-minus-low portfolio, and show what remains after transaction costs.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing", "implicit-terminology"]
+    },
+    {
+      "id": "route-ap-anomaly-validation-en",
+      "prompt": "Audit the conclusion of an RFS anomaly paper that calls an in-sample return pattern robust even though the holdout and post-publication tests are weak.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing", "audit"]
+    },
+    {
+      "id": "route-ap-vs-markets-en",
+      "prompt": "Rewrite the JF abstract. A corporate-bond factor predicts expected returns and earns a risk premium; dealer market liquidity is one proposed mechanism, not the main evidence.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-asset-pricing-writing"],
+      "negative_for": ["finance-intermediation-markets-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "asset-pricing", "cross-skill-conflict"]
+    },
+
+    {
+      "id": "route-causal-staggered-did-en",
+      "prompt": "Restructure the introduction of our JFE governance paper using staggered adoption and difference-in-differences, with the parallel-trends threat stated clearly.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-theory-structural-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal"]
+    },
+    {
+      "id": "route-causal-iv-zh",
+      "prompt": "改写这篇 JF 公司金融论文的方法部分：核心是工具变量，需要交代第一阶段、排除性约束和 LATE 边界。",
+      "language": "mixed",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-theory-structural-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal", "chinese"]
+    },
+    {
+      "id": "route-causal-colloquial-zh",
+      "prompt": "帮我捋顺这份金融稿子的结果段：政策分批推行，我们比处理组和对照组，但政策前趋势不太好看。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal", "colloquial", "implicit-terminology"]
+    },
+    {
+      "id": "route-causal-rdd-en",
+      "prompt": "Audit the identification section of an RFS finance paper using regression discontinuity around an eligibility cutoff; check bandwidth and the running variable.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-theory-structural-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal", "audit"]
+    },
+    {
+      "id": "route-causal-natural-experiment-en",
+      "prompt": "Rewrite the abstract of a household-finance natural experiment and state the causal estimand without calling every mechanism identified.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-theory-structural-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal", "claim-calibration"]
+    },
+    {
+      "id": "route-causal-vs-intermediation-en",
+      "prompt": "Revise our bank-lending paper for JFE. A staggered regulatory reform identifies the credit-supply effect with DID; include pre-trends and treated-versus-control comparisons. Bank funding is the setting.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-causal-empirical-writing"],
+      "negative_for": ["finance-intermediation-markets-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "causal", "cross-skill-conflict"]
+    },
+
+    {
+      "id": "route-intermed-credit-supply-en",
+      "prompt": "Audit an RFS paper claiming that a deposit funding shock reduces bank credit supply; require evidence separating borrower demand and selection.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "intermediation"]
+    },
+    {
+      "id": "route-intermed-dealer-en",
+      "prompt": "Write the mechanism and results sections for a dealer-inventory, order-flow, and price-discovery paper aimed at JF.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "market-structure"]
+    },
+    {
+      "id": "route-intermed-bank-demand-zh",
+      "prompt": "润色这篇 JFE 银行贷款论文的引言：我们声称信贷供给下降，但还要区分需求、筛选和贷款审批。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "intermediation", "chinese"]
+    },
+    {
+      "id": "route-intermed-implicit-en",
+      "prompt": "Rewrite the results section of this finance paper: after deposits drain, mortgage applications are unchanged but approvals fall and loan pricing rises.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "intermediation", "implicit-terminology"]
+    },
+    {
+      "id": "route-intermed-colloquial-zh",
+      "prompt": "帮我把这个交易稿子捋清楚：订单流来了以后买卖价差和市场深度怎么变，别笼统地说“流动性变好”。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "market-structure", "colloquial"]
+    },
+    {
+      "id": "route-intermed-vs-ap-en",
+      "prompt": "Revise the abstract of our corporate-bond finance paper. Dealer inventory and order flow move bid-ask spreads and price discovery; bond returns are a secondary outcome.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-intermediation-markets-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "market-structure", "cross-skill-conflict"]
+    },
+
+    {
+      "id": "route-theory-proposition-en",
+      "prompt": "Revise the model section of a JF theory paper with propositions, proofs, comparative statics, and an equilibrium characterization.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "theory"]
+    },
+    {
+      "id": "route-theory-structural-zh",
+      "prompt": "重构这篇 JFE 结构估计论文的方法部分，说清参数的结构识别、目标矩和非目标矩。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "structural", "chinese"]
+    },
+    {
+      "id": "route-theory-calibration-en",
+      "prompt": "Rewrite the results and conclusion of our calibrated quantitative finance model, separating model fit, counterfactual policy experiments, and welfare analysis.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "quantitative-model"]
+    },
+    {
+      "id": "route-theory-implicit-colloquial-zh",
+      "prompt": "帮我捋顺这篇金融稿子的模型段：两个贷方先后行动，信息结构不同，我需要把均衡概念交代明白。",
+      "language": "zh",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-causal-empirical-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "theory", "colloquial", "implicit-terminology"]
+    },
+    {
+      "id": "route-theory-vs-intermediation-en",
+      "prompt": "Revise a bank-run model for RFS: state the propositions and equilibrium characterization, then bound the welfare counterfactual. The banking institution is secondary to the formal model.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-intermediation-markets-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "theory", "cross-skill-conflict"]
+    },
+    {
+      "id": "route-theory-vs-ap-en",
+      "prompt": "Audit the structural estimation section of a household portfolio model for JF: expected returns are one targeted moment, while model fit, counterfactuals, and welfare carry the contribution.",
+      "language": "en",
+      "expected_primary": "finance-top-journal-writing",
+      "expected_supporting": ["finance-theory-structural-writing"],
+      "negative_for": ["finance-asset-pricing-writing"],
+      "top_k": 2,
+      "tags": ["positive", "co-routing", "structural", "cross-skill-conflict"]
+    },
+
+    {
+      "id": "route-none-wacc-en",
+      "prompt": "Explain how to compute WACC for my private company.",
+      "language": "en",
+      "expected_primary": null,
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-top-journal-writing",
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["negative", "generic-finance", "no-writing-task"]
+    },
+    {
+      "id": "route-none-stata-zh",
+      "prompt": "帮我 debug 这个 Stata loop，只修代码，不改论文。",
+      "language": "mixed",
+      "expected_primary": null,
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-top-journal-writing",
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["negative", "code-debugging", "chinese"]
+    },
+    {
+      "id": "route-none-biology-en",
+      "prompt": "Rewrite the abstract of my molecular-biology manuscript about protein folding.",
+      "language": "en",
+      "expected_primary": null,
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-top-journal-writing",
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["negative", "non-finance", "writing-task"]
+    },
+    {
+      "id": "route-none-trading-advice-zh",
+      "prompt": "现在应该买哪只股票？给我一个下周的收益预测。",
+      "language": "zh",
+      "expected_primary": null,
+      "expected_supporting": [],
+      "negative_for": [
+        "finance-top-journal-writing",
+        "finance-asset-pricing-writing",
+        "finance-causal-empirical-writing",
+        "finance-intermediation-markets-writing",
+        "finance-theory-structural-writing"
+      ],
+      "tags": ["negative", "trading-advice", "no-writing-task", "colloquial"]
+    }
+  ]
+}

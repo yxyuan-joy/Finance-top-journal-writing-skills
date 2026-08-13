@@ -14,6 +14,8 @@ State treatment cohorts, timing, comparison observations, event window, anticipa
 
 Explain what event-study leads can diagnose and their limited power. Do not write `no significant pre-trends proves parallel trends`.
 
+For staggered adoption, choose the estimand before choosing a named estimator or software command. Record cohort-specific treatment timing, eligible controls at each date, support by cohort and event time, anticipation, treatment reversals, and whether the target is an overall, cohort-time, or event-time average effect. Then verify that the implementation aggregates only comparisons compatible with that estimand and report the weighting/aggregation rule. A fashionable estimator name does not resolve poor overlap, forbidden controls, few clusters, spillovers, or a policy that changes intensity rather than switching on once. If those inputs are missing, provide a bounded design blueprint rather than pretending to select a production-ready estimator.
+
 ## Instrumental variables
 
 Define instrument, endogenous treatment, first stage, reduced form, exclusion restriction, independence, monotonicity, and complier population. Report first-stage strength with appropriate diagnostics. Explain why the instrument affects the outcome only through treatment and discuss plausible violations. Interpret the estimate as the relevant local effect unless stronger homogeneity assumptions are justified.

@@ -7,7 +7,7 @@ description: Draft, revise, or audit financial-intermediation and market-structu
 
 Center the paper on an institutional mechanism connecting agents, constraints, choices, and market outcomes. Use `$finance-top-journal-writing` with this skill when installed.
 
-Read [evidence-basis.md](references/evidence-basis.md) when routing among credit supply, funding/liquidity, screening/contracting, networks/runs, dealer/venue microstructure, or regulation/market design. Its independent 60-paper portfolio supplies bounded teaching functions, not language to copy.
+Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a mechanism-specific anchor or provenance check would help; search by subtype/function and read only matching rows rather than loading all 60 papers. It supplies bounded teaching functions, not language to copy.
 
 ## Route the mechanism
 
@@ -87,4 +87,4 @@ Read [exhibits-and-appendix.md](references/exhibits-and-appendix.md). Include in
 8. Local evidence is not generalized to the entire market without support.
 9. Price, quantity, selection, and incidence evidence appear together when the channel requires their joint movement.
 
-Deliver revised text plus a `Mechanism boundary` and unresolved institutional-validity risks.
+Deliver the requested text first. Add a compact `Mechanism boundary` and deduplicated institutional-validity risks when they materially constrain the claim; do not emit every internal ledger by default.
