@@ -18,11 +18,17 @@ Coordinate two orders rather than forcing them to coincide:
 
 Signal the switch to solution order, and after solving each block translate the result back into the forward economic mechanism. Do not reorder a proof dependency merely to make the section titles mimic the timeline.
 
+## Local conditions and intuition anchors
+
+Treat every numerical illustration or model-derived quantitative result as inseparable from a local condition capsule: the model environment or variant, the exercise and benchmark, and the key parameter and assumption conditions that generate it. Put the capsule in the same sentence or immediate passage, or in the corresponding exhibit note. Restate it when the environment changes; do not rely on a distant setup or carry a number across a different closure. If the capsule cannot be recovered, insert a visible placeholder or omit the number.
+
+Before dense formal, quantitative, counterfactual, welfare, or policy comparisons, give a minimal economic-intuition anchor in forward order: who chooses, which force binds, how behavior responds, and what equilibrium consequence follows. The anchor is a conceptual bridge, not a required standalone paragraph or a substitute for exact conditions.
+
 ## Abstract
 
-**Function.** Present the economic puzzle, environment or friction, mechanism, decisive result, and implication without notation. For pure theory, state the proposition and conditions in economic language. For quantitative work, add the empirical discipline and quantitative result. For counterfactuals, state the intervention, benchmark, magnitude, and maintained-structure boundary.
+**Function.** Present the economic puzzle, environment or friction, mechanism, headline result, and implication without notation. For pure theory, state only the central proposition and its economically material conditions. For quantitative work, select only the central quantitative result and the discipline needed to interpret it. For counterfactuals, include a magnitude only when its local condition capsule and maintained-structure boundary can be stated compactly. Route technical illustrations, auxiliary comparisons, and full condition maps to later sections.
 
-**Required evidence.** Identify the agents and choice, what the benchmark lacks, and what becomes endogenous. Label each number as estimate, fit, decomposition, illustration, or counterfactual. Include material uncertainty or sensitivity.
+**Required evidence.** Identify the agents and choice, what the benchmark lacks, and what becomes endogenous. Label each selected number as estimate, fit, decomposition, illustration, or counterfactual and attach its local condition capsule. Include material uncertainty or sensitivity. Do not serialize the model ledger or matrix.
 
 **Common overclaims.** Do not call calibrated parameters identified; matching targeted moments validation; a model-consistent fact proof of the mechanism; an illustrative magnitude an estimated effect; or a counterfactual a causal experiment. Do not imply uniqueness if only existence or one equilibrium characterization is shown.
 
@@ -30,17 +36,19 @@ Signal the switch to solution order, and after solving each block translate the 
 
 ## Introduction
 
-**Function.** Build the paper's argument before the setup. Use paragraphs with distinct jobs:
+**Function.** Build the paper's argument before the setup. Select and combine the following jobs as the argument requires; they do not prescribe a paragraph count:
 
 1. Define an economic tension that existing mechanisms cannot resolve.
 2. Introduce the minimal new friction, information structure, contract, or equilibrium closure.
 3. Explain the mechanism in plain language as a sequence of incentives and responses.
-4. State the central formal result and its economically meaningful conditions.
+4. State only the headline formal or quantitative result and its economically meaningful conditions.
 5. Show how the benchmark or nearest model behaves differently.
 6. For hybrids, derive discriminating observable predictions.
-7. For quantitative papers, preview data mapping, identification or calibration, fit, and headline counterfactual.
+7. For quantitative papers, preview only the discipline and headline counterfactual needed to understand the contribution.
 8. Position the contribution relative to the nearest models by changed primitive, equilibrium force, or quantitative discipline.
 9. End with a domain or maintained-structure boundary when it changes interpretation.
+
+Place the minimal economic-intuition anchor before dense comparisons. Defer technical numerical illustrations to the formal or quantitative results, full assumption–result maps to the robustness or extensions discussion, and detailed policy rankings to the counterfactual and welfare section.
 
 **Required evidence.** Preview only results established later. Match empirical predictions to observables. Separate moments that discipline the model from those that assess it, and mechanism from quantitative importance.
 

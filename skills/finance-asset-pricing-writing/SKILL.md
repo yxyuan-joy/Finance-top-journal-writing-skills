@@ -40,13 +40,15 @@ Record:
 
 Use placeholders rather than assuming a conventional CRSP construction.
 
+Treat the evaluation state as part of every performance, fit, or prediction number. Bind the number to its applicable sample and period, discovery-versus-evaluation status, estimation mode, benchmark, gross-versus-net status, cost coverage, implementation delay, and aggregation/netting/overlap treatment. Preserve this state wherever the number is reused. These axes are independent: never infer or relabel one from another, and mark a missing field rather than borrowing a nearby label.
+
 For a full-paper draft, validation audit, or strategy-feasibility claim, copy and complete [real-time-validation-implementability-ledger.md](assets/real-time-validation-implementability-ledger.md). Do not load or emit the entire template for a narrow paragraph edit.
 
 ## Draft the argument
 
 ### Abstract and introduction
 
-State the economic question before the estimator. Clarify whether the result is a new fact, a sharper economic mechanism, a model rejection, an improvement in fit/prediction, or an implementable payoff. Give a central magnitude and benchmark. State out-of-sample and cost evidence only when actually performed.
+State the economic question before the estimator. Clarify whether the result is a new fact, a sharper economic mechanism, a model rejection, an improvement in fit/prediction, or an implementable payoff. Select the smallest sufficient set of headline evidence and preserve the evaluation state of every reported number. Treat the ledger as an internal audit device, not content to serialize into the abstract or introduction; achieve brevity by reporting fewer numbers rather than trimming their applicable state, and route secondary results to the design, results, exhibits, or appendix. State out-of-sample and cost evidence only when actually performed.
 
 Read [section-blueprints.md](references/section-blueprints.md) for section-specific architecture.
 
@@ -107,5 +109,7 @@ Before delivery, verify:
 7. Prediction, pricing, causal, risk, and mispricing claims use distinct wording.
 8. The conclusion does not generalize beyond the asset universe and period.
 9. A new factor, model, or diagnostic is explained first as an economic object, then defined formally, then compared against a meaningful benchmark.
+10. Every performance, fit, or prediction number retains one internally consistent evaluation state; no state axis is inferred from or relabeled as another.
+11. The abstract and introduction contain the smallest sufficient evidence set rather than an export of the fact ledger.
 
 Deliver the requested text first. Add unresolved asset-pricing evidence gaps and a short failure-mode audit only when they materially constrain the claim; avoid repeating the same missing item in several ledgers.

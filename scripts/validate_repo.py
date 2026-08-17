@@ -52,6 +52,26 @@ GOLD_CRITERIA_FIELDS = {
     "must_avoid",
     "human_review",
 }
+INSTRUCTIONAL_GENERALIZATION_FILES = (
+    "skills/finance-top-journal-writing/SKILL.md",
+    "skills/finance-top-journal-writing/references/title-and-abstract.md",
+    "skills/finance-top-journal-writing/references/introduction-and-positioning.md",
+    "skills/finance-top-journal-writing/references/evidence-and-claim-policy.md",
+    "skills/finance-asset-pricing-writing/SKILL.md",
+    "skills/finance-asset-pricing-writing/references/section-blueprints.md",
+    "skills/finance-causal-empirical-writing/SKILL.md",
+    "skills/finance-causal-empirical-writing/references/design-router.md",
+    "skills/finance-causal-empirical-writing/references/section-blueprints.md",
+    "skills/finance-intermediation-markets-writing/SKILL.md",
+    "skills/finance-intermediation-markets-writing/references/section-blueprints.md",
+    "skills/finance-theory-structural-writing/SKILL.md",
+    "skills/finance-theory-structural-writing/references/section-blueprints.md",
+)
+PAPER_IDENTITY_RE = re.compile(
+    r"(?:https?://)?doi\.org/|(?<![A-Za-z0-9])10\.\d{4,9}/\S+|"
+    r"^\s*(?:paper|article)\s+(?:title|doi)\s*:",
+    re.I | re.M,
+)
 
 
 def parse_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -154,6 +174,26 @@ def validate_local_links(path: Path) -> list[str]:
             continue
         if not target.exists():
             errors.append(f"{path.relative_to(ROOT)}: broken local link: {link}")
+    return errors
+
+
+def validate_instructional_generalization() -> list[str]:
+    """Keep reusable instructions free of paper-level identities.
+
+    Evidence catalogs may retain article metadata for provenance. The procedural
+    files that agents load to write a manuscript must encode transferable gates,
+    not the identities of evaluation cases or teaching exemplars.
+    """
+
+    errors: list[str] = []
+    for relative in INSTRUCTIONAL_GENERALIZATION_FILES:
+        path = ROOT / relative
+        if not path.exists():
+            continue
+        if PAPER_IDENTITY_RE.search(path.read_text(encoding="utf-8")):
+            errors.append(
+                f"{relative}: instructional text contains a paper-level title or identifier"
+            )
     return errors
 
 
@@ -408,6 +448,7 @@ def main() -> int:
     errors.extend(validate_evidence_sets())
     errors.extend(validate_skill_evals())
     errors.extend(validate_gold_cases())
+    errors.extend(validate_instructional_generalization())
     for markdown in sorted(ROOT.rglob("*.md")):
         if ".git" not in markdown.parts:
             errors.extend(validate_local_links(markdown))

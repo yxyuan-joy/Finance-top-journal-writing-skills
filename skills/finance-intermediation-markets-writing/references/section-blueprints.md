@@ -19,11 +19,13 @@ institutional and descriptive evidence: what the intermediary, contract, or venu
 
 The levels may use different units, comparisons, estimands, and selection assumptions. Agreement across them can build a mechanism chain, but evidence at one level does not inherit the causal strength of another. If several shocks support the same response, synthesize them by their different assumptions and populations rather than inventing separate contributions.
 
+For every evidence component, preserve an internal ownership record containing its variation or model source, outcome or object, unit, estimand, population and period, maintained assumptions, inference or precision, and evidentiary job. Keep first stage, reduced form, IV, dynamics, downstream outcomes, model results, and analogous blocks distinct. Apply this discipline even when causal identification is secondary and no causal-writing skill is loaded. Do not transfer identification language, precision, or scope across components.
+
 ## Abstract
 
-**Function.** Compress the institutional mechanism and evidence into a self-contained claim. A useful five-sentence order is: institutional tension; setting and design/model; behavioral response; price, quantity, or incidence magnitude; interpretation and boundary. Use fewer sentences when they perform the same jobs.
+**Function.** Compress the institutional mechanism and evidence into a self-contained claim. Combine the institutional tension, source of variation or model discipline, headline response and magnitude, decisive diagnostic or trade-off, and compact boundary without forcing a sentence count. Omit secondary designs and result inventories.
 
-**Required evidence.** Name the agents, decision margin, variation or model discipline, market, and estimand. Report the headline magnitude with unit and benchmark. If the mechanism depends on joint movement, state both price and quantity, or quantity and selection. Say whether the result is local, short-run, partial-equilibrium, or model-dependent.
+**Required evidence.** Verify the agents, decision margin, variation or model discipline, market, and estimand internally. Report the headline magnitude with its own unit, benchmark, population, period, and inference. If the mechanism depends on joint movement, retain the combination necessary to interpret it. State the binding scope boundary without copying the internal map or component record into the abstract.
 
 **Common overclaims.** Do not turn lower lending into tighter supply without demand or selection evidence; a narrower spread into higher welfare; faster price response into better price discovery; a regulatory exposure into compliance; or a model decomposition into model-free causality. Avoid listing every robustness check.
 
@@ -31,18 +33,18 @@ The levels may use different units, comparisons, estimands, and selection assump
 
 ## Introduction
 
-**Function.** Make the contribution legible before institutional detail. Build paragraphs around distinct jobs:
+**Function.** Make the contribution legible before institutional detail. Adapt and combine these argument jobs rather than forcing a paragraph count:
 
-1. State the economically consequential institutional tension.
-2. Explain the inference problem: observed equilibrium prices and quantities can reflect multiple sides or channels.
-3. Introduce the setting, data granularity, and source of leverage.
-4. State the central behavioral result and magnitude.
-5. Explain the evidence that separates the proposed mechanism from the closest alternative.
-6. Present substitution, real effects, propagation, incidence, or model-based equilibrium implications.
-7. Position the exact object learned relative to the nearest mechanism and design papers.
-8. End with one boundary when local evidence, measurement, or maintained structure limits the claim.
+- State the economically consequential institutional tension.
+- Explain the inference problem: observed equilibrium prices and quantities can reflect multiple sides or channels.
+- Introduce the setting, data granularity, and source of leverage.
+- State the central behavioral result and magnitude with its own unit and evidence source.
+- Explain the evidence that most sharply separates the proposed mechanism from the closest alternative.
+- Preview a consequence or trade-off only when it materially changes the headline interpretation.
+- Position the exact object learned relative to the nearest mechanism and design papers.
+- Retain a compact boundary when local evidence, measurement, or maintained structure limits the claim.
 
-**Required evidence.** Support the headline with the same specification and population used later. Preview the decisive diagnostic. For hybrid papers, separate what empirical variation establishes from what the model supplies.
+**Required evidence.** Support the headline with the same specification, population, period, unit, and inference used later. Preview the decisive diagnostic or trade-off. For hybrid papers, separate what empirical variation establishes from what the model supplies. Defer secondary designs and results to their own sections.
 
 **Common overclaims.** Do not use a broad social problem as a substitute for a specific research question. Do not claim to identify supply, information, contagion, or welfare merely because the result is consistent with it. Avoid contribution lists based only on a new country, dataset, or shock.
 
@@ -62,7 +64,7 @@ The levels may use different units, comparisons, estimands, and selection assump
 
 **Function.** Show that the dataset observes the mechanism at the right unit and time, then connect variation to the intended estimand or model object.
 
-**Required evidence.** State observation level, coverage, frequency, entity linkage, timestamp precision, reporting lag, inclusion rules, censoring, aggregation, weighting, and external coverage. Define whether measures are applications, approvals, commitments, originations, drawdowns, quotes, orders, trades, posted terms, executed terms, gross exposure, or net exposure. Validate central proxies against an institutional benchmark. For reduced-form designs, define assignment, comparison units, timing, fixed effects, inference, anticipation, and spillovers. For structural or quantitative designs, separate observed facts from model-imposed decomposition.
+**Required evidence.** State observation level, coverage, frequency, entity linkage, timestamp precision, reporting lag, inclusion rules, censoring, aggregation, weighting, and external coverage. Define whether measures are applications, approvals, commitments, originations, drawdowns, quotes, orders, trades, posted terms, executed terms, gross exposure, or net exposure. Validate central proxies against an institutional benchmark. For reduced-form designs, define assignment, comparison units, timing, fixed effects, inference, anticipation, and spillovers. For structural or quantitative designs, separate observed facts from model-imposed decomposition. Preserve each component's own variation or model source, object, unit, estimand, population and period, assumptions, inference or precision, and evidentiary job.
 
 **Common overclaims.** Aggregated lending can confound borrower demand and lender supply. Observed borrowers or executed trades can hide selection. Clock mismatch can manufacture price response. Balance-sheet frequency can be too coarse for event timing. A proxy's convenient availability is not construct validity.
 
@@ -81,7 +83,7 @@ The levels may use different units, comparisons, estimands, and selection assump
 7. Trace incidence, real outcomes, stability, or aggregate response.
 8. Present welfare or policy only if the design or model supports it.
 
-**Required evidence.** For each main exhibit, state the question, comparison, magnitude, uncertainty, benchmark, and implication for one live alternative. Keep denominators, samples, units, and specification lineage stable. Report informative nulls. Interpret informative price–quantity movement jointly.
+**Required evidence.** For each main exhibit, state the question, comparison, magnitude, uncertainty, benchmark, and implication for one live alternative. Keep denominators, samples, units, and specification lineage stable within the component. Report informative nulls. Interpret evidence jointly only after establishing that the components answer compatible questions. Do not narrate a downstream or model-based result with identification or precision earned by another block.
 
 **Common overclaims.** Heterogeneity is not automatically mechanism evidence; an interaction can reflect composition. A lender-level response need not reduce borrower-level credit if substitution is strong. Common asset losses are not contagion. A spread measure does not represent every liquidity dimension. Downstream correlations are not real effects without credible timing and comparison.
 
@@ -110,3 +112,5 @@ The levels may use different units, comparisons, estimands, and selection assump
 ## Whole-paper output gate
 
 Before delivery, confirm that the same mechanism vocabulary, unit, sample, horizon, and specification travel across abstract, introduction, exhibits, and conclusion. Confirm that price, quantity, selection, substitution, and incidence are either supported, marked not applicable, or explicitly left unresolved—never silently omitted when central to the claim.
+
+Place each qualifier beside the claim it limits. Consolidate remaining cross-cutting scope into a compact sentence and delete repeated disclaimer inventories from later paragraphs or sections.

@@ -29,7 +29,11 @@ Build a compact evidence chain, not a miniature introduction:
 
 Not every abstract needs five sentences; each function must be recoverable. Put the main finding before a list of secondary analyses.
 
-Build the abstract from the evidence ledger after the main exhibits are stable. Keep only results needed to establish the answer, credibility, mechanism, or boundary. Do not turn `three findings` or any other number observed in an exemplar into a rule.
+Build the abstract from the evidence ledger after the main exhibits are stable, but do not export the ledger into prose. Retain only evidence essential to recover the question, answer, credibility, central countervailing implication, or binding boundary. If a material consequence or trade-off changes how the main conclusion should be interpreted, give it prominence commensurate with that role rather than burying it in a generic qualification.
+
+Do not turn `three findings`, a preferred sentence count, or any other number observed in an exemplar into a rule. Let salience and dependency determine how many findings or sentences survive.
+
+Treat length and format as compliance-sensitive when the user also names a target journal. Verify the current official rule or a supplied live template. If the requested constraint conflicts with the verified rule, surface the conflict and obtain or state a deliberate resolution rather than silently following one constraint while claiming compliance. If the current rule cannot be verified, use `[CURRENT JOURNAL FORMAT RULE NEEDS VERIFICATION]` and do not infer it from published articles.
 
 ## Abstract modes
 
@@ -68,5 +72,7 @@ State the economic model, data moments/identification, fit or validation, counte
 - Can a reader identify the question, leverage, main answer, and contribution?
 - Are population, period, and model scope honest?
 - Do all numbers match the main tables?
+- Does each retained quantity preserve the nearby unit, comparison, uncertainty, and evidentiary status needed to interpret it correctly?
+- Is any material countervailing implication central to the answer visible at appropriate prominence?
 - Does the abstract distinguish association, prediction, causality, and model implication?
 - Would removing any sentence break the evidence chain? If not, compress it.

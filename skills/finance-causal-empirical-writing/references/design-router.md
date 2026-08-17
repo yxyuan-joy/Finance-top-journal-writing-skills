@@ -48,4 +48,16 @@ common target claim
 → exact increment in credibility or scope
 ```
 
-Keep unlike estimates separate and explain why their signs or magnitudes are comparable before synthesizing them. Several weak designs do not mechanically create one strong causal claim.
+Before synthesis, keep an internal component record for every design, stage, or model block:
+
+- variation or model source;
+- outcome or object and its unit;
+- estimand;
+- population and period;
+- maintained assumptions;
+- inference or precision;
+- evidentiary job in the argument.
+
+Keep first stage, reduced form, IV, dynamics, downstream outcomes, model results, and analogous blocks separately owned even when they appear in the same exhibit or share a source of variation. Do not attach the outcome, unit, sample, baseline, uncertainty, assumptions, or interpretation of one block to another. Do not use stronger identification or precision in one component to upgrade a weaker component.
+
+Keep unlike estimates separate and explain why their signs or magnitudes are comparable before synthesizing them. Several weak designs do not mechanically create one strong causal claim. In the abstract and introduction, retain only the headline evidence and the diagnostic or trade-off that materially changes its credibility or meaning; defer the component record and secondary evidence to the design and results sections.

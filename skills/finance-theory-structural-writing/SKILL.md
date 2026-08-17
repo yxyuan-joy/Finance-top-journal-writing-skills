@@ -43,13 +43,15 @@ When the requested prose depends on an exact theorem condition, inequality, or p
 
 Never invent a theorem condition, parameter source, moment, or welfare number.
 
+Treat the local environment as part of every numerical illustration or model-derived quantitative result. Keep the model variant or exercise, relevant benchmark, and key parameter and assumption conditions adjacent to the number wherever it appears. If those conditions are unavailable, use a visible placeholder or omit the number rather than carrying it into a different environment.
+
 ## Draft the paper
 
 Read [section-blueprints.md](references/section-blueprints.md).
 
 ### Abstract/introduction
 
-Lead with the economic puzzle and missing mechanism, not notation. State the model environment/friction, core equilibrium mechanism, decisive result, and empirical/quantitative discipline. For counterfactuals, report magnitude and maintained structure.
+Lead with the economic puzzle and missing mechanism, not notation. Give a minimal economic-intuition anchor—choice, binding force, response, and consequence—before dense formal, quantitative, or policy comparisons. State only the headline formal or quantitative result in the abstract and introduction; route technical numerical illustrations and full assumption–result maps to the relevant later sections. For a reported counterfactual magnitude, keep the maintained structure and local conditions attached.
 
 ### Model setup
 
@@ -102,5 +104,7 @@ Read [proofs-exhibits-and-appendix.md](references/proofs-exhibits-and-appendix.m
 9. Sensitivity covers economically central assumptions/parameters.
 10. Reduced-form evidence is not described as proof of the entire model.
 11. Every central friction is evaluated against a transparent benchmark without that friction or with a competing closure.
+12. Every numerical illustration or model-derived quantitative result retains its local environment, benchmark, and key parameter and assumption conditions wherever it is reported.
+13. A minimal economic-intuition anchor precedes dense formal or policy comparison, while the abstract and introduction retain only the headline result rather than technical examples or a condition inventory.
 
 Deliver the requested text first. Add `Maintained structure` and an `Identification/fit boundary` for structural, calibrated, counterfactual, or welfare claims; for a routine pure-theory draft, use one compact domain/assumption boundary instead. Consolidate unresolved proof or counterfactual gaps rather than repeating them across artifacts.

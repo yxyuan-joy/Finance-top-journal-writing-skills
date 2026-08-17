@@ -25,6 +25,8 @@ Write one sentence for each:
 
 For a multi-stage treatment chain, separate assignment, the first-stage change in the economically relevant exposure, and the final outcome. State the estimand at each link and do not rename assignment as the downstream exposure merely because the latter is the paper's economic object.
 
+Preserve evidence ownership across components. For each design, stage, or model block, keep its variation or model source, outcome or object, unit, estimand, population and period, maintained assumptions, inference or precision, and evidentiary job attached to that block. Keep first stage, reduced form, IV, dynamics, downstream outcomes, model results, and analogous components distinct. Do not transfer stronger identification, precision, scope, or interpretation from one component to another.
+
 Do not claim that `DID`, `IV`, or `RDD` “solves endogeneity.” Explain why this variation recovers this estimand.
 
 For a full-paper draft, identification audit, or incomplete design, copy and complete [estimand-threat-to-test-ledger.md](assets/estimand-threat-to-test-ledger.md). Do not load or emit the entire template for a narrow paragraph edit.
@@ -54,11 +56,11 @@ Read [section-blueprints.md](references/section-blueprints.md).
 
 ### Abstract
 
-Name the intervention/variation, population/comparison, main estimate with units, the most design-defining validation, and scope. Do not use causal verbs if the assumptions are unstated or unsupported.
+Select only the headline causal evidence and the diagnostic or trade-off that most changes its interpretation. Name the intervention or variation, population and comparison, central estimand and magnitude with units, and a compact scope boundary. Omit secondary designs and result inventories, and do not expose internal ledgers. Do not use causal verbs if the assumptions are unstated or unsupported.
 
 ### Introduction
 
-Reach the causal question quickly. Explain why ordinary comparisons fail, how the setting creates leverage, what assumptions remain, and which evidence bears on them. Present mechanism evidence after the main effect and avoid equating subgroup differences with channels.
+Reach the causal question quickly. Explain why ordinary comparisons fail, how the setting creates leverage, what assumptions remain, and which evidence bears on them. Organize the preview around the headline estimand, the decisive credibility evidence, and any interpretation-changing trade-off; defer secondary designs and results to their sections. Present mechanism evidence after the main effect and avoid equating subgroup differences with channels.
 
 ### Institutional setting
 
@@ -70,7 +72,7 @@ Define the estimating equation, but make variation and counterfactual readable w
 
 ### Results
 
-Report estimate, units, baseline mean or other benchmark, uncertainty, and target population. Separate first stage/reduced form/IV, intent-to-treat/treatment-on-treated, and short-/long-run effects.
+Report estimate, units, baseline mean or other benchmark, uncertainty, and target population. Separate first stage/reduced form/IV, intent-to-treat/treatment-on-treated, dynamics, downstream outcomes, and model-based results. Retain each component's own variation, sample and period, estimand, assumptions, and inference rather than borrowing labels or strength from another block.
 
 ## Match robustness to threats
 
@@ -102,7 +104,9 @@ Read [mechanisms-and-heterogeneity.md](references/mechanisms-and-heterogeneity.m
 
 Use `supports`, `narrows`, or `is consistent with` unless the design directly distinguishes channels.
 
-When multiple designs are available, state whether they perform distinct jobs or test the same claim under meaningfully different assignment processes, assumptions, populations, or periods. For same-claim triangulation, report each design's estimand and leading threat, then explain exactly what convergence or divergence changes. Do not pool unlike estimates or describe several imperfect designs as if their mere number proves the claim.
+When multiple designs are available, state whether they perform distinct jobs or test the same claim under meaningfully different assignment processes, assumptions, populations, or periods. Preserve each component's variation or model source, outcome or object, unit, estimand, population and period, assumptions, inference or precision, and evidentiary job before synthesizing. For same-claim triangulation, report each design's estimand and leading threat, then explain exactly what convergence or divergence changes. Do not pool unlike estimates, transfer credibility across components, or describe several imperfect designs as if their mere number proves the claim.
+
+Qualify a claim where the relevant limitation first matters. Consolidate remaining cross-cutting scope into a compact sentence, and do not repeat inventories of disclaimers across the abstract, introduction, results, and conclusion.
 
 ## Apply hard gates
 
