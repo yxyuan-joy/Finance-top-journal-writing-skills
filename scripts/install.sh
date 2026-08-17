@@ -48,6 +48,120 @@ is_known_skill() {
   return 1
 }
 
+git_tracks_repo_root() {
+  local git_root
+  if ! command -v git >/dev/null 2>&1; then
+    return 1
+  fi
+  if ! git_root=$(git -C "$repo_root" rev-parse --show-toplevel 2>/dev/null); then
+    return 1
+  fi
+  [[ "$(cd "$git_root" && pwd -P)" == "$(cd "$repo_root" && pwd -P)" ]]
+}
+
+copy_payload_file() {
+  local source_file=$1
+  local destination_file=$2
+  if ! mkdir -p "$(dirname "$destination_file")"; then
+    return 1
+  fi
+  cp -pP "$source_file" "$destination_file"
+}
+
+copy_tracked_skill() {
+  local skill=$1
+  local staging=$2
+  local prefix="skills/$skill"
+  local manifest="$staging/.tracked-files"
+  local tracked relative
+  local copied=0
+
+  if ! git -C "$repo_root" ls-files -z -- "$prefix" > "$manifest"; then
+    rm -f "$manifest"
+    return 1
+  fi
+
+  while IFS= read -r -d '' tracked; do
+    relative=${tracked#"$prefix/"}
+    if [[ "$relative" == "$tracked" || -z "$relative" ]]; then
+      rm -f "$manifest"
+      return 1
+    fi
+    if [[ ! -e "$repo_root/$tracked" && ! -L "$repo_root/$tracked" ]]; then
+      echo "error: tracked source file is missing: $tracked" >&2
+      rm -f "$manifest"
+      return 1
+    fi
+    if ! copy_payload_file "$repo_root/$tracked" "$staging/$relative"; then
+      rm -f "$manifest"
+      return 1
+    fi
+    copied=$((copied + 1))
+  done < "$manifest"
+  rm -f "$manifest"
+
+  ((copied > 0)) && [[ -f "$staging/SKILL.md" ]]
+}
+
+is_fallback_junk() {
+  local relative=$1
+  local basename=${relative##*/}
+  case "/$relative/" in
+    */__pycache__/*|*/.git/*|*/.svn/*|*/node_modules/*|*/.*/*)
+      return 0
+      ;;
+  esac
+  case "$basename" in
+    .*|*.pyc|*.pyo|*.tmp|*.temp|*.bak|*.orig|*.rej|*.swp|*.swo|*~|\#*\#|Thumbs.db)
+      return 0
+      ;;
+  esac
+  return 1
+}
+
+copy_release_skill() {
+  local skill=$1
+  local staging=$2
+  local source_dir="$repo_root/skills/$skill"
+  local component source_file relative
+  local copied=0
+
+  if ! copy_payload_file "$source_dir/SKILL.md" "$staging/SKILL.md"; then
+    return 1
+  fi
+  copied=1
+
+  # Release archives have no Git index. Limit their payload to the standard
+  # Skill resource directories and filter generated/editor artifacts anywhere
+  # inside those directories. Root-level auxiliary files are intentionally not
+  # installed.
+  for component in agents references assets scripts; do
+    [[ -d "$source_dir/$component" ]] || continue
+    while IFS= read -r -d '' source_file; do
+      relative=${source_file#"$source_dir/"}
+      if is_fallback_junk "$relative"; then
+        continue
+      fi
+      if ! copy_payload_file "$source_file" "$staging/$relative"; then
+        return 1
+      fi
+      copied=$((copied + 1))
+    done < <(find "$source_dir/$component" \( -type f -o -type l \) -print0)
+  done
+
+  ((copied > 0)) && [[ -f "$staging/SKILL.md" ]]
+}
+
+copy_skill_payload() {
+  local skill=$1
+  local staging=$2
+  if git_tracks_repo_root; then
+    copy_tracked_skill "$skill" "$staging"
+  else
+    copy_release_skill "$skill" "$staging"
+  fi
+}
+
 while (($#)); do
   case "$1" in
     --target)
@@ -130,7 +244,7 @@ for skill in "${selected[@]}"; do
 
   mkdir -p "$staging_root"
   staging=$(mktemp -d "$staging_root/${skill}.XXXXXX")
-  if ! cp -R "$source_dir/." "$staging/"; then
+  if ! copy_skill_payload "$skill" "$staging"; then
     rm -rf "$staging"
     rmdir "$staging_root" 2>/dev/null || true
     echo "error: failed to stage $skill; existing installation was not changed" >&2

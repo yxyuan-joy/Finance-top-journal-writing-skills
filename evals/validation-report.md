@@ -1,6 +1,7 @@
 # Validation Report
 
-Release: **v1.3.0**  
+Release: **v1.3.1**
+
 Last updated: **2026-08-17**
 
 ## What this report establishes
@@ -75,7 +76,7 @@ The evidence supports public use of the suite for drafting, restructuring, and a
 - passing a deterministic matcher proves semantic quality;
 - a generic writing workflow substitutes for identification, modeling, or domain expertise.
 
-The blind paper rounds assessed the substantive rule set at commit `da2c20ff8f7438c59be6e6873bf3e43a58690fc4`. Release v1.3.0 adds public packaging, bilingual documentation, and language-selection behavior without changing the validated claim and evidence logic. All deterministic checks are rerun on the final release commit.
+The blind paper rounds assessed the substantive rule set at commit `da2c20ff8f7438c59be6e6873bf3e43a58690fc4`. Release v1.3.0 added public packaging, bilingual documentation, and language-selection behavior without changing the validated claim and evidence logic. Release v1.3.1 keeps those rules unchanged, consolidates maintainer documentation and duplicate assertions, and prevents local cache files from entering an installation. All deterministic checks are rerun on the final release commit.
 
 ## Reproduce the public checks
 

@@ -108,31 +108,5 @@ class BehaviorEvalTests(unittest.TestCase):
         self.assertEqual(theory["hard_failures_triggered"], 0)
 
 
-class GoldCaseTests(unittest.TestCase):
-    def test_two_well_formed_gold_cases_per_skill(self) -> None:
-        skills = {
-            "finance-top-journal-writing",
-            "finance-asset-pricing-writing",
-            "finance-causal-empirical-writing",
-            "finance-intermediation-markets-writing",
-            "finance-theory-structural-writing",
-        }
-        root = ROOT / "evals" / "gold"
-        self.assertEqual({path.name for path in root.iterdir() if path.is_dir()}, skills)
-        for skill in skills:
-            cases = [path for path in (root / skill).iterdir() if path.is_dir()]
-            self.assertEqual(len(cases), 2)
-            for case in cases:
-                self.assertEqual(
-                    {path.name for path in case.iterdir() if path.is_file()},
-                    {"input.md", "expected-criteria.json", "reference-output.md"},
-                )
-                criteria = json.loads((case / "expected-criteria.json").read_text())
-                self.assertEqual(criteria["case_id"], case.name)
-                self.assertEqual(criteria["skill"], skill)
-                self.assertIn("SYNTHETIC", (case / "input.md").read_text().upper())
-                self.assertIn("SYNTHETIC", (case / "reference-output.md").read_text().upper())
-
-
 if __name__ == "__main__":
     unittest.main()
