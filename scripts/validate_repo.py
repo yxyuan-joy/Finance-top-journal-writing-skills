@@ -333,6 +333,10 @@ def validate_evidence_sets() -> list[str]:
             errors.append(f"{path.relative_to(ROOT)}: duplicate DOI")
         for row_number, row in enumerate(rows, start=2):
             doi = row.get("doi", "").lower()
+            if row.get("journal") not in {"JF", "JFE", "RFS"}:
+                errors.append(
+                    f"{path.relative_to(ROOT)}:{row_number}: journal must be JF, JFE, or RFS"
+                )
             if row.get("selection_tier") not in {"core", "section_specific", "supporting"}:
                 errors.append(f"{path.relative_to(ROOT)}:{row_number}: invalid selection_tier")
             for field in EVIDENCE_FIELDS - {"metadata_note"}:
@@ -411,6 +415,47 @@ def validate_evidence_sets() -> list[str]:
             if leaks:
                 errors.append(
                     f"{held_path.relative_to(ROOT)}: {set_name} held-out leakage: {', '.join(leaks)}"
+                )
+
+    overlap_path = ROOT / "evidence" / "sets" / "overlap-matrix.json"
+    if overlap_path.exists() and len(portfolios) == len(EVIDENCE_SETS):
+        matrix: dict[str, dict[str, dict[str, float | int]]] = {}
+        for left, left_dois in portfolios.items():
+            matrix[left] = {}
+            for right, right_dois in portfolios.items():
+                intersection = len(left_dois & right_dois)
+                union_count = len(left_dois | right_dois)
+                matrix[left][right] = {
+                    "intersection": intersection,
+                    "jaccard": round(intersection / union_count, 4)
+                    if union_count
+                    else 0,
+                }
+        general = portfolios["general-writing"]
+        expected_overlap = {
+            "method": "doi_set_overlap",
+            "memberships": sum(len(dois) for dois in portfolios.values()),
+            "unique_papers": len(set().union(*portfolios.values())),
+            "sets": {name: len(dois) for name, dois in portfolios.items()},
+            "specialist_independence": {
+                name: {
+                    "papers": len(dois),
+                    "overlap_with_general": len(dois & general),
+                    "outside_general": len(dois - general),
+                }
+                for name, dois in portfolios.items()
+                if name != "general-writing"
+            },
+            "pairwise": matrix,
+        }
+        try:
+            recorded_overlap = json.loads(overlap_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            errors.append(f"{overlap_path.relative_to(ROOT)}: invalid JSON: {exc}")
+        else:
+            if recorded_overlap != expected_overlap:
+                errors.append(
+                    f"{overlap_path.relative_to(ROOT)}: generated summary is stale or inconsistent with evidence CSVs"
                 )
     return errors
 
@@ -524,7 +569,6 @@ def main() -> int:
         ".github/workflows/ci.yml",
         "assets/finance-writing-skills-banner.svg",
         "evidence/README.md",
-        "evidence/curation-report.md",
         "evidence/sets/general-writing.csv",
         "evidence/sets/asset-pricing.csv",
         "evidence/sets/causal-empirical.csv",

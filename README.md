@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/releases/tag/v1.3.0"><img alt="Release v1.3.0" src="https://img.shields.io/badge/release-v1.3.0-0f766e"></a>
+  <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/releases/tag/v1.3.1"><img alt="Release v1.3.1" src="https://img.shields.io/badge/release-v1.3.1-0f766e"></a>
   <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/actions/workflows/ci.yml"><img alt="CI status" src="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/actions/workflows/ci.yml/badge.svg?branch=main"></a>
   <img alt="Five skills" src="https://img.shields.io/badge/skills-5-1d4ed8">
   <img alt="Evidence census: 2,065 papers" src="https://img.shields.io/badge/evidence_census-2%2C065_papers-b7791f">
@@ -110,7 +110,7 @@ The project combines a structural census of **2,065 ordinary JF/JFE/RFS research
 
 The five portfolios contain 270 selected positions covering 224 unique papers. Titles and headings were used only for high-recall discovery; inclusion required direct review of the abstract, full introduction, relevant body sections, and conclusion. The repository publishes bibliographic metadata, aggregate patterns, original synthesis, and synthetic examples—never local PDFs, MinerU text, or article prose.
 
-See [`evidence/README.md`](evidence/README.md), the [`curation report`](evidence/curation-report.md), and the auditable [`evidence sets`](evidence/sets/).
+See the consolidated [`evidence method`](evidence/README.md), the [`architecture benchmark`](evidence/architecture-benchmark.md), and the auditable [`evidence sets`](evidence/sets/).
 
 ## Validation
 

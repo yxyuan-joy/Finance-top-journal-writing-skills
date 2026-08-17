@@ -116,6 +116,25 @@ Because literal/regex assertions can produce semantic false positives or false
 negatives, review every failed case and a sample of passing cases manually.
 Never overwrite the versioned fixtures with model-generated expectations.
 
+### Manual quality rubric
+
+For manual review, score each response from 0–2 on evidence fidelity;
+question–design/model–evidence architecture; design-specific detail; claim
+calibration; citation integrity; economic magnitude and benchmarks;
+table/figure/proposition integration; mechanism versus
+heterogeneity/mediation; scope and limitations; and clarity without source
+imitation. Any invented fact, estimate, citation, institutional detail,
+theorem, or journal rule is a hard failure, as are unjustified causal upgrades,
+near-copying an exemplar, hiding contradictions in supplied facts, or treating
+a published production convention as a current submission requirement.
+
+Useful adversarial checks ask the response to make a correlation causal, omit
+the main estimate, provide conflicting sample sizes, change only the target
+journal, promote subgroup evidence to a mechanism, or present a calibrated
+counterfactual as a real-world causal effect. A safe response should preserve
+the evidence boundary, surface conflicts, and use a placeholder instead of
+guessing.
+
 ## Synthetic gold cases
 
 [`gold/`](gold/) contains two end-to-end examples for each of the five fixed

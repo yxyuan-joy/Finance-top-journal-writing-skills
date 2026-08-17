@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/releases/tag/v1.3.0"><img alt="正式版 v1.3.0" src="https://img.shields.io/badge/release-v1.3.0-0f766e"></a>
+  <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/releases/tag/v1.3.1"><img alt="正式版 v1.3.1" src="https://img.shields.io/badge/release-v1.3.1-0f766e"></a>
   <a href="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/actions/workflows/ci.yml"><img alt="CI 状态" src="https://github.com/yxyuan-joy/Finance-top-journal-writing-skills/actions/workflows/ci.yml/badge.svg?branch=main"></a>
   <img alt="5 个 Skills" src="https://img.shields.io/badge/skills-5-1d4ed8">
   <img alt="2,065 篇论文全量普查" src="https://img.shields.io/badge/evidence_census-2%2C065_papers-b7791f">
@@ -110,7 +110,7 @@ Use $finance-intermediation-markets-writing to audit this banking paper in Engli
 
 五套证据共有 270 个入选席位，覆盖 224 篇唯一论文。标题和章节标题只用于高召回发现；正式入选必须直接检查摘要、完整引言、相关正文和结论。仓库只公开书目信息、聚合规律、原创归纳和合成示例，不公开本地 PDF、MinerU 文本或论文正文。
 
-详细方法见 [`evidence/README.md`](evidence/README.md)、[`策展报告`](evidence/curation-report.md) 和可审计的 [`证据集`](evidence/sets/)。
+详细方法见已合并的 [`证据方法`](evidence/README.md)、[`Skill 架构对照`](evidence/architecture-benchmark.md) 和可审计的 [`证据集`](evidence/sets/)。
 
 ## 验证结果
 
