@@ -1,4 +1,5 @@
 interface:
   display_name: "Finance Top-Journal Writing"
   short_description: "Write and audit complete JF, JFE, and RFS papers"
-  default_prompt: "Use $finance-top-journal-writing to revise my [section] for [JF/JFE/RFS] from the supplied question, design/model, sample, main estimates, closest literature, and evidence limits without inventing missing facts."
+  brand_color: "#0F766E"
+  default_prompt: "Use $finance-top-journal-writing to revise my [section] for [JF/JFE/RFS] in [English/Chinese] from supplied facts."

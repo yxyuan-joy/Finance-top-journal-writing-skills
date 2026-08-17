@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Finance Top-Journal Writing Skills</title>
+  <desc id="desc">Evidence-informed writing workflows for JF, JFE, and RFS finance papers.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.58" stop-color="#0b2b38"/>
+      <stop offset="1" stop-color="#0f4c4c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#f4c86a"/>
+    </linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#d8f3ef" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <path d="M0 266C170 221 322 303 489 256S795 177 1200 246V320H0Z" fill="#2dd4bf" opacity="0.07"/>
+  <path d="M0 287C204 247 337 317 532 276S892 214 1200 260" fill="none" stroke="url(#accent)" stroke-opacity="0.32" stroke-width="2"/>
+
+  <g transform="translate(66 54)" filter="url(#shadow)">
+    <rect x="0" y="0" width="190" height="212" rx="24" fill="#f8fafc"/>
+    <rect x="28" y="30" width="82" height="9" rx="4.5" fill="#0f766e"/>
+    <rect x="28" y="51" width="126" height="6" rx="3" fill="#cbd5e1"/>
+    <rect x="28" y="67" width="112" height="6" rx="3" fill="#e2e8f0"/>
+    <path d="M30 166L64 138L91 151L125 104L159 84" fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="64" cy="138" r="6" fill="#f4c86a"/>
+    <circle cx="125" cy="104" r="6" fill="#f4c86a"/>
+    <circle cx="159" cy="84" r="6" fill="#f4c86a"/>
+    <rect x="28" y="184" width="132" height="5" rx="2.5" fill="#dbe4ea"/>
+  </g>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="310" y="86" fill="#99f6e4" font-size="17" font-weight="700" letter-spacing="3.4">EVIDENCE-INFORMED · BILINGUAL</text>
+    <text x="307" y="142" fill="#ffffff" font-size="48" font-weight="760" letter-spacing="-1.2">Finance Top-Journal</text>
+    <text x="307" y="197" fill="#ffffff" font-size="48" font-weight="760" letter-spacing="-1.2">Writing Skills</text>
+    <text x="310" y="236" fill="#cbd5e1" font-size="19" font-weight="450">Argument architecture, evidence discipline, and section-level workflows</text>
+  </g>
+
+  <g transform="translate(958 48)" font-family="Inter, ui-sans-serif, system-ui, sans-serif" text-anchor="middle">
+    <circle cx="72" cy="40" r="38" fill="#0f766e" stroke="#5eead4" stroke-opacity="0.65"/>
+    <text x="72" y="47" fill="#ffffff" font-size="21" font-weight="800">JF</text>
+    <circle cx="126" cy="104" r="38" fill="#183f58" stroke="#7dd3fc" stroke-opacity="0.65"/>
+    <text x="126" y="111" fill="#ffffff" font-size="19" font-weight="800">JFE</text>
+    <circle cx="72" cy="168" r="38" fill="#6b4f1d" stroke="#f4c86a" stroke-opacity="0.7"/>
+    <text x="72" y="175" fill="#ffffff" font-size="19" font-weight="800">RFS</text>
+    <path d="M92 70L106 86M106 122L92 138M72 78V130" fill="none" stroke="#d8f3ef" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+</svg>

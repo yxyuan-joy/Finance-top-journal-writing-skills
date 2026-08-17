@@ -2,19 +2,38 @@
 
 Use this workflow to turn an evidence ledger into prose. Treat the listed paragraph jobs as functions, not a mandatory paragraph count: combine adjacent jobs for a short paper and split a dense job when the evidence requires it. Draft only after fixing the target claim—documentation, prediction, model evaluation, risk price, mechanism, or implementability.
 
+## Atomic evaluation state
+
+Before drafting, attach a single evaluation-state record to every performance, fit, or prediction number. Retain every applicable field together:
+
+- sample or universe and period;
+- discovery-versus-evaluation status;
+- estimation mode;
+- benchmark;
+- gross-versus-net status;
+- cost coverage;
+- implementation delay; and
+- aggregation, netting, and overlap treatment.
+
+Treat these as independent axes. Never use one axis as shorthand for another, silently carry a label across a changed specification, or combine a number with state fields from another result. Preserve the record across prose, exhibits, and sections. If a field is unknown, mark it and narrow or omit the claim; do not guess. In an abstract or introduction, select only numbers whose applicable state can be conveyed without crowding the argument. Omit a secondary number rather than detach it from the information needed to interpret it.
+
 ## Sections
 
 [Abstract](#abstract) · [Introduction](#introduction) · [Design](#data-timing-and-empirical-design) · [Results](#results) · [Validation](#validation-and-interpretation) · [Conclusion](#conclusion)
 
 ## Abstract
 
-### Sentence jobs
+### Content jobs
+
+Select and combine these jobs without imposing a fixed sentence count:
 
 1. **Question and economic object.** Name the expected-return, pricing, forecasting, or investor-decision question without opening on a method or dataset.
 2. **Universe and test.** Give the asset universe, period, signal/model, and whether the evaluation is in sample, held out, post-discovery, or live.
 3. **Headline result.** Report one central magnitude with frequency, units, uncertainty, and benchmark: for example, a monthly long–short spread, pricing-error reduction, or out-of-sample loss improvement.
 4. **Credibility.** Name the validation that most directly addresses the leading failure mode, such as real-time availability, a frozen holdout, international evidence, or realistic costs.
 5. **Interpretation and boundary.** State what the result changes and retain the main ambiguity or scope limit.
+
+Do not walk through the fact ledger. Keep only the evidence necessary to identify the headline claim, its comparator, its credibility, and its binding boundary. Route secondary estimates and the rest of their evaluation states to later sections.
 
 ### Required facts
 
@@ -30,16 +49,20 @@ A reader should be able to identify the economic object, test population, magnit
 
 ## Introduction
 
-### Paragraph jobs
+### Argument jobs
+
+Select and combine only the jobs needed for the paper; they do not prescribe a paragraph count:
 
 1. **Economic tension.** Establish the pricing fact, model disagreement, or investor problem. Explain the consequence of resolving it—do not merely announce another characteristic or factor.
 2. **Why the frontier is insufficient.** Identify the closest evidence and its binding limitation: timing, benchmark, search, measurement, economic mechanism, or feasibility. Avoid a broad literature inventory.
 3. **Resolution.** Explain the new object, data, model, or test and why it addresses that limitation. Give enough construction timing to make the design credible.
-4. **Headline evidence.** Report the main magnitude in interpretable units, the raw and benchmark-adjusted object when both matter, and the sample in which it is estimated.
-5. **Validation.** Present the two or three tests that bear most directly on the leading alternative explanation. Explain what each rules down rather than listing robustness checks.
+4. **Headline evidence.** Report the smallest sufficient set of main magnitudes in interpretable units, preserving the full applicable evaluation state. Include raw and benchmark-adjusted objects together only when the contrast is necessary to interpret the claim.
+5. **Validation.** Present the smallest discriminating set of tests that bears directly on the leading alternative explanation. Explain what each rules down rather than listing robustness checks.
 6. **Economic interpretation.** Distinguish risk, mispricing, institutional, and statistical-learning accounts. State the distinctive prediction tested and any live competing account.
 7. **Contribution.** State precisely whether the paper changes a known fact, model assessment, mechanism, validation standard, or feasible-investment conclusion. Compare with the closest work by economic function.
 8. **Roadmap only if useful.** Include a short map when the paper has an unusual sequence; do not repeat the table of contents mechanically.
+
+Do not serialize construction choices, validation regimes, or implementation assumptions into the introduction. Retain every applicable state field for each selected headline number; achieve brevity by selecting fewer numbers, not by dropping state fields. Route the complete audit trail to design, results, exhibits, or the appendix.
 
 For a factor-extraction, test-asset, or diagnostic methodology paper, add a conceptual bridge before treating construction as an empirical recipe:
 

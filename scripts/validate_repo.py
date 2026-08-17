@@ -52,6 +52,26 @@ GOLD_CRITERIA_FIELDS = {
     "must_avoid",
     "human_review",
 }
+INSTRUCTIONAL_GENERALIZATION_FILES = (
+    "skills/finance-top-journal-writing/SKILL.md",
+    "skills/finance-top-journal-writing/references/title-and-abstract.md",
+    "skills/finance-top-journal-writing/references/introduction-and-positioning.md",
+    "skills/finance-top-journal-writing/references/evidence-and-claim-policy.md",
+    "skills/finance-asset-pricing-writing/SKILL.md",
+    "skills/finance-asset-pricing-writing/references/section-blueprints.md",
+    "skills/finance-causal-empirical-writing/SKILL.md",
+    "skills/finance-causal-empirical-writing/references/design-router.md",
+    "skills/finance-causal-empirical-writing/references/section-blueprints.md",
+    "skills/finance-intermediation-markets-writing/SKILL.md",
+    "skills/finance-intermediation-markets-writing/references/section-blueprints.md",
+    "skills/finance-theory-structural-writing/SKILL.md",
+    "skills/finance-theory-structural-writing/references/section-blueprints.md",
+)
+PAPER_IDENTITY_RE = re.compile(
+    r"(?:https?://)?doi\.org/|(?<![A-Za-z0-9])10\.\d{4,9}/\S+|"
+    r"^\s*(?:paper|article)\s+(?:title|doi)\s*:",
+    re.I | re.M,
+)
 
 
 def parse_simple_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -154,6 +174,131 @@ def validate_local_links(path: Path) -> list[str]:
             continue
         if not target.exists():
             errors.append(f"{path.relative_to(ROOT)}: broken local link: {link}")
+    return errors
+
+
+def validate_instructional_generalization() -> list[str]:
+    """Keep reusable instructions free of paper-level identities.
+
+    Evidence catalogs may retain article metadata for provenance. The procedural
+    files that agents load to write a manuscript must encode transferable gates,
+    not the identities of evaluation cases or teaching exemplars.
+    """
+
+    errors: list[str] = []
+    for relative in INSTRUCTIONAL_GENERALIZATION_FILES:
+        path = ROOT / relative
+        if not path.exists():
+            continue
+        if PAPER_IDENTITY_RE.search(path.read_text(encoding="utf-8")):
+            errors.append(
+                f"{relative}: instructional text contains a paper-level title or identifier"
+            )
+    return errors
+
+
+def validate_release_metadata() -> list[str]:
+    """Keep the public plugin, citation, and bilingual entry points aligned."""
+
+    errors: list[str] = []
+    plugin_path = ROOT / ".codex-plugin" / "plugin.json"
+    citation_path = ROOT / "CITATION.cff"
+    try:
+        plugin = json.loads(plugin_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f".codex-plugin/plugin.json: invalid manifest: {exc}"]
+
+    if plugin.get("name") != "finance-top-journal-writing-skills":
+        errors.append(".codex-plugin/plugin.json: unexpected plugin name")
+    if plugin.get("skills") != "./skills/":
+        errors.append(".codex-plugin/plugin.json: skills must be ./skills/")
+    elif not (ROOT / "skills").is_dir():
+        errors.append(".codex-plugin/plugin.json: skills path does not exist")
+
+    for field in ("description", "license"):
+        if not isinstance(plugin.get(field), str) or not plugin[field].strip():
+            errors.append(f".codex-plugin/plugin.json: {field} must be non-empty")
+    for field in ("homepage", "repository"):
+        value = plugin.get(field)
+        if not isinstance(value, str) or not value.startswith("https://"):
+            errors.append(f".codex-plugin/plugin.json: {field} must be an https URL")
+    author = plugin.get("author")
+    if not isinstance(author, dict) or not isinstance(author.get("name"), str) or not author["name"].strip():
+        errors.append(".codex-plugin/plugin.json: author.name must be non-empty")
+    keywords = plugin.get("keywords")
+    if not isinstance(keywords, list) or not keywords or any(
+        not isinstance(keyword, str) or not keyword.strip() for keyword in keywords
+    ):
+        errors.append(".codex-plugin/plugin.json: keywords must be a non-empty string list")
+
+    interface = plugin.get("interface")
+    if not isinstance(interface, dict):
+        errors.append(".codex-plugin/plugin.json: interface must be an object")
+        interface = {}
+    for field in (
+        "displayName",
+        "shortDescription",
+        "longDescription",
+        "developerName",
+        "category",
+        "brandColor",
+    ):
+        if not isinstance(interface.get(field), str) or not interface[field].strip():
+            errors.append(f".codex-plugin/plugin.json: interface.{field} must be non-empty")
+    if interface.get("brandColor") and not re.fullmatch(
+        r"#[0-9A-Fa-f]{6}", interface["brandColor"]
+    ):
+        errors.append(".codex-plugin/plugin.json: interface.brandColor must be #RRGGBB")
+    capabilities = interface.get("capabilities")
+    if not isinstance(capabilities, list) or any(
+        not isinstance(capability, str) or not capability.strip()
+        for capability in capabilities
+    ):
+        errors.append(".codex-plugin/plugin.json: interface.capabilities must be a string list")
+
+    default_prompts = interface.get("defaultPrompt")
+    if not (
+        isinstance(default_prompts, list)
+        and 1 <= len(default_prompts) <= 3
+        and all(
+            isinstance(prompt, str) and prompt.strip() and len(prompt) <= 128
+            for prompt in default_prompts
+        )
+    ):
+        errors.append(
+            ".codex-plugin/plugin.json: interface.defaultPrompt must contain 1-3 strings of at most 128 characters"
+        )
+
+    version = plugin.get("version")
+    if not isinstance(version, str) or not re.fullmatch(r"\d+\.\d+\.\d+", version):
+        errors.append(".codex-plugin/plugin.json: version must use semantic versioning")
+        version = None
+
+    try:
+        citation_text = citation_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        errors.append(f"CITATION.cff: unreadable: {exc}")
+        citation_text = ""
+    citation_match = re.search(r"^version:\s*['\"]?([^\s'\"]+)", citation_text, re.M)
+    citation_version = citation_match.group(1) if citation_match else None
+    if version and citation_version != version:
+        errors.append(
+            f"release version mismatch: plugin={version}, CITATION.cff={citation_version}"
+        )
+
+    readme_pairs = (
+        ("README.md", "README.zh-CN.md"),
+        ("README.zh-CN.md", "README.md"),
+    )
+    for readme_name, language_link in readme_pairs:
+        path = ROOT / readme_name
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        if language_link not in text:
+            errors.append(f"{readme_name}: missing language switch to {language_link}")
+        if version and f"v{version}" not in text:
+            errors.append(f"{readme_name}: missing current release v{version}")
     return errors
 
 
@@ -372,8 +517,12 @@ def main() -> int:
 
     for required in (
         "README.md",
+        "README.zh-CN.md",
         "LICENSE",
         "CITATION.cff",
+        ".codex-plugin/plugin.json",
+        ".github/workflows/ci.yml",
+        "assets/finance-writing-skills-banner.svg",
         "evidence/README.md",
         "evidence/curation-report.md",
         "evidence/sets/general-writing.csv",
@@ -386,9 +535,11 @@ def main() -> int:
         "evidence/corpus-census/aggregate-patterns.json",
         "evidence/architecture-benchmark.md",
         "evals/README.md",
+        "evals/validation-report.md",
         "evals/cases/routing-v1.json",
         "evals/cases/behavior-v1.json",
         "scripts/run_behavior_evals.py",
+        "scripts/install.sh",
         "skills/finance-top-journal-writing/assets/cross-section-consistency-ledger.md",
         "skills/finance-top-journal-writing/references/corporate-household-governance-archetypes.md",
         "skills/finance-top-journal-writing/references/discussion-limitations-and-scope.md",
@@ -399,8 +550,6 @@ def main() -> int:
         "skills/finance-causal-empirical-writing/assets/estimand-threat-to-test-ledger.md",
         "skills/finance-intermediation-markets-writing/assets/mechanism-incidence-map.md",
         "skills/finance-theory-structural-writing/assets/primitives-identification-fit-counterfactual-welfare-matrix.md",
-        "evals/forward-test-results.md",
-        "evals/manual-test-report-2026-08-13.md",
     ):
         if not (ROOT / required).exists():
             errors.append(f"missing repository file: {required}")
@@ -408,6 +557,8 @@ def main() -> int:
     errors.extend(validate_evidence_sets())
     errors.extend(validate_skill_evals())
     errors.extend(validate_gold_cases())
+    errors.extend(validate_instructional_generalization())
+    errors.extend(validate_release_metadata())
     for markdown in sorted(ROOT.rglob("*.md")):
         if ".git" not in markdown.parts:
             errors.extend(validate_local_links(markdown))

@@ -7,6 +7,8 @@ description: Draft, restructure, revise, or audit complete finance manuscripts a
 
 Build a defensible finance-paper argument from the author's evidence. Treat JF, JFE, and RFS as journals sharing a high bar for contribution and credibility, with some observable production conventions—not as three fixed prose personas.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Treat [evidence-basis.md](references/evidence-basis.md) as a searchable provenance catalog, not required reading. Consult it only when the task genuinely needs a teaching anchor or provenance audit. Search first by subtype or writing function and read only nearby rows; do not load the full 50-paper catalog for ordinary drafting. Never imitate an exemplar's wording or length.
 
 ## Establish the writing contract
@@ -66,6 +68,10 @@ Select only functional modules that the paper needs. Do not force every label in
 
 Treat the architectures below as function checklists rather than fixed paragraph counts. They are synthesized from a full recent-corpus census plus deliberately selected teaching exemplars; do not imitate an exemplar's sentences, length, section count, or topic-specific claims.
 
+Do not convert corpus frequencies, exemplar structures, or review heuristics into fixed paragraph, sentence, finding, citation, or numerical budgets. Let the evidence chain determine the smallest complete structure.
+
+Treat evaluation cases only as diagnostics. When maintaining or extending this skill, retain the transferable failure mode and discard the case-specific topic, setting, institution, variable names, estimates, title, and identifier.
+
 | Section | Required job |
 |---|---|
 | Title | Name the phenomenon or relationship and, only when useful, the setting/design. Avoid claiming more than the evidence. |
@@ -99,6 +105,8 @@ Read [journal-adapters.md](references/journal-adapters.md) whenever the user spe
 Read [journal-fit-and-targeting.md](references/journal-fit-and-targeting.md) when the user asks which journal to target or whether the contribution fits JF/JFE/RFS.
 Read [official-submission-sources.md](references/official-submission-sources.md) for compliance-related requests, then recheck the linked live page at submission time.
 
+Treat an explicit length or format request paired with a named target journal as compliance-sensitive. Verify the current official rule or a supplied live template, surface any conflict before finalizing, and never present an unverified or incompatible constraint as journal-compliant.
+
 Apply only three classes of adaptation:
 
 1. Follow the user's live template or current official instructions first.
@@ -114,7 +122,7 @@ For every substantive paragraph:
 1. Lead with its claim or question.
 2. Provide the necessary evidence, logic, or comparison.
 3. Interpret the evidence at the supported strength.
-4. State the boundary or transition when it prevents overreading.
+4. State the boundary where it prevents overreading, placing it beside the claim it qualifies rather than repeating a disclaimer list throughout the manuscript.
 
 Use topic sentences that advance the argument. Prefer concrete nouns and verbs. Keep technical detail when it establishes credibility; move implementation detail that does not change interpretation to an appendix.
 
@@ -131,14 +139,15 @@ Use topic sentences that advance the argument. Prefer concrete nouns and verbs. 
 Read [revision-and-quality-gates.md](references/revision-and-quality-gates.md), then verify:
 
 1. Every number and citation traces to supplied or verified evidence.
-2. The abstract, introduction, tables, results, and conclusion state the same main finding.
-3. Causal strength matches identification strength.
-4. Each robustness test maps to a named threat.
-5. Contribution claims compare against the closest literature rather than a broad straw literature.
-6. Terminology, samples, signs, units, and time windows are consistent.
-7. The conclusion introduces no new estimate or citation-dependent claim.
-8. The prose does not imitate a source paper or reproduce protected text.
-9. No observed production pattern or exemplar habit is presented as a current journal requirement.
+2. Every reported quantity remains linked to its applicable specification, sample, unit, uncertainty, comparison, and interpretive status; no quantity is detached or relabeled for fluency.
+3. The abstract, introduction, tables, results, and conclusion state the same main finding and preserve any material countervailing consequence central to its interpretation.
+4. Causal strength matches identification strength.
+5. Each robustness test maps to a named threat.
+6. Contribution claims compare against the closest verified literature on the exact margin rather than a broad straw literature.
+7. Terminology, samples, signs, units, and time windows are consistent.
+8. The conclusion introduces no new estimate or citation-dependent claim.
+9. The prose does not imitate a source paper or reproduce protected text.
+10. No observed production pattern or exemplar habit is presented as a current journal requirement.
 
 If a draft file is available, run:
 

@@ -30,6 +30,8 @@ For conflicts among author artifacts, use this compact protocol:
 4. Never assemble one claim from pieces of different specifications. The coefficient, uncertainty, sample, baseline, and label must travel together.
 5. Keep `[CONFLICT: ...]` in working text until the lineage is resolved, then update every occurrence and cross-reference.
 
+Treat each reported quantity as an atomic evidence bundle. Keep its source or exhibit, specification or model state, sample or population, unit or denominator, uncertainty, comparison or benchmark, and interpretive status linked in the working record whenever applicable. State the subset locally needed to prevent misreading; do not detach, relabel, or recombine a quantity merely to improve flow.
+
 ## 2. Build a fact ledger
 
 Before drafting a high-stakes section, record:
@@ -68,6 +70,7 @@ Do not upgrade a claim because the target journal is selective. Downgrade langua
 - Confirm that a cited paper supports the exact sentence, not merely the topic.
 - Separate a paper's result from the current paper's interpretation of it.
 - Avoid unsupported novelty claims such as `first`, `only`, or `no study`.
+- When verified closest sources are supplied, anchor the contribution to the smallest necessary set of papers and identify the exact margin changed. Otherwise use `[VERIFIED CLOSEST-SOURCE COMPARISON NEEDED]`.
 - When revising an existing draft, preserve citation keys unless a verified correction is available.
 
 ## 5. Handle missing evidence
@@ -82,9 +85,11 @@ Use explicit placeholders that state the missing object:
 
 Do not fill a placeholder with a plausible-looking number or reference. If the missing fact determines the argument's direction, draft an outline rather than full prose.
 
+Place each limitation, scope condition, or maintained assumption beside the claim it constrains. Do not replace local qualification with repeated end-of-paragraph disclaimer lists.
+
 ## 6. Preserve bilingual statistical meaning
 
-Translate the estimand, not only the words. Preserve the supplied sign, unit, denominator, transformation, comparison group, and uncertainty. Chinese phrases such as `提高 4.8%`, `上升 0.05`, `一个标准差`, and `显著` do not by themselves reveal whether the source means percent, percentage points, log points, a coefficient scale, economic magnitude, or statistical significance.
+Translate the estimand, not only the words. Preserve the supplied sign, unit, denominator, transformation, comparison group, and uncertainty. A reported change or significance label does not by itself reveal whether the source means percent, percentage points, log points, a coefficient scale, economic magnitude, or statistical significance.
 
 When the source is ambiguous, retain the number only in a ledger and use a named placeholder such as `[CONFIRM WHETHER 4.8 IS PERCENT, PERCENTAGE POINTS, OR LOG POINTS]`. Do not convert units, signs, standard errors, confidence intervals, or significance language for fluency. Preserve English variable names and table labels when translating them would break the link to an exhibit.
 

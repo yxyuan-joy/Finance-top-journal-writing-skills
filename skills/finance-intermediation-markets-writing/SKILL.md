@@ -7,6 +7,8 @@ description: Draft, revise, or audit financial-intermediation and market-structu
 
 Center the paper on an institutional mechanism connecting agents, constraints, choices, and market outcomes. Use `$finance-top-journal-writing` with this skill when installed.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a mechanism-specific anchor or provenance check would help; search by subtype/function and read only matching rows rather than loading all 60 papers. It supplies bounded teaching functions, not language to copy.
 
 ## Route the mechanism
@@ -38,13 +40,19 @@ Record:
 
 Do not call a quantity change `credit supply`, `liquidity`, or `price discovery` without showing why the measure captures that object.
 
+Preserve evidence ownership when the paper uses multiple designs, stages, models, or evidence levels. For each component, retain its variation or model source, outcome or object, unit, estimand, population and period, maintained assumptions, inference or precision, and evidentiary job. Keep first stage, reduced form, IV, dynamics, downstream outcomes, model results, and analogous blocks distinct. Do this even when causal logic is secondary and `$finance-causal-empirical-writing` is not loaded. Do not let stronger identification, precision, or scope transfer from one component to another.
+
 ## Draft the paper
 
 Read [section-blueprints.md](references/section-blueprints.md).
 
+### Abstract
+
+Select the headline institutional or market evidence and the diagnostic or trade-off that most changes its interpretation. State the central object, source of variation or model discipline, magnitude with its own unit and population, and a compact scope boundary. Omit secondary designs and result inventories, and do not expose internal maps or ledgers.
+
 ### Introduction
 
-Open with the institutional friction or market-design tension. Explain why observing equilibrium quantities/prices alone does not reveal the proposed channel. Describe the institution, leverage, main magnitude, incidence, and equilibrium boundary. Compare against the closest mechanism paper.
+Open with the institutional friction or market-design tension. Explain why observing equilibrium quantities/prices alone does not reveal the proposed channel. Organize the preview around the headline evidence, the decisive mechanism diagnostic, and any consequential trade-off; defer secondary designs and results to their sections. State the main magnitude with its own unit, population, and evidence source, retain a compact boundary, and compare against the closest mechanism paper.
 
 ### Institutional setting
 
@@ -57,6 +65,8 @@ Explain entity resolution, lender/borrower or trader/venue linkage, timestamp al
 ### Design/results
 
 Separate the institutional margin from aggregate equilibrium outcomes. For credit papers, distinguish supply, demand, borrower selection, and composition. For market papers, distinguish liquidity dimensions, information, inventory, and mechanical price effects. For network papers, separate direct exposure from propagation.
+
+For every evidence block, preserve its own source of variation or model discipline, outcome or object, unit, estimand, population and period, assumptions, inference or precision, and role in the mechanism chain. Do not use the identification language, uncertainty, or scope of one block to describe another.
 
 When the paper combines facts and a model, give them different jobs: facts establish the institutional object and motivating patterns; the model separates forces or closes a counterfactual; untargeted evidence evaluates whether that closure is credible. Never relabel a model-based decomposition as model-free evidence.
 
@@ -89,4 +99,6 @@ Read [exhibits-and-appendix.md](references/exhibits-and-appendix.md). Include in
 8. Local evidence is not generalized to the entire market without support.
 9. Price, quantity, selection, and incidence evidence appear together when the channel requires their joint movement.
 
-Deliver the requested text first. Add a compact `Mechanism boundary` and deduplicated institutional-validity risks when they materially constrain the claim; do not emit every internal ledger by default.
+Place each qualifier next to the claim it limits. Consolidate remaining cross-cutting scope into a compact sentence and remove repeated disclaimer inventories from later paragraphs or sections.
+
+Deliver the requested text first. Add a compact `Mechanism boundary` only when unresolved institutional-validity risks materially constrain the claim; do not emit every internal ledger or map by default.

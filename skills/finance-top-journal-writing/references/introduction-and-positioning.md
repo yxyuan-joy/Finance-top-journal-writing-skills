@@ -25,6 +25,8 @@ economic tension or consequential unknown
 
 Use this as a functional order, not a rigid paragraph count. Lead with the research problem; do not spend several paragraphs on generic importance before stating the question.
 
+Do not prescribe fixed paragraph, finding, contribution, citation, or numerical budgets. Include only the functions required to make the argument complete, and give each function the space its evidentiary importance warrants.
+
 The order is defeasible. A measurement paper may define the object before the gap; a theory paper may state the empirical facts before the missing mechanism; a causal paper may need a short institutional event before it can make the counterfactual problem intelligible. Preserve the dependency among functions even when their surface order changes.
 
 For a descriptive or measurement paper, a consequential unknown can replace a treatment-style question. One defensible architecture is:
@@ -64,12 +66,14 @@ Each fact in a fact ladder must answer a different unresolved question and make 
 
 - Report the main result early with units and a meaningful benchmark.
 - Organize secondary results by evidentiary role: validation, mechanism, boundary, or consequence.
+- Preserve a material countervailing consequence or trade-off when it changes the interpretation of the central conclusion; do not demote it to a vague closing qualification.
 - Give important nulls the role they deserve.
 - Avoid walking through tables in order.
 
 ### Contribution
 
 - Compare with the nearest papers on the exact margin changed.
+- When verified closest sources are supplied, use the smallest necessary paper-level anchor and state the exact margin of advance. When they are not supplied or verified, use `[VERIFIED CLOSEST-SOURCE COMPARISON NEEDED]` rather than a broad novelty claim.
 - Distinguish contribution to fact, method/measurement, mechanism/theory, or scope.
 - Explain why the new evidence changes interpretation rather than merely adding another setting.
 
@@ -96,6 +100,8 @@ Use concentric rings:
 For every citation cluster, state the relationship: confirms, contradicts, extends, distinguishes, measures, or changes scope. A citation list without a logical verb is not positioning.
 
 Default to integrating literature into the introduction. Create a separate literature section only if it synthesizes several debates, develops hypotheses, or explains technical distinctions that would derail the opening argument.
+
+Attach scope and maintained-assumption boundaries to the claims they qualify. State a manuscript-level boundary once when synthesis requires it, but do not repeat generic disclaimer lists at the end of successive paragraphs.
 
 ## 5. Common failures and repairs
 

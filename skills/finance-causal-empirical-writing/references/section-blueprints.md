@@ -8,17 +8,19 @@ Use this workflow after defining the estimand and identifying variation. Treat p
 
 ## Abstract
 
-### Sentence jobs
+### Core jobs
 
-1. **Causal question.** Name the intervention or economically relevant exposure, outcome, and population.
-2. **Identification.** State the assignment rule, shock, cutoff, instrument, or timing contrast and the comparison that supplies the counterfactual.
-3. **Estimate.** Report the estimand, magnitude in original units, uncertainty, and a baseline or distributional benchmark.
-4. **Credibility.** Name one design-defining diagnostic or institutional fact; do not list generic robustness checks.
-5. **Mechanism and scope.** Give a supported channel or consequence and retain the key local-population, time-horizon, interference, or external-validity boundary.
+Perform these jobs compactly; combine them rather than assigning a fixed sentence to each:
+
+- **Causal question.** Name the intervention or economically relevant exposure, outcome, and population.
+- **Identification.** State the assignment rule, shock, cutoff, instrument, or timing contrast and the comparison that supplies the counterfactual.
+- **Headline estimate.** Report the central estimand, magnitude in original units, uncertainty, and a compatible benchmark.
+- **Decisive interpretation evidence.** Select the diagnostic, institutional fact, mechanism evidence, or trade-off that most changes credibility or meaning; do not inventory robustness checks, designs, or secondary results.
+- **Scope.** Retain the binding local-population, time-horizon, interference, or external-validity boundary in compact form.
 
 ### Required facts
 
-Know treatment and outcome definitions, treatment and observation units, population/period, assignment/timing, comparison, estimand, estimate, inference, baseline, and central identifying assumption. If a central item is missing, use a placeholder or provide a design blueprint rather than a production-ready causal abstract.
+Verify treatment and outcome definitions, treatment and observation units, population and period, assignment and timing, comparison, estimand, estimate, inference, baseline, and central identifying assumption internally. Do not copy the ledger into the abstract. If a central item is missing, use a placeholder or provide a design blueprint rather than a production-ready causal abstract.
 
 ### Overclaim traps
 
@@ -30,27 +32,22 @@ A reader should understand `who is compared with whom, why, for what estimand, w
 
 ## Introduction
 
-### Paragraph jobs
+### Argument jobs
 
-1. **Economic decision and causal question.** Establish the behavior, friction, or policy tradeoff and explain why the effect matters.
-2. **Counterfactual problem.** Show why ordinary treated–untreated or before–after comparisons are confounded. Name the most important selection, timing, or equilibrium concern.
-3. **Institutional leverage.** Explain the event, rule, threshold, instrument, or randomization and how it creates the relevant comparison. Include strategic responses when they threaten assignment.
-4. **Estimand and assumption.** Name the target population, causal object, treatment contrast, and identifying assumption in plain language. For multi-stage chains, distinguish assignment, exposure, and outcome links.
-5. **Headline result.** Report magnitude, units, uncertainty, baseline, time horizon, and whether the estimate is ITT, reduced form, IV/LATE, ATT, event-time effect, or another object.
-6. **Design credibility.** Select the evidence most diagnostic of the leading threat. Explain what it alleviates and what remains rather than announcing that the design is robust.
-7. **Mechanism and consequences.** Present timing, intermediate outcomes, cross-sectional predictions, or competing-channel tests after the main effect. Label heterogeneity as heterogeneity unless additional assumptions support mediation.
-8. **Contribution.** Compare against the closest question and design. State whether the paper changes the estimated effect, identification, mechanism, incidence, or policy understanding—not merely that the setting or dataset is new.
+Adapt and combine these jobs to fit the evidence; do not force a paragraph count:
 
-Order evidence by inferential dependency, not automatically by outcome timing. When a policy shock is used to diagnose whether a preexisting choice was optimal, a defensible chain is:
+- **Economic decision and causal question.** Establish the behavior, friction, or trade-off and explain why the effect matters.
+- **Counterfactual problem.** Show why ordinary treated–untreated or before–after comparisons are confounded. Name the most important selection, timing, or equilibrium concern.
+- **Institutional leverage.** Explain the event, rule, threshold, instrument, or randomization and how it creates the relevant comparison. Include strategic responses when they threaten assignment.
+- **Estimand and assumption.** Name the target population, causal object, treatment contrast, and identifying assumption in plain language. For multi-stage chains, distinguish assignment, exposure, and outcome links.
+- **Headline result.** Report magnitude, units, uncertainty, baseline, time horizon, and whether the estimate is ITT, reduced form, IV/LATE, ATT, event-time effect, or another object.
+- **Design credibility.** Select the evidence most diagnostic of the leading threat. Explain what it alleviates and what remains rather than announcing that the design is robust.
+- **Mechanism, consequence, or trade-off.** Preview only the evidence that materially changes the headline interpretation. Label heterogeneity as heterogeneity unless additional assumptions support mediation.
+- **Contribution.** Compare against the closest question and design. State whether the paper changes the estimated effect, identification, mechanism, incidence, or policy understanding—not merely that the setting or dataset is new.
 
-```text
-intervention changes the target behavior
-→ valuation or welfare diagnostic answers the optimality question
-→ reallocation or downstream outcomes explain why
-→ heterogeneity shows where the diagnosis changes
-```
+Keep secondary designs and result inventories out of the introduction. Introduce a secondary component only when its distinct evidentiary job is necessary to understand the headline claim, its credibility, or a consequential trade-off.
 
-The valuation or welfare block has a different evidentiary job from an operational outcome. State the extra assumptions it needs; a favorable market reaction is not a complete social-welfare test.
+Order evidence by inferential dependency, not automatically by outcome timing. State which question each component unlocks and which additional assumptions it introduces. Keep identification, diagnosis, mechanism, downstream consequence, and model- or welfare-based interpretation as distinct evidentiary jobs; do not let a later block inherit the causal strength of an earlier one.
 
 ### Required facts
 
@@ -91,7 +88,7 @@ The reader should be able to draw the assignment and measurement timeline, disti
 3. **Identification.** State the counterfactual assumption in plain language adjacent to the equation and connect it to the institution.
 4. **Inference.** Match clustering or randomization inference to the assignment and dependence structure. Report few-cluster, serial-correlation, spatial/network, or generated-regressor limitations when relevant.
 5. **Diagnostics plan.** Map each leading threat to a pre-specified diagnostic or sensitivity analysis and state what outcome would change the interpretation.
-6. **Multi-stage or multiple-design logic.** Keep first stage, reduced form, IV, and downstream outcomes distinct. Give each secondary design one job—assignment credibility, mechanism, external validation, or aggregate consequence.
+6. **Component ownership.** For every design, stage, or model block, retain its variation or model source, outcome or object, unit, estimand, population and period, maintained assumptions, inference or precision, and evidentiary job. Keep first stage, reduced form, IV, dynamics, downstream outcomes, model results, and analogous blocks distinct. Give each secondary component a named job and do not transfer stronger identification or precision from one block to another.
 
 ### Overclaim traps
 
@@ -112,7 +109,9 @@ Another researcher should be able to identify exactly which observations and con
 5. **Sensitivity and bounds.** State attenuation, sign change, imprecision, or economically relevant confidence bounds. Preserve informative nulls and failed diagnostics.
 6. **External validity and equilibrium.** Distinguish the identified local/partial-equilibrium effect from broader incidence, displacement, or general-equilibrium claims.
 
-Before fixing subsection order, draw the dependency graph among the paper's claims. Place a result earlier when later interpretation logically requires it, even if the underlying outcome occurs later in calendar time. A first stage, valuation diagnostic, allocation response, mechanism test, and welfare calculation are not interchangeable `outcomes`; label the question each one unlocks.
+Before comparing components, verify that each retains its own variation or model source, outcome or object, unit, estimand, population and period, assumptions, inference or precision, and evidentiary job. Never narrate a downstream or model-based block with the identification language earned by another block.
+
+Before fixing subsection order, draw the dependency graph among the paper's claims. Place a result earlier when later interpretation logically requires it, even if the underlying outcome occurs later in calendar time. A first stage, diagnostic, intermediate result, mechanism test, downstream consequence, and model-based interpretation are not interchangeable `outcomes`; label the question each one unlocks.
 
 ### Overclaim traps
 
@@ -148,3 +147,5 @@ No subgroup table should be called mechanism evidence solely because effects dif
 ### Final output check
 
 Verify that abstract, introduction, design, tables, results, and conclusion use the same treatment, estimand, estimate, units, baseline, sample, and uncertainty. Keep assignment distinct from exposure, identification distinct from diagnostics, mechanism distinct from heterogeneity, and local evidence distinct from universal policy claims.
+
+Place each qualifier next to the claim it limits. Consolidate remaining cross-cutting scope into a compact sentence and remove repeated disclaimer inventories from later paragraphs or sections.

@@ -17,6 +17,13 @@ MODULE = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = MODULE
 SPEC.loader.exec_module(MODULE)
 
+VALIDATOR_PATH = ROOT / "scripts" / "validate_repo.py"
+VALIDATOR_SPEC = importlib.util.spec_from_file_location("validate_repo", VALIDATOR_PATH)
+assert VALIDATOR_SPEC and VALIDATOR_SPEC.loader
+VALIDATOR = importlib.util.module_from_spec(VALIDATOR_SPEC)
+sys.modules[VALIDATOR_SPEC.name] = VALIDATOR
+VALIDATOR_SPEC.loader.exec_module(VALIDATOR)
+
 
 class SkillEvalTests(unittest.TestCase):
     @classmethod
@@ -87,6 +94,27 @@ class SkillEvalTests(unittest.TestCase):
         self.assertGreaterEqual(behavior["hard_failures"], 20)
         self.assertNotIn("pass_rate", behavior)
         self.assertNotIn("model", behavior)
+
+    def test_instructional_generalization_guard(self) -> None:
+        self.assertEqual(VALIDATOR.validate_instructional_generalization(), [])
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            procedural = root / "procedural.md"
+            procedural.write_text(
+                "Reusable rule followed by https://doi.org/10.0000/example.",
+                encoding="utf-8",
+            )
+            original_root = VALIDATOR.ROOT
+            original_files = VALIDATOR.INSTRUCTIONAL_GENERALIZATION_FILES
+            try:
+                VALIDATOR.ROOT = root
+                VALIDATOR.INSTRUCTIONAL_GENERALIZATION_FILES = ("procedural.md",)
+                errors = VALIDATOR.validate_instructional_generalization()
+            finally:
+                VALIDATOR.ROOT = original_root
+                VALIDATOR.INSTRUCTIONAL_GENERALIZATION_FILES = original_files
+            self.assertEqual(len(errors), 1)
+            self.assertIn("paper-level title or identifier", errors[0])
 
     def test_invalid_behavior_regex_is_a_schema_error(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
