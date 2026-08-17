@@ -1,0 +1,37 @@
+{
+  "name": "finance-top-journal-writing-skills",
+  "version": "1.3.0",
+  "description": "Evidence-informed writing workflows for JF, JFE, and RFS finance papers.",
+  "author": {
+    "name": "Yixuan Yuan",
+    "url": "https://github.com/yxyuan-joy"
+  },
+  "homepage": "https://github.com/yxyuan-joy/Finance-top-journal-writing-skills",
+  "repository": "https://github.com/yxyuan-joy/Finance-top-journal-writing-skills",
+  "license": "MIT",
+  "keywords": [
+    "academic-writing",
+    "agent-skills",
+    "finance",
+    "jf",
+    "jfe",
+    "rfs"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Finance Top-Journal Writing Skills",
+    "shortDescription": "Bilingual JF, JFE, and RFS writing workflows.",
+    "longDescription": "Five evidence-informed skills for drafting, restructuring, and auditing finance papers in English or Chinese.",
+    "developerName": "Yixuan Yuan",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me choose the right finance writing skill for my paper.",
+      "Revise my finance paper in English without inventing missing facts.",
+      "请帮我选择合适的金融论文写作 skill，并用中文审校。"
+    ],
+    "brandColor": "#0F766E"
+  }
+}

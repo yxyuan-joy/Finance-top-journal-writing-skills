@@ -7,6 +7,8 @@ description: Draft, restructure, revise, or audit complete finance manuscripts a
 
 Build a defensible finance-paper argument from the author's evidence. Treat JF, JFE, and RFS as journals sharing a high bar for contribution and credibility, with some observable production conventions—not as three fixed prose personas.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Treat [evidence-basis.md](references/evidence-basis.md) as a searchable provenance catalog, not required reading. Consult it only when the task genuinely needs a teaching anchor or provenance audit. Search first by subtype or writing function and read only nearby rows; do not load the full 50-paper catalog for ordinary drafting. Never imitate an exemplar's wording or length.
 
 ## Establish the writing contract

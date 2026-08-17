@@ -7,6 +7,8 @@ description: Draft, revise, or audit empirical asset-pricing and investments man
 
 Write asset-pricing papers as tests of an economic object, not as collections of return regressions. Use `$finance-top-journal-writing` with this skill when it is installed; the core skill supplies full-paper and journal-adapter guidance.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when an asset-pricing anchor or provenance check is useful; search by subtype/function and read only matching rows rather than loading all 50 papers. Heed transfer limits and do not reproduce source prose.
 
 ## Classify the paper before drafting

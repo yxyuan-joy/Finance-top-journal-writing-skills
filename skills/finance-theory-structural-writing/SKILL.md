@@ -7,6 +7,8 @@ description: Draft, revise, or audit formal-theory, structural-estimation, calib
 
 Make the model's economic mechanism, identification, and domain visible. Use `$finance-top-journal-writing` with this skill when installed.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a model-type anchor or provenance check would help; search by subtype/function and read only matching rows rather than loading all 50 papers. Do not make fit or identification compulsory for pure theory.
 
 ## Route the paper

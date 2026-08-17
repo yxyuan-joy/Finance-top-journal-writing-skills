@@ -1,4 +1,5 @@
 interface:
   display_name: "Finance Asset-Pricing Writing"
   short_description: "Write rigorous JF, JFE, and RFS asset-pricing papers"
-  default_prompt: "Use $finance-asset-pricing-writing to revise my [section] for [JF/JFE/RFS] using the supplied universe, signal/model, timing, benchmarks, estimates, validation sample, and implementation limits."
+  brand_color: "#0F766E"
+  default_prompt: "Use $finance-asset-pricing-writing to audit my [section] for [JF/JFE/RFS] in [English/Chinese]."

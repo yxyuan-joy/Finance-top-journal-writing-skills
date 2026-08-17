@@ -7,6 +7,8 @@ description: Draft, revise, or audit financial-intermediation and market-structu
 
 Center the paper on an institutional mechanism connecting agents, constraints, choices, and market outcomes. Use `$finance-top-journal-writing` with this skill when installed.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a mechanism-specific anchor or provenance check would help; search by subtype/function and read only matching rows rather than loading all 60 papers. It supplies bounded teaching functions, not language to copy.
 
 ## Route the mechanism

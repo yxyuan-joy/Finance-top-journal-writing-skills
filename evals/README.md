@@ -90,8 +90,7 @@ include both English and Chinese plus `colloquial`, `implicit-terminology`, and
 
 Fixtures use `schema_version: 1`. Add new cases to a versioned JSON file under
 `evals/cases/`; change the schema version only with a matching parser and test
-update. The older `evals/routing-cases.json` is a small historical seed and is
-not part of the executable versioned suite.
+update.
 
 ## Layer 3: saved-response behavioral grading
 
@@ -125,3 +124,11 @@ skills. Every case keeps `input.md`, `expected-criteria.json`, and
 for observable handoff quality and human calibration, not stylistic imitation
 or evidence about journal preferences. Gold outputs are one defensible answer,
 not text that a model must reproduce verbatim.
+
+## Current release evidence
+
+[`validation-report.md`](validation-report.md) is the single current summary of
+the deterministic checks, isolated behavioral cases, held-out transfer audit,
+and three rounds of blind testing on previously unused JF/JFE/RFS papers.
+Historical development reports were consolidated into that file so public
+users do not need to reconcile several version-specific conclusions.

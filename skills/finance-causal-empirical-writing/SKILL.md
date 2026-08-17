@@ -7,6 +7,8 @@ description: Draft, revise, or audit causal empirical finance manuscripts for Th
 
 Make the identifying argument inspectable. Use `$finance-top-journal-writing` with this skill when installed for full-paper and journal-adapter guidance.
 
+Honor the user's requested output language. If none is specified, match the user's language. Preserve variable names, citation keys, equations, and technical labels when translating them would break traceability.
+
 Use [evidence-basis.md](references/evidence-basis.md) as an optional searchable provenance catalog. Consult it only when a design-specific teaching anchor or provenance check would help; search by design/function and read only matching rows rather than loading all 60 papers. It is not a source of sentences or a claim that all designs need the same checks.
 
 ## Define the estimand before the design label
